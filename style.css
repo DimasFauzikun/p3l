@@ -235,7 +235,6 @@ h2 {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  border-radius: 50% 50% 0 0; /* Membuat efek lengkung atas */
 }
 
 .profile-image img {
@@ -272,6 +271,45 @@ h2 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px; /* Jarak antar card */
+}
+
+/* bentuk team-card */
+.team-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px; /* Tinggi gambar */
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Overlay Text on Image */
+.team-name-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Role Text */
+.team-role {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+  font-weight: normal;
+}
+
+.team-role-1 {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+  font-weight: normal;
+  text-align: center; /* Membuat teks berada di tengah */
 }
 
 /* RESPONSIVE TEAM CARDS */
