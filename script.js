@@ -82,3 +82,54 @@ window.addEventListener("scroll", function () {
     deliveryBoy.style.transform = `translateX(${deliveryBoyMove}px)`;
   }
 });
+
+// Format input as currency
+function formatCurrency(input) {
+  let value = input.value.replace(/[^\d]/g, ""); // Menghapus semua non-digit
+  if (value.length > 0) {
+    value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."); // Menambahkan titik setiap 3 digit
+    input.value = "Rp " + value;
+  } else {
+    input.value = "";
+  }
+}
+
+// Memastikan input hanya angka ketika form disubmit
+document.querySelector("form").addEventListener("submit", function (event) {
+  let budgetField = document.getElementById("budget");
+  let budgetValue = budgetField.value.replace(/[^\d]/g, ""); // Hapus simbol 'Rp' dan titik
+  budgetField.value = budgetValue; // Simpan hanya angka tanpa simbol
+});
+
+// sweet allert
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const form = event.target;
+
+    let valid = true;
+    form
+      .querySelectorAll("input[required], select[required], textarea[required]")
+      .forEach((input) => {
+        if (!input.value.trim()) {
+          valid = false;
+        }
+      });
+
+    if (valid) {
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Data berhasil disimpan!",
+      }).then(() => {
+        form.submit();
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Harap lengkapi semua data yang diperlukan!",
+      });
+    }
+  });
