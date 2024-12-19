@@ -26,21 +26,62 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!is_numeric($budget) || empty($budget)) {
     $message = "Budget harus berupa angka.";
   } else {
-    $stmt = $conn->prepare("INSERT INTO contact (name, phone, email, address, service, package, budget, date, details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssssss", $name, $phone, $email, $address, $service, $package, $budget, $date, $details);
-
-    if ($stmt->execute()) {
-      $message = "Data berhasil disimpan!";
-    } else {
-      $message = "Terjadi kesalahan: " . $stmt->error;
-    }
-
+    // Periksa apakah tanggal sudah ada di database
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM contact WHERE date = ?");
+    $stmt->bind_param("s", $date);
+    $stmt->execute();
+    $stmt->bind_result($count);
+    $stmt->fetch();
     $stmt->close();
+
+    if ($count > 0) {
+      // Jika tanggal sudah terpakai, tampilkan SweetAlert
+      echo "<script>
+              setTimeout(() => {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Tanggal Tidak Tersedia',
+                  text: 'Tanggal ini sudah terpakai. Silakan pilih tanggal lain.',
+                });
+              }, 200);
+            </script>";
+    } else {
+      // Simpan data jika tanggal belum terpakai
+      $stmt = $conn->prepare("INSERT INTO contact (name, phone, email, address, service, package, budget, date, details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+      $stmt->bind_param("sssssssss", $name, $phone, $email, $address, $service, $package, $budget, $date, $details);
+
+      if ($stmt->execute()) {
+        // Berhasil menyimpan data
+        echo "<script>
+                setTimeout(() => {
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Data Berhasil Disimpan',
+                    text: 'Terima kasih telah menghubungi kami.',
+                  });
+                }, 200);
+              </script>";
+      } else {
+        // Gagal menyimpan data
+        echo "<script>
+                setTimeout(() => {
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Kesalahan',
+                    text: 'Terjadi kesalahan saat menyimpan data.',
+                  });
+                }, 200);
+              </script>";
+      }
+
+      $stmt->close();
+    }
   }
 }
 
 $conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
