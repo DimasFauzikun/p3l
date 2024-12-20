@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2024 at 09:39 AM
+-- Generation Time: Dec 20, 2024 at 03:25 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `p3l`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `akun_admin`
+--
+
+CREATE TABLE `akun_admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `akun_admin`
+--
+
+INSERT INTO `akun_admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin1234');
 
 -- --------------------------------------------------------
 
@@ -48,6 +67,35 @@ INSERT INTO `contact` (`id`, `name`, `phone`, `email`, `address`, `service`, `pa
 (46, 'Dimas f', 2147483647, 'dudu@gmail.com', 'jln. in dulu jadian kaga', 'Wedding Organizer, Photoshoot Services', 'THE INTIMATE ELEGANCE', 95000000, '2024-12-28', 'baru nih'),
 (47, 'andri', 2147483647, 'dudu@gmail.com', 'jln. in dulu jadian kaga', 'Wedding Organizer, Photoshoot Services, Venue for ', 'THE IMPERIAL BLISS', 96000000, '2024-12-21', 'apa sih'),
 (53, 'andri', 2147483647, 'dudu@gmail.com', 'jln. in dulu jadian kaga', 'Wedding Organizer, Photoshoot Services, Venue for ', 'THE INTIMATE ELEGANCE', 95000000, '2025-03-15', 'vefwa');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `portofolio`
+--
+
+CREATE TABLE `portofolio` (
+  `id` int(11) NOT NULL,
+  `gambar_porto` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `portofolio`
+--
+
+INSERT INTO `portofolio` (`id`, `gambar_porto`) VALUES
+(1, 'uploads/Rectangle 45.jpg'),
+(2, 'uploads/Rectangle 46.jpg'),
+(3, 'uploads/Rectangle 48.jpg'),
+(4, 'uploads/Rectangle 47.jpg'),
+(5, 'uploads/Rectangle 49.jpg'),
+(6, 'uploads/Rectangle 50.jpg'),
+(7, 'uploads/Rectangle 51.jpg'),
+(8, 'uploads/Rectangle 54.jpg'),
+(9, 'uploads/Rectangle 53.jpg'),
+(10, 'uploads/Rectangle 52.jpg'),
+(11, 'uploads/Rectangle 55.jpg'),
+(12, 'uploads/Rectangle 56.jpg');
 
 -- --------------------------------------------------------
 
@@ -102,9 +150,21 @@ INSERT INTO `wedding_packages` (`id`, `title_pk`, `deskripsi_pk`, `pax`, `gambar
 --
 
 --
+-- Indexes for table `akun_admin`
+--
+ALTER TABLE `akun_admin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `portofolio`
+--
+ALTER TABLE `portofolio`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -124,10 +184,22 @@ ALTER TABLE `wedding_packages`
 --
 
 --
+-- AUTO_INCREMENT for table `akun_admin`
+--
+ALTER TABLE `akun_admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+
+--
+-- AUTO_INCREMENT for table `portofolio`
+--
+ALTER TABLE `portofolio`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `services`

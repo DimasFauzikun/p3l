@@ -8,13 +8,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 $conn = mysqli_connect('localhost', 'root', '', 'p3l');
 
 // Fungsi untuk menambahkan data
-function tambahService($conn, $title, $deskripsi, $gambar)
+function tambahService($conn, $gambar_porto)
 {
-    $title = mysqli_real_escape_string($conn, $title);
-    $deskripsi = mysqli_real_escape_string($conn, $deskripsi);
-    $gambar = mysqli_real_escape_string($conn, $gambar);
+    $gambar_porto = mysqli_real_escape_string($conn, $gambar_porto);
 
-    $query = "INSERT INTO services (title, deskripsi, gambar) VALUES ('$title', '$deskripsi', '$gambar')";
+    $query = "INSERT INTO portofolio (gambar_porto) VALUES ('$gambar_porto')";
 
     if (mysqli_query($conn, $query)) {
         echo "Data berhasil ditambahkan.";
@@ -24,26 +22,20 @@ function tambahService($conn, $title, $deskripsi, $gambar)
 }
 
 // Fungsi untuk menampilkan data
-function tampilServices($conn)
+function tampilportofolio($conn)
 {
-    $query = "SELECT * FROM services";
+    $query = "SELECT * FROM portofolio";
     $result = mysqli_query($conn, $query);
     return $result;
 }
 
 // Fungsi untuk mengedit data
-function editService($conn, $id, $title, $deskripsi, $gambar)
+function editService($conn, $id, $gambar_porto)
 {
     $id = mysqli_real_escape_string($conn, $id);
-    $title = mysqli_real_escape_string($conn, $title);
-    $deskripsi = mysqli_real_escape_string($conn, $deskripsi);
-    $gambar = mysqli_real_escape_string($conn, $gambar);
+    $gambar_porto = mysqli_real_escape_string($conn, $gambar_porto);
 
-    if (!empty($gambar)) {
-        $query = "UPDATE services SET title='$title', deskripsi='$deskripsi', gambar='$gambar' WHERE id='$id'";
-    } else {
-        $query = "UPDATE services SET title='$title', deskripsi='$deskripsi' WHERE id='$id'";
-    }
+    $query = "UPDATE portofolio SET gambar_porto='$gambar_porto' WHERE id='$id'";
 
     if (mysqli_query($conn, $query)) {
         echo "Data berhasil diupdate.";
@@ -55,7 +47,7 @@ function editService($conn, $id, $title, $deskripsi, $gambar)
 // Fungsi untuk menghapus data
 function hapusService($conn, $id)
 {
-    $query = "DELETE FROM services WHERE id='$id'";
+    $query = "DELETE FROM portofolio WHERE id='$id'";
     if (mysqli_query($conn, $query)) {
         echo "Data berhasil dihapus.";
     } else {
@@ -66,34 +58,30 @@ function hapusService($conn, $id)
 // Menangani form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['tambah'])) {
-        $title = $_POST['title'];
-        $deskripsi = $_POST['deskripsi'];
-        $gambar = '';
+        $gambar_porto = '';
 
-        if (!empty($_FILES['gambar']['name'])) {
-            $fileName = $_FILES['gambar']['name'];
-            $fileTmpName = $_FILES['gambar']['tmp_name'];
+        if (!empty($_FILES['gambar_porto']['name'])) {
+            $fileName = $_FILES['gambar_porto']['name'];
+            $fileTmpName = $_FILES['gambar_porto']['tmp_name'];
             $fileDestination = 'uploads/' . $fileName;
             move_uploaded_file($fileTmpName, $fileDestination);
-            $gambar = $fileDestination;
+            $gambar_porto = $fileDestination;
         }
 
-        tambahService($conn, $title, $deskripsi, $gambar);
+        tambahService($conn, $gambar_porto);
     } elseif (isset($_POST['edit'])) {
         $id = $_POST['id'];
-        $title = $_POST['title'];
-        $deskripsi = $_POST['deskripsi'];
-        $gambar = '';
+        $gambar_porto = '';
 
-        if (!empty($_FILES['gambar']['name'])) {
-            $fileName = $_FILES['gambar']['name'];
-            $fileTmpName = $_FILES['gambar']['tmp_name'];
+        if (!empty($_FILES['gambar_porto']['name'])) {
+            $fileName = $_FILES['gambar_porto']['name'];
+            $fileTmpName = $_FILES['gambar_porto']['tmp_name'];
             $fileDestination = 'uploads/' . $fileName;
             move_uploaded_file($fileTmpName, $fileDestination);
-            $gambar = $fileDestination;
+            $gambar_porto = $fileDestination;
         }
 
-        editService($conn, $id, $title, $deskripsi, $gambar);
+        editService($conn, $id, $gambar_porto);
     }
 }
 
@@ -101,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['hapus'])) {
     hapusService($conn, $_POST['id']);
 }
 
-$dataResult = tampilServices($conn);
+$dataResult = tampilportofolio($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -112,7 +100,7 @@ $dataResult = tampilServices($conn);
     <link rel="stylesheet" href="assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Admin Services</title>
+    <title>Admin portofolio</title>
     <style>
         body {
             margin-left: 280px;
@@ -165,7 +153,7 @@ $dataResult = tampilServices($conn);
         </ul>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="admin2.php" class="nav-link active">
+                <a href="admin2.php" class="nav-link text-white">
                     <i class="fas fa-calendar-alt me-2"></i> Services
                 </a>
             </li>
@@ -179,7 +167,7 @@ $dataResult = tampilServices($conn);
         </ul>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="admin4.php" class="nav-link text-white">
+                <a href="admin4.php" class="nav-link active">
                     <i class="fas fa-calendar-alt me-2"></i> portofolio
                 </a>
             </li>
@@ -194,16 +182,10 @@ $dataResult = tampilServices($conn);
         <hr>
     </div>
     <div class="container mt-5">
-        <h2>Manage Services</h2>
+        <h2>Manage portofolio</h2>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
-                <input type="text" class="form-control" name="title" placeholder="Title">
-            </div>
-            <div class="mb-3">
-                <textarea class="form-control" name="deskripsi" placeholder="Description" rows="4"></textarea>
-            </div>
-            <div class="mb-3">
-                <input type="file" class="form-control" name="gambar" id="gambar" accept=".jpg, .jpeg, .png">
+                <input type="file" class="form-control" name="gambar_porto" id="gambar_porto" accept=".jpg, .jpeg, .png">
             </div>
             <div class="mb-3">
                 <input type="submit" class="btn btn-primary" name="tambah" value="Add Service">
@@ -214,8 +196,6 @@ $dataResult = tampilServices($conn);
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Title</th>
-                    <th>Description</th>
                     <th>Image</th>
                     <th>Action</th>
                 </tr>
@@ -224,20 +204,12 @@ $dataResult = tampilServices($conn);
                 <?php while ($row = mysqli_fetch_assoc($dataResult)) { ?>
                     <tr>
                         <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['title']; ?></td>
-                        <td><?php echo nl2br($row['deskripsi']); ?></td>
-                        <td><img src="<?php echo $row['gambar']; ?>" alt="Image" width="100"></td>
+                        <td><img src="<?php echo $row['gambar_porto']; ?>" alt="Image" width="100"></td>
                         <td>
                             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" class="mb-2">
                                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                 <div class="mb-2">
-                                    <input type="text" class="form-control" name="title" value="<?php echo $row['title']; ?>">
-                                </div>
-                                <div class="mb-2">
-                                    <textarea class="form-control" name="deskripsi" rows="4"><?php echo $row['deskripsi']; ?></textarea>
-                                </div>
-                                <div class="mb-2">
-                                    <input type="file" class="form-control" name="gambar" id="gambar" accept=".jpg, .jpeg, .png">
+                                    <input type="file" class="form-control" name="gambar_porto" id="gambar_porto" accept=".jpg, .jpeg, .png">
                                 </div>
                                 <div class="mb-2">
                                     <input type="submit" class="btn btn-success" name="edit" value="Edit">

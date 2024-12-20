@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,6 +104,20 @@
             <li class="nav-item">
                 <a href="admin3.php" class="nav-link text-white">
                     <i class="fas fa-calendar-alt me-2"></i> Wedding Packages
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="admin4.php" class="nav-link text-white">
+                    <i class="fas fa-calendar-alt me-2"></i> portofolio
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="logout.php" class="nav-link text-white">
+                    <i class="fas fa-calendar-alt me-2"></i> Log Out
                 </a>
             </li>
         </ul>

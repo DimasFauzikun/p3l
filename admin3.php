@@ -209,6 +209,20 @@ $dataResult = tampilPackages($conn);
                 </a>
             </li>
         </ul>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="admin4.php" class="nav-link text-white">
+                    <i class="fas fa-calendar-alt me-2"></i> portofolio
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="logout.php" class="nav-link text-white">
+                    <i class="fas fa-calendar-alt me-2"></i> Log Out
+                </a>
+            </li>
+        </ul>
         <hr>
     </div>
     <div class="container mt-5">
