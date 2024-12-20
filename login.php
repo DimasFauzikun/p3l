@@ -21,20 +21,7 @@ if (isset($_POST['submit'])) {
         exit();
     } else {
         // Jika tidak ditemukan, tampilkan pesan error atau lakukan tindakan lain
-        echo "Login Gagal. Silakan coba lagi.";
-    }
-}
-
-if (isset($_POST['daftarSubmit'])) {
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
-
-    $insert = mysqli_query($conn, "INSERT INTO admin(username, password) VALUES('$username','$password')") or die('query failed');
-
-    if ($insert) {
-        $message[] = '<span style="color: green;">Akun berhasil dibuat!</span>';
-    } else {
-        $message[] = '<span style="color: red;">Akun gagal dibuat.</span>';
+        echo "<script>alert('Login Gagal. Silakan coba lagi.');</script>";
     }
 }
 ?>
@@ -45,55 +32,114 @@ if (isset($_POST['daftarSubmit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .login-container {
+            width: 350px;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #4a4a8f;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #4a4a8f;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #6a6de6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #585bc3;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .form-options a {
+            color: #6a6de6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .form-options a:hover {
+            text-decoration: underline;
+        }
+
+        .form-options input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="text-center">Login Admin</h2>
-                    </div>
-                    <div class="card-body">
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                            <div class="form-group">
-                                <label for="username">Username:</label>
-                                <input type="text" id="username" name="username" class="form-control" placeholder="Input username" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password:</label>
-                                <input type="password" id="password" name="password" class="form-control" placeholder="Input password" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" name="submit" value="Login" class="btn btn-primary btn-block">
-                            </div>
-                        </form>
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                            <?php
-                            if (isset($message)) {
-                                foreach ($message as $msg) {
-                                    echo '<p class="message">' . $msg . '</p>';
-                                }
-                            }
-                            ?>
-                            <!-- <div class="form-group">
-                                <input type="submit" name="daftarSubmit" value="Daftar" class="btn btn-success btn-block">
-                            </div>
-                        </form> -->
-                    </div>
-                </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Username" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-options">
+                <div>
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <a href="#">Forgot?</a>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submit" value="Login">
+            </div>
+        </form>
     </div>
-
-    <!-- Sertakan script Bootstrap dan jQuery jika diperlukan -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
-<!-- #region -->
