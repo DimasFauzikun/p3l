@@ -82,7 +82,21 @@
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
                 <a href="admin.php" class="nav-link active">
-                    <i class="fas fa-calendar-alt me-2"></i> Dashboard
+                    <i class="fas fa-calendar-alt me-2"></i> Data contact
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="admin2.php" class="nav-link text-white">
+                    <i class="fas fa-calendar-alt me-2"></i> Services
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="admin3.php" class="nav-link text-white">
+                    <i class="fas fa-calendar-alt me-2"></i> Wedding Packages
                 </a>
             </li>
         </ul>
