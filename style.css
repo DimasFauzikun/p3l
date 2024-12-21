@@ -1,4 +1,72 @@
-/* HERO SECTION */
+/* Main Page  */
+@font-face {
+  font-family: 'Raleway';
+  src: url('assets/font/Raleway/static/Raleway-SemiBold.ttf') format('truetype');
+  font-weight: 600; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('assets/font/Raleway/static/Raleway-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+.main-header{
+  width: 100%;              /* Lebar penuh halaman */
+  height: 52px;             /* Tinggi sesuai Figma */
+  background-color: #CBD3C9; /* Warna latar belakang */
+  display: flex;            /* Menengahkan konten */
+  align-items: center;      /* Teks di tengah vertikal */
+  justify-content: center;  /* Teks di tengah horizontal */
+  font-family: 'Raleway', sans-serif; /* Font Raleway */
+  font-weight: 600;         
+  font-size: 12px;          /* Ukuran font */
+  color: #000;              /* Warna font hitam */
+  text-transform: uppercase; /* Jika perlu huruf kapital */
+  top: 0;                   /* Posisi atas halaman */
+  left: 0;                  /* Mulai dari sisi kiri */
+  letter-spacing: 0.10em;
+}
+
+.navbar {
+  background-color: #CBD3C9;
+  width: 100%; /* Lebar penuh */
+  height: 246px;
+  padding: 0; /* Menghilangkan padding default */
+  background-color: white; /* Warna latar belakang navbar */
+}
+
+.navbar-brand img {
+  max-width: 100%; /* Sesuaikan ukuran logo */
+  height: auto; /* Sesuaikan proporsi logo */
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 500 !important; /* Medium */
+  font-size: 18px !important; /* Ukuran font */
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block; /* Pastikan item ditampilkan dalam baris yang sama */
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+
+/* Main Page - Hero Section */
 .hero-section {
   display: flex;
   align-items: center;
@@ -22,17 +90,102 @@ footer {
 }
 
 /* HERO */
-.hero {
-  position: relative;
-  text-align: left;
-  overflow: hidden;
-  z-index: 1;
-  padding: 2rem;
+
+@font-face {
+  font-family: 'CormorantGaramond-Regular';
+  src: url('assets/font/CormorantGaramond-Regular.ttf') format('truetype');
+  font-weight: 400; 
+  font-style: normal;
 }
 
-.hero-content > :is(*, .btn) {
-  margin-inline: 0;
+@font-face {
+  font-family: 'CormorantGaramond-Bold';
+  src: url('assets/font/CormorantGaramond-Bold.ttf') format('truetype');
+  font-weight: 700; 
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'CormorantGaramond-Medium';
+  src: url('assets/font/CormorantGaramond-Medium.ttf') format('truetype');
+  font-weight: 500; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CormorantGaramond-Ligth';
+  src: url('assets/font/CormorantGaramond-Ligth.ttf') format('truetype');
+  font-weight: 300; 
+  font-style: normal;
+}
+
+.hero {
+  width: 100%;
+  height: 680px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3)
+  ),
+  url("assets/images/Home_Banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFAFA;
+}
+
+.hero-btn {
+  background-color: #A4AEA2;
+  width: 235px;
+  height: 52px;
+  color: white !important;  
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: normal;
+  font-size: 13px;
+  text-decoration: none !important; 
+  transition: all 0.3s ease-in-out; 
+}
+
+.hero-btn:hover {
+  background-color: #8D968B;
+}
+
+.hero-content {
+  text-align: center;
+  color: #FFFAFA;
+}
+
+.title {
+  color: #fffafa;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+/* Subtitle Styling */
+.subtitle {
+  color: #fffafa;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  margin-top: 0; 
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+
+.description {
+  font-family: "Raleway", serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+
 
 .hero-banner {
   display: block;
@@ -44,51 +197,332 @@ footer {
   aspect-ratio: 1 / 0.9;
 }
 
-.hero-img {
-  position: absolute;
-  bottom: 0;
+/* Main Page - About Section */
+.about{
+  width: 100%;
+  height: 1074px;
+  background-color: #FFFAFA;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  scroll-margin-top: -80px;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -2px;
+.about-btn {
+  background-color: #A4AEA2;
+  width: 259px;
+  height: 52px;
+  color: white !important;  
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: normal;
+  font-size: 12px;
+  text-decoration: none !important; 
+  transition: all 0.3s ease-in-out;
+}
+
+.about-btn:hover {
+  background-color: #8D968B;
+}
+
+.container-about{
+  padding: 50px 20px;
+}
+
+.text-center.wrap-text {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 20px;
+  max-width: 900px; /* Atur lebar maksimum sesuai keinginan */
+  margin: 0 auto;   /* Membuat teks terpusat di tengah */
+  padding: 0 50px;  /* Menambahkan padding untuk memberi jarak dengan tepi */
+  text-align: center; /* Memastikan teks tetap terpusat */
+}
+
+.vr {
+  border-left: 2px solid black !important;
+  height: 100% !important; 
+}
+
+
+.text-center .head-text{
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+.text-center .head-text2{
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 72px;
+  color: #737373;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.text-center .head-text3{
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+/* Main Page - Service & Portfolio */
+/* Container utama */
+.container-service, .container-portfolio {
+  display: flex;
+  height: 1109px; /* Mengisi tinggi layar */
+}
+
+/* Gambar */
+.items-primary {
+  flex: 1;
+}
+
+.service-btn {
+  background-color: #A4AEA2;
+  width: 235px;
+  height: 52px;
+  color: white !important;  
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: normal;
+  font-size: 13px;
+  text-decoration: none !important; 
+  transition: all 0.3s ease-in-out; 
+}
+
+.service-btn:hover {
+  background-color: #8D968B;
+}
+
+.portfolio-btn {
+  background-color: #A4AEA2;
+  width: 235px;
+  height: 52px;
+  color: white !important;  
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: normal;
+  font-size: 13px;
+  text-decoration: none !important; 
+  transition: all 0.3s ease-in-out; 
+}
+
+.portfolio-btn:hover {
+  background-color: #8D968B;
+}
+
+.items-primary img {
   width: 100%;
   height: 100%;
-  background-image: url("../images/hero-bg-shape.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right bottom;
-  pointer-events: none;
-  z-index: -1;
+  object-fit: cover; /* Agar gambar memenuhi area */
 }
 
-/* about */
-/* ABOUT SECTION */
-h1,
-h2 {
+/* Teks */
+.items-secondary {
+  flex: 1; /* Proporsi 50% */
+  padding: 0 91px; /* Jarak teks ke gambar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Pusatkan teks secara vertikal */
+}
+
+.head-text h1 {
+  font-size: 64px;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.content {
+  font-family: "Raleway", serif;
+}
+
+.sub-head-content {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 20px;
   font-weight: bold;
+  margin-top: 20px;
+  letter-spacing: 0.08rem;
 }
 
-.card {
+.main-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.08rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.container-service > .items-primary:first-child img,
+.container-portfolio > .items-primary:last-child img {
+  margin: 0;
+}
+
+/* Main Page - Camera 360 */
+.camera-360 {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  background-color: #FFFAFA;
+}
+
+.camera-360 img {
+  height: 350px;
+  width: auto; 
+  max-width: 100%; 
+}
+
+/* Main Page - Location */
+.location {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFAFA;
+  padding: 0 80px; 
+  box-sizing: border-box;
+}
+
+.location iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 100%; 
   border: none;
-  border-radius: 10px;
+  
 }
 
-.card-img-top {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+/* Main Page - Footer */
+.footer {
+  width: 100%;
+  height: 257px;
+  background-color: #FFFAFA; 
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 0 180px; 
+  box-sizing: border-box;
+  border-bottom: 1px solid #7A7A7A;
 }
 
-.text-center h6 {
-  font-weight: bold;
+
+.footer-navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; 
 }
 
-.text-center p {
-  font-size: 0.9rem;
-  color: #6c757d;
+.footer-navigation li a {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000; /* Warna teks */
+  transition: color 0.3s ease;
 }
+
+.footer-navigation li a:hover {
+  color: #A4AEA2; /* Warna saat di-hover */
+}
+
+.social-links {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+  gap: 20px; 
+}
+
+.social-links li a {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666; /* Warna ikon sosial */
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: #A4AEA2;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 127px;
+  width: auto; 
+  object-fit: contain; 
+}
+
+
+/* Main Page - Footer Copyright*/
+.copyright {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Posisikan teks di tengah secara horizontal */
+  align-items: center; /* Posisikan teks di tengah secara vertikal */
+  background-color: #FFFAFA; /* Opsional, warna background footer */
+  box-sizing: border-box;
+}
+
+.copyright-content p {
+  margin: 0; /* Hilangkan margin default dari paragraf */
+  font-family: "Raleway", sans-serif; /* Font keluarga */
+  font-weight: 400;
+  font-size: 11px; /* Ukuran font */
+  color: #7A7A7A; /* Warna teks */
+  text-align: center; /* Teks diatur ke tengah */
+}
+/* <================================================================================>*/
+/* <================================================================================>*/
+
+/* About Page - Hero*/
+.hero-about {
+  width: 100%;
+  height: 291px;
+  background:
+  url("assets/images/Aboutus_Banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFAFA;
+}
+
 
 /* TEXT BANNER HOME */
 .text-white {
@@ -176,6 +610,7 @@ h2 {
     display: none; /* Hide hero image on very small screens */
   }
 }
+
 
 /* ABOUT */
 /* Kanan gambar */
@@ -599,6 +1034,7 @@ form textarea {
 }
 
 /* Service section - Flexbox vertikal */
+
 .checkbox-group {
   display: flex; /* Aktifkan Flexbox */
   flex-direction: column; /* Atur checkbox agar vertikal */
@@ -713,7 +1149,7 @@ a:hover {
 /* footer */
 
 /* footer Container */
-footer {
+/* footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -721,17 +1157,17 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   gap: 100px;
-}
+} */
 
 /* Navigation Menu */
-nav {
+/* nav {
   display: flex;
   flex-direction: column;
   gap: 10px;
   text-align: left;
-}
+} */
 
-nav ul {
+/* nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -747,10 +1183,10 @@ nav ul li a {
 
 nav ul li a:hover {
   color: gray;
-}
+} */
 
 /* Title Styling */
-.title {
+/* .title {
   text-align: center;
   margin: 0 auto;
 }
@@ -765,7 +1201,7 @@ nav ul li a:hover {
   font-size: 14px;
   color: gray;
   margin-top: 5px;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 1024px) {
