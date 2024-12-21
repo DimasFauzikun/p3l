@@ -32,14 +32,16 @@ $dataResult = tampilPackages($conn);
 
 <body>
     <!-- Header -->
-    <header class="text-center py-3 bg-light">
-        <p class="text-uppercase small">Tailoring extraordinary experiences for you</p>
+    <header class="main-header">
+        Tailoring extraordinary experiences for you
     </header>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">VILLAVI THE VENUE</a>
+            <a class="navbar-brand" href="home.php">
+                <img src="VillaVi_Logo.jpg" alt="VillaVi Logo" height=50% width=50%>
+            </a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -47,6 +49,7 @@ $dataResult = tampilPackages($conn);
                 data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -150,40 +153,32 @@ $dataResult = tampilPackages($conn);
     </div>
 
     <!-- Footer -->
-    <footer>
-        <nav>
-            <ul class="navigation">
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="portofolio.html">PORTFOLIO</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+    <section id="footer" class="footer">
+        <nav class="footer-container">
+            <ul class="footer-navigation">
+                <li><a href="home.php">HOME</a></li>
+                <li><a href="about.php">ABOUT</a></li>
+                <li><a href="services.php">SERVICES</a></li>
+                <li><a href="portofolio.php">PORTFOLIO</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
             </ul>
             <ul class="social-links">
-                <li><a href="#">EMAIL</a></li>
-                <li><a href="#">INSTAGRAM</a></li>
-                <li><a href="#">MAPS</a></li>
-                <li><a href="#">WHATSAPP</a></li>
+                <li><a href="mailto:villavithevenue@gmail.com">EMAIL</a></li>
+                <li><a href="https://www.instagram.com/villavi.the.venue" target="_blank">INSTAGRAM</a></li>
+                <li><a href="https://maps.app.goo.gl/N23mAheD9p1kQBAh8" target="_blank">MAPS</a></li>
+                <li><a href="https://wa.me/6289696476888" target="_blank">WHATSAPP</a></li>
             </ul>
-        </nav>
-        <div class="title">
-            <h1>VILLAVI THE VENUE</h1>
-            <p>Weddings and Events</p>
-        </div>
-    </footer>
 
-    <!-- Footer -->
-    <footer class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="long-hr-container">
-                        <hr class="long-hr" />
-                    </div>
-                    <p>&copy;2024 Villavi The Venue | ALL RIGHTS RESERVED</p>
-                    <p>DESIGN BY GENERASI TATAP LAYAR</p>
-                </div>
-            </div>
+        </nav>
+        <nav class="logo">
+            <img src="VillaVi_Logo.png" alt="VillaVi Logo">
+        </nav>
+    </section>
+
+    <footer class="copyright">
+        <div class="copyright-content">
+            <p>©2024 VillaVi The Venue | ALL RIGHTS RESERVED<br>
+                | DESIGN BY GENERASI TATAP LAYAR</p>
         </div>
     </footer>
 

@@ -1,37 +1,37 @@
 /* Main Page  */
 @font-face {
-  font-family: 'Raleway';
-  src: url('assets/font/Raleway/static/Raleway-SemiBold.ttf') format('truetype');
-  font-weight: 600; 
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-SemiBold.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('assets/font/Raleway/static/Raleway-Medium.ttf') format('truetype');
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-Medium.ttf") format("truetype");
   font-weight: 500; /* Medium */
   font-style: normal;
 }
 
-.main-header{
-  width: 100%;              /* Lebar penuh halaman */
-  height: 52px;             /* Tinggi sesuai Figma */
-  background-color: #CBD3C9; /* Warna latar belakang */
-  display: flex;            /* Menengahkan konten */
-  align-items: center;      /* Teks di tengah vertikal */
-  justify-content: center;  /* Teks di tengah horizontal */
-  font-family: 'Raleway', sans-serif; /* Font Raleway */
-  font-weight: 600;         
-  font-size: 12px;          /* Ukuran font */
-  color: #000;              /* Warna font hitam */
+.main-header {
+  width: 100%; /* Lebar penuh halaman */
+  height: 52px; /* Tinggi sesuai Figma */
+  background-color: #cbd3c9; /* Warna latar belakang */
+  display: flex; /* Menengahkan konten */
+  align-items: center; /* Teks di tengah vertikal */
+  justify-content: center; /* Teks di tengah horizontal */
+  font-family: "Raleway", sans-serif; /* Font Raleway */
+  font-weight: 600;
+  font-size: 12px; /* Ukuran font */
+  color: #000; /* Warna font hitam */
   text-transform: uppercase; /* Jika perlu huruf kapital */
-  top: 0;                   /* Posisi atas halaman */
-  left: 0;                  /* Mulai dari sisi kiri */
-  letter-spacing: 0.10em;
+  top: 0; /* Posisi atas halaman */
+  left: 0; /* Mulai dari sisi kiri */
+  letter-spacing: 0.1em;
 }
 
 .navbar {
-  background-color: #CBD3C9;
+  background-color: #cbd3c9;
   width: 100%; /* Lebar penuh */
   height: 246px;
   padding: 0; /* Menghilangkan padding default */
@@ -44,7 +44,7 @@
 }
 
 .navbar-nav .nav-item .nav-link {
-  font-family: 'Raleway', sans-serif !important;
+  font-family: "Raleway", sans-serif !important;
   font-weight: 500 !important; /* Medium */
   font-size: 18px !important; /* Ukuran font */
   color: #000;
@@ -64,7 +64,6 @@
 .nav-link:hover {
   color: #007bff;
 }
-
 
 /* Main Page - Hero Section */
 .hero-section {
@@ -92,53 +91,50 @@ footer {
 /* HERO */
 
 @font-face {
-  font-family: 'CormorantGaramond-Regular';
-  src: url('assets/font/CormorantGaramond-Regular.ttf') format('truetype');
-  font-weight: 400; 
+  font-family: "CormorantGaramond-Regular";
+  src: url("assets/font/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CormorantGaramond-Bold';
-  src: url('assets/font/CormorantGaramond-Bold.ttf') format('truetype');
-  font-weight: 700; 
+  font-family: "CormorantGaramond-Bold";
+  src: url("assets/font/CormorantGaramond-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CormorantGaramond-Medium';
-  src: url('assets/font/CormorantGaramond-Medium.ttf') format('truetype');
-  font-weight: 500; 
+  font-family: "CormorantGaramond-Medium";
+  src: url("assets/font/CormorantGaramond-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CormorantGaramond-Ligth';
-  src: url('assets/font/CormorantGaramond-Ligth.ttf') format('truetype');
-  font-weight: 300; 
+  font-family: "CormorantGaramond-Ligth";
+  src: url("assets/font/CormorantGaramond-Ligth.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
 }
 
 .hero {
   width: 100%;
   height: 680px;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.3), 
-    rgba(0, 0, 0, 0.3)
-  ),
-  url("assets/images/Home_Banner.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/images/Home_Banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #FFFAFA;
+  color: #fffafa;
 }
 
 .hero-btn {
-  background-color: #A4AEA2;
+  background-color: #a4aea2;
   width: 235px;
   height: 52px;
-  color: white !important;  
+  color: white !important;
   letter-spacing: 0.08em;
   text-align: center;
   line-height: 50px;
@@ -147,17 +143,17 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   font-size: 13px;
-  text-decoration: none !important; 
-  transition: all 0.3s ease-in-out; 
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero-btn:hover {
-  background-color: #8D968B;
+  background-color: #8d968b;
 }
 
 .hero-content {
   text-align: center;
-  color: #FFFAFA;
+  color: #fffafa;
 }
 
 .title {
@@ -173,7 +169,7 @@ footer {
   color: #fffafa;
   font-family: "Cormorant Garamond", serif;
   font-size: 24px;
-  margin-top: 0; 
+  margin-top: 0;
   letter-spacing: 0.1em;
   font-weight: 300;
 }
@@ -184,8 +180,6 @@ footer {
   font-weight: 700;
   letter-spacing: 0.1em;
 }
-
-
 
 .hero-banner {
   display: block;
@@ -198,10 +192,10 @@ footer {
 }
 
 /* Main Page - About Section */
-.about{
+.about {
   width: 100%;
   height: 1074px;
-  background-color: #FFFAFA;
+  background-color: #fffafa;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -212,10 +206,10 @@ footer {
 }
 
 .about-btn {
-  background-color: #A4AEA2;
+  background-color: #a4aea2;
   width: 259px;
   height: 52px;
-  color: white !important;  
+  color: white !important;
   letter-spacing: 0.08em;
   text-align: center;
   line-height: 50px;
@@ -224,15 +218,15 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   font-size: 12px;
-  text-decoration: none !important; 
+  text-decoration: none !important;
   transition: all 0.3s ease-in-out;
 }
 
 .about-btn:hover {
-  background-color: #8D968B;
+  background-color: #8d968b;
 }
 
-.container-about{
+.container-about {
   padding: 50px 20px;
 }
 
@@ -241,18 +235,17 @@ footer {
   font-weight: 400;
   font-size: 20px;
   max-width: 900px; /* Atur lebar maksimum sesuai keinginan */
-  margin: 0 auto;   /* Membuat teks terpusat di tengah */
-  padding: 0 50px;  /* Menambahkan padding untuk memberi jarak dengan tepi */
+  margin: 0 auto; /* Membuat teks terpusat di tengah */
+  padding: 0 50px; /* Menambahkan padding untuk memberi jarak dengan tepi */
   text-align: center; /* Memastikan teks tetap terpusat */
 }
 
 .vr {
   border-left: 2px solid black !important;
-  height: 100% !important; 
+  height: 100% !important;
 }
 
-
-.text-center .head-text{
+.text-center .head-text {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -261,7 +254,7 @@ footer {
   line-height: 1.4;
 }
 
-.text-center .head-text2{
+.text-center .head-text2 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   font-size: 72px;
@@ -271,7 +264,7 @@ footer {
   margin: 20px 0;
 }
 
-.text-center .head-text3{
+.text-center .head-text3 {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   color: #000000;
@@ -281,7 +274,8 @@ footer {
 
 /* Main Page - Service & Portfolio */
 /* Container utama */
-.container-service, .container-portfolio {
+.container-service,
+.container-portfolio {
   display: flex;
   height: 1109px; /* Mengisi tinggi layar */
 }
@@ -292,10 +286,10 @@ footer {
 }
 
 .service-btn {
-  background-color: #A4AEA2;
+  background-color: #a4aea2;
   width: 235px;
   height: 52px;
-  color: white !important;  
+  color: white !important;
   letter-spacing: 0.08em;
   text-align: center;
   line-height: 50px;
@@ -304,19 +298,19 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   font-size: 13px;
-  text-decoration: none !important; 
-  transition: all 0.3s ease-in-out; 
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
 }
 
 .service-btn:hover {
-  background-color: #8D968B;
+  background-color: #8d968b;
 }
 
 .portfolio-btn {
-  background-color: #A4AEA2;
+  background-color: #a4aea2;
   width: 235px;
   height: 52px;
-  color: white !important;  
+  color: white !important;
   letter-spacing: 0.08em;
   text-align: center;
   line-height: 50px;
@@ -325,12 +319,12 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   font-size: 13px;
-  text-decoration: none !important; 
-  transition: all 0.3s ease-in-out; 
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolio-btn:hover {
-  background-color: #8D968B;
+  background-color: #8d968b;
 }
 
 .items-primary img {
@@ -388,15 +382,15 @@ footer {
   width: 100%;
   height: 500px;
   display: flex;
-  justify-content: center; 
-  align-items: center;    
-  background-color: #FFFAFA;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffafa;
 }
 
 .camera-360 img {
   height: 350px;
-  width: auto; 
-  max-width: 100%; 
+  width: auto;
+  max-width: 100%;
 }
 
 /* Main Page - Location */
@@ -406,39 +400,37 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFAFA;
-  padding: 0 80px; 
+  background-color: #fffafa;
+  padding: 0 80px;
   box-sizing: border-box;
 }
 
 .location iframe {
   width: 100%;
   max-width: 100%;
-  height: 100%; 
+  height: 100%;
   border: none;
-  
 }
 
 /* Main Page - Footer */
 .footer {
   width: 100%;
   height: 257px;
-  background-color: #FFFAFA; 
+  background-color: #fffafa;
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
-  padding: 0 180px; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 180px;
   box-sizing: border-box;
-  border-bottom: 1px solid #7A7A7A;
+  border-bottom: 1px solid #7a7a7a;
 }
-
 
 .footer-navigation {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .footer-navigation li a {
@@ -451,7 +443,7 @@ footer {
 }
 
 .footer-navigation li a:hover {
-  color: #A4AEA2; /* Warna saat di-hover */
+  color: #a4aea2; /* Warna saat di-hover */
 }
 
 .social-links {
@@ -459,7 +451,7 @@ footer {
   margin-top: 20px;
   padding: 0;
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .social-links li a {
@@ -472,7 +464,7 @@ footer {
 }
 
 .social-links li a:hover {
-  color: #A4AEA2;
+  color: #a4aea2;
 }
 
 .logo {
@@ -483,10 +475,9 @@ footer {
 
 .logo img {
   height: 127px;
-  width: auto; 
-  object-fit: contain; 
+  width: auto;
+  object-fit: contain;
 }
-
 
 /* Main Page - Footer Copyright*/
 .copyright {
@@ -495,7 +486,7 @@ footer {
   display: flex;
   justify-content: center; /* Posisikan teks di tengah secara horizontal */
   align-items: center; /* Posisikan teks di tengah secara vertikal */
-  background-color: #FFFAFA; /* Opsional, warna background footer */
+  background-color: #fffafa; /* Opsional, warna background footer */
   box-sizing: border-box;
 }
 
@@ -504,7 +495,7 @@ footer {
   font-family: "Raleway", sans-serif; /* Font keluarga */
   font-weight: 400;
   font-size: 11px; /* Ukuran font */
-  color: #7A7A7A; /* Warna teks */
+  color: #7a7a7a; /* Warna teks */
   text-align: center; /* Teks diatur ke tengah */
 }
 /* <================================================================================>*/
@@ -514,15 +505,13 @@ footer {
 .hero-about {
   width: 100%;
   height: 291px;
-  background:
-  url("assets/images/Aboutus_Banner.jpg") center/cover no-repeat;
+  background: url("assets/images/Aboutus_Banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #FFFAFA;
+  color: #fffafa;
 }
-
 
 /* TEXT BANNER HOME */
 .text-white {
@@ -610,7 +599,6 @@ footer {
     display: none; /* Hide hero image on very small screens */
   }
 }
-
 
 /* ABOUT */
 /* Kanan gambar */
@@ -1410,4 +1398,22 @@ footer p {
 .lead {
   max-width: 600px;
   margin: 0 auto;
+}
+/* 360 */
+#camera-360 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Tinggi area 360 */
+  overflow: hidden;
+  padding: 20px 0; /* Tambahkan ruang di atas dan bawah */
+  margin: 30px 0; /* Tambahkan ruang 20px di luar elemen atas dan bawah */
+}
+
+#viewerCanvas {
+  width: 90%; /* Lebar lebih kecil, sekitar 60% dari container */
+  max-width: 980px; /* Lebar maksimum untuk mencegah tampilan terlalu besar */
+  height: auto; /* Otomatis menyesuaikan tinggi sesuai aspek rasio */
+  border-radius: 10px; /* Opsional: sudut bulat untuk estetika */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
 }
