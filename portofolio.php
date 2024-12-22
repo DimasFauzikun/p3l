@@ -23,8 +23,8 @@ $portfolios = fetchPortfolios($conn);
 
 <body>
     <!-- Header -->
-    <header class="text-center py-3 bg-light">
-        <p class="text-uppercase small">Tailoring extraordinary experiences for you</p>
+    <header class="main-header">
+        Tailoring extraordinary experiences for you
     </header>
 
     <!-- Navbar -->

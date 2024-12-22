@@ -160,6 +160,7 @@ $dataResult = tampilPackages($conn);
             color: white;
             padding: 1rem;
             overflow-y: auto;
+            transition: width 0.3s ease;
         }
 
         .sidebar a {
@@ -176,6 +177,42 @@ $dataResult = tampilPackages($conn);
 
         .content {
             padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                margin-left: 0;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .sidebar a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .sidebar {
+                padding: 0.5rem;
+            }
+
+            .sidebar a {
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 10px;
+            }
         }
     </style>
 </head>

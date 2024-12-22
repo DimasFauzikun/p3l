@@ -75,6 +75,47 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             text-align: center;
             margin: 10px 0;
         }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            body {
+                margin-left: 200px;
+            }
+
+            .sidebar {
+                width: 200px;
+            }
+
+            .calendar {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            .calendar-day {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                margin-left: 0;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .calendar {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5px;
+            }
+
+            .calendar-day {
+                padding: 6px;
+            }
+        }
     </style>
 </head>
 
