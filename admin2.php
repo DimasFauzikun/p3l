@@ -145,6 +145,33 @@ $dataResult = tampilServices($conn);
         .content {
             padding: 20px;
         }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            body {
+                margin-left: 200px;
+            }
+
+            .sidebar {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                margin-left: 0;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 

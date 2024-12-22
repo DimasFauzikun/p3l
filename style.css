@@ -1,39 +1,37 @@
 /* Main Page  */
 @font-face {
-  font-family: 'Raleway';
-  src: url('assets/font/Raleway/static/Raleway-SemiBold.ttf') format('truetype');
-  font-weight: 600; 
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-SemiBold.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('assets/font/Raleway/static/Raleway-Medium.ttf') format('truetype');
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-Medium.ttf") format("truetype");
   font-weight: 500; /* Medium */
   font-style: normal;
 }
 
-
-
-.main-header{
-  width: 100%;              /* Lebar penuh halaman */
-  height: 52px;             /* Tinggi sesuai Figma */
-  background-color: #CBD3C9; /* Warna latar belakang */
-  display: flex;            /* Menengahkan konten */
-  align-items: center;      /* Teks di tengah vertikal */
-  justify-content: center;  /* Teks di tengah horizontal */
-  font-family: 'Raleway', sans-serif; /* Font Raleway */
-  font-weight: 600;         
-  font-size: 12px;          /* Ukuran font */
-  color: #000;              /* Warna font hitam */
+.main-header {
+  width: 100%; /* Lebar penuh halaman */
+  height: 52px; /* Tinggi sesuai Figma */
+  background-color: #cbd3c9; /* Warna latar belakang */
+  display: flex; /* Menengahkan konten */
+  align-items: center; /* Teks di tengah vertikal */
+  justify-content: center; /* Teks di tengah horizontal */
+  font-family: "Raleway", sans-serif; /* Font Raleway */
+  font-weight: 600;
+  font-size: 12px; /* Ukuran font */
+  color: #000; /* Warna font hitam */
   text-transform: uppercase; /* Jika perlu huruf kapital */
-  top: 0;                   /* Posisi atas halaman */
-  left: 0;                  /* Mulai dari sisi kiri */
-  letter-spacing: 0.10em;
+  top: 0; /* Posisi atas halaman */
+  left: 0; /* Mulai dari sisi kiri */
+  letter-spacing: 0.1em;
 }
 
 .navbar {
-  background-color: #CBD3C9;
+  background-color: #cbd3c9;
   width: 100%; /* Lebar penuh */
   height: 246px;
   padding: 0; /* Menghilangkan padding default */
@@ -46,7 +44,7 @@
 }
 
 .navbar-nav .nav-item .nav-link {
-  font-family: 'Raleway', sans-serif !important;
+  font-family: "Raleway", sans-serif !important;
   font-weight: 500 !important; /* Medium */
   font-size: 18px !important; /* Ukuran font */
   color: #000;
@@ -67,8 +65,8 @@
   color: #007bff;
 }
 
-
 /* Main Page - Hero Section */
+/* Gaya umum */
 .hero-section {
   display: flex;
   align-items: center;
@@ -76,6 +74,7 @@
   text-align: center;
   color: #fff;
   padding: 2rem;
+  flex-direction: column; /* Tambahkan agar tampilan lebih fleksibel */
 }
 
 .navbar-brand {
@@ -91,57 +90,91 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Media queries untuk responsivitas */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 1.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
+}
+
 /* HERO */
 
 @font-face {
-  font-family: 'CormorantGaramond-Regular';
-  src: url('assets/font/CormorantGaramond-Regular.ttf') format('truetype');
-  font-weight: 400; 
+  font-family: "CormorantGaramond-Regular";
+  src: url("assets/font/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CormorantGaramond-Bold';
-  src: url('assets/font/CormorantGaramond-Bold.ttf') format('truetype');
-  font-weight: 700; 
+  font-family: "CormorantGaramond-Bold";
+  src: url("assets/font/CormorantGaramond-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CormorantGaramond-Medium';
-  src: url('assets/font/CormorantGaramond-Medium.ttf') format('truetype');
-  font-weight: 500; 
+  font-family: "CormorantGaramond-Medium";
+  src: url("assets/font/CormorantGaramond-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CormorantGaramond-Ligth';
-  src: url('assets/font/CormorantGaramond-Ligth.ttf') format('truetype');
-  font-weight: 300; 
+  font-family: "CormorantGaramond-Ligth";
+  src: url("assets/font/CormorantGaramond-Ligth.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
 }
 
 .hero {
   width: 100%;
   height: 680px;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.3), 
-    rgba(0, 0, 0, 0.3)
-  ),
-  url("assets/images/Home_Banner.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/images/Home_Banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #FFFAFA;
+  color: #fffafa;
   scroll-margin-top: 200px;
 }
 
 .hero-btn {
-  background-color: #A4AEA2;
+  background-color: #a4aea2;
   width: 235px;
   height: 52px;
-  color: white !important;  
+  color: white !important;
   letter-spacing: 0.08em;
   text-align: center;
   line-height: 50px;
@@ -150,17 +183,17 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   font-size: 13px;
-  text-decoration: none !important; 
-  transition: all 0.3s ease-in-out; 
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero-btn:hover {
-  background-color: #8D968B;
+  background-color: #8d968b;
 }
 
 .hero-content {
   text-align: center;
-  color: #FFFAFA;
+  color: #fffafa;
 }
 
 .title {
@@ -176,7 +209,7 @@ footer {
   color: #fffafa;
   font-family: "Cormorant Garamond", serif;
   font-size: 24px;
-  margin-top: 0; 
+  margin-top: 0;
   letter-spacing: 0.1em;
   font-weight: 300;
 }
@@ -188,8 +221,6 @@ footer {
   letter-spacing: 0.1em;
 }
 
-
-
 .hero-banner {
   display: block;
   position: absolute;
@@ -200,25 +231,28 @@ footer {
   aspect-ratio: 1 / 0.9;
 }
 
+/* --------------------------------------------------------- */
 /* Main Page - About Section */
-.about{
+/* Gaya umum */
+.about {
   width: 100%;
-  height: 1074px;
-  background-color: #FFFAFA;
+  height: auto; /* Sesuaikan tinggi untuk konten fleksibel */
+  background-color: #fffafa;
   align-items: center;
   justify-content: center;
   text-align: center;
   display: flex;
+  flex-direction: column; /* Untuk tata letak vertikal pada layar kecil */
   margin: 0;
   padding: 0;
   scroll-margin-top: -80px;
 }
 
 .about-btn {
-  background-color: #A4AEA2;
+  background-color: #a4aea2;
   width: 259px;
   height: 52px;
-  color: white !important;  
+  color: white !important;
   letter-spacing: 0.08em;
   text-align: center;
   line-height: 50px;
@@ -227,15 +261,15 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   font-size: 12px;
-  text-decoration: none !important; 
+  text-decoration: none !important;
   transition: all 0.3s ease-in-out;
 }
 
 .about-btn:hover {
-  background-color: #8D968B;
+  background-color: #8d968b;
 }
 
-.container-about{
+.container-about {
   padding: 50px 20px;
 }
 
@@ -243,19 +277,18 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-size: 20px;
-  max-width: 900px; /* Atur lebar maksimum sesuai keinginan */
-  margin: 0 auto;   /* Membuat teks terpusat di tengah */
-  padding: 0 50px;  /* Menambahkan padding untuk memberi jarak dengan tepi */
-  text-align: center; /* Memastikan teks tetap terpusat */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 50px;
+  text-align: center;
 }
 
 .vr {
   border-left: 2px solid black !important;
-  height: 100% !important; 
+  height: 100% !important;
 }
 
-
-.text-center .head-text{
+.text-center .head-text {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -264,7 +297,7 @@ footer {
   line-height: 1.4;
 }
 
-.text-center .head-text2{
+.text-center .head-text2 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   font-size: 72px;
@@ -274,7 +307,7 @@ footer {
   margin: 20px 0;
 }
 
-.text-center .head-text3{
+.text-center .head-text3 {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   color: #000000;
@@ -282,9 +315,80 @@ footer {
   letter-spacing: 0.1em;
 }
 
+/* Media Queries untuk Responsivitas */
+@media (max-width: 1024px) {
+  .text-center.wrap-text {
+    font-size: 18px;
+    padding: 0 30px;
+    max-width: 700px;
+  }
+
+  .text-center .head-text2 {
+    font-size: 56px;
+  }
+
+  .text-center .head-text3 {
+    font-size: 18px;
+  }
+
+  .about-btn {
+    width: 230px;
+    height: 48px;
+    line-height: 46px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-center.wrap-text {
+    font-size: 16px;
+    padding: 0 20px;
+    max-width: 600px;
+  }
+
+  .text-center .head-text2 {
+    font-size: 48px;
+  }
+
+  .text-center .head-text3 {
+    font-size: 16px;
+  }
+
+  .about-btn {
+    width: 200px;
+    height: 42px;
+    line-height: 40px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-center.wrap-text {
+    font-size: 14px;
+    padding: 0 10px;
+    max-width: 100%;
+  }
+
+  .text-center .head-text2 {
+    font-size: 36px;
+  }
+
+  .text-center .head-text3 {
+    font-size: 14px;
+  }
+
+  .about-btn {
+    width: 180px;
+    height: 38px;
+    line-height: 36px;
+    font-size: 9px;
+  }
+}
+
 /* Main Page - Service & Portfolio */
 /* Container utama */
-.container-service, .container-portfolio {
+.container-service,
+.container-portfolio {
   display: flex;
   height: 1109px; /* Mengisi tinggi layar */
 }
@@ -294,32 +398,14 @@ footer {
   flex: 1;
 }
 
-.service-btn {
-  background-color: #A4AEA2;
-  width: 235px;
-  height: 52px;
-  color: white !important;  
-  letter-spacing: 0.08em;
-  text-align: center;
-  line-height: 50px;
-  display: inline-block;
-  border-radius: 3px;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: normal;
-  font-size: 13px;
-  text-decoration: none !important; 
-  transition: all 0.3s ease-in-out; 
-}
-
-.service-btn:hover {
-  background-color: #8D968B;
-}
-
+/* ----------------------------------------------------- */
+/* Gaya Umum */
+.service-btn,
 .portfolio-btn {
-  background-color: #A4AEA2;
+  background-color: #a4aea2;
   width: 235px;
   height: 52px;
-  color: white !important;  
+  color: white !important;
   letter-spacing: 0.08em;
   text-align: center;
   line-height: 50px;
@@ -328,12 +414,13 @@ footer {
   font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   font-size: 13px;
-  text-decoration: none !important; 
-  transition: all 0.3s ease-in-out; 
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
 }
 
+.service-btn:hover,
 .portfolio-btn:hover {
-  background-color: #8D968B;
+  background-color: #8d968b;
 }
 
 .items-primary img {
@@ -342,13 +429,57 @@ footer {
   object-fit: cover; /* Agar gambar memenuhi area */
 }
 
+/* Media Queries untuk Responsivitas */
+@media (max-width: 1024px) {
+  .service-btn,
+  .portfolio-btn {
+    width: 200px;
+    height: 45px;
+    line-height: 43px;
+    font-size: 12px;
+  }
+
+  .items-primary img {
+    object-fit: contain; /* Pilihan yang lebih fleksibel untuk layar besar */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-btn,
+  .portfolio-btn {
+    width: 180px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 11px;
+  }
+
+  .items-primary img {
+    object-fit: cover; /* Menjaga proporsi gambar */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-btn,
+  .portfolio-btn {
+    width: 150px;
+    height: 35px;
+    line-height: 33px;
+    font-size: 10px;
+  }
+
+  .items-primary img {
+    object-fit: contain; /* Menyesuaikan gambar untuk layar kecil */
+  }
+}
+
 /* Teks */
+/* Gaya Umum */
 .items-secondary {
-  flex: 1; /* Proporsi 50% */
-  padding: 0 91px; /* Jarak teks ke gambar */
+  flex: 1;
+  padding: 0 91px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Pusatkan teks secara vertikal */
+  justify-content: center;
 }
 
 .head-text h1 {
@@ -369,7 +500,7 @@ footer {
   font-size: 20px;
   font-weight: bold;
   margin-top: 20px;
-  letter-spacing: 0.em;
+  letter-spacing: 0em;
 }
 
 .main-text {
@@ -379,6 +510,57 @@ footer {
   letter-spacing: 0.08em;
   margin-top: 10px;
   color: #333;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 1024px) {
+  .items-secondary {
+    padding: 0 50px; /* Kurangi padding untuk tablet besar */
+  }
+
+  .head-text h1 {
+    font-size: 48px; /* Perkecil ukuran font untuk tablet besar */
+  }
+
+  .sub-head-content,
+  .main-text {
+    font-size: 18px; /* Perkecil ukuran teks */
+  }
+}
+
+@media (max-width: 768px) {
+  .items-secondary {
+    padding: 0 30px; /* Kurangi padding lebih lanjut untuk tablet kecil */
+    text-align: center; /* Pusatkan teks untuk layar kecil */
+  }
+
+  .head-text h1 {
+    font-size: 36px; /* Ukuran font lebih kecil untuk tablet kecil */
+    text-align: center;
+  }
+
+  .sub-head-content,
+  .main-text {
+    font-size: 16px; /* Ukuran font yang lebih kecil */
+    line-height: 1.6; /* Sesuaikan spasi antar baris */
+  }
+}
+
+@media (max-width: 480px) {
+  .items-secondary {
+    padding: 0 15px; /* Minimal padding untuk ponsel */
+  }
+
+  .head-text h1 {
+    font-size: 28px; /* Ukuran font untuk ponsel */
+    text-align: center;
+  }
+
+  .sub-head-content,
+  .main-text {
+    font-size: 14px; /* Ukuran font lebih kecil untuk ponsel */
+    line-height: 1.5; /* Spasi antar baris yang lebih rapat */
+  }
 }
 
 .container-service > .items-primary:first-child img,
@@ -405,6 +587,35 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
 }
 
+/* Responsiveness */
+@media (max-width: 768px) {
+  #camera-360 {
+    height: 300px; /* Kurangi tinggi untuk tablet */
+    padding: 15px 0;
+    margin: 20px 0;
+  }
+
+  #viewerCanvas {
+    width: 95%; /* Lebar lebih besar pada tablet */
+    max-width: 700px; /* Sesuaikan dengan ukuran tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  #camera-360 {
+    height: 250px; /* Kurangi tinggi untuk ponsel */
+    padding: 10px 0;
+    margin: 15px 0;
+  }
+
+  #viewerCanvas {
+    width: 100%; /* Gunakan seluruh lebar untuk ponsel */
+    max-width: 480px; /* Lebar maksimum yang sesuai untuk layar kecil */
+    border-radius: 5px; /* Kurangi sudut bulat untuk layar kecil */
+  }
+}
+
+/* -------------------------------------------- */
 /* Main Page - Location */
 .location {
   width: 100%;
@@ -412,39 +623,61 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFAFA;
-  padding: 0 80px; 
+  background-color: #fffafa;
+  padding: 0 80px;
   box-sizing: border-box;
 }
 
 .location iframe {
   width: 100%;
   max-width: 100%;
-  height: 100%; 
+  height: 100%;
   border: none;
-  
 }
 
+/* Responsiveness */
+@media (max-width: 768px) {
+  .location {
+    height: 400px;
+    padding: 0 40px;
+  }
+
+  .location iframe {
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .location {
+    height: 300px;
+    padding: 0 20px;
+  }
+
+  .location iframe {
+    height: 100%;
+  }
+}
+
+/* -------------------------------------- */
 /* Main Page - Footer */
 .footer {
   width: 100%;
   height: 257px;
-  background-color: #FFFAFA; 
+  background-color: #fffafa;
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
-  padding: 0 180px; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 180px;
   box-sizing: border-box;
-  border-bottom: 1px solid #7A7A7A;
+  border-bottom: 1px solid #7a7a7a;
 }
-
 
 .footer-navigation {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .footer-navigation li a {
@@ -457,7 +690,7 @@ footer {
 }
 
 .footer-navigation li a:hover {
-  color: #A4AEA2; /* Warna saat di-hover */
+  color: #a4aea2; /* Warna saat di-hover */
 }
 
 .social-links {
@@ -465,7 +698,7 @@ footer {
   margin-top: 20px;
   padding: 0;
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .social-links li a {
@@ -478,7 +711,7 @@ footer {
 }
 
 .social-links li a:hover {
-  color: #A4AEA2;
+  color: #a4aea2;
 }
 
 .logo {
@@ -489,10 +722,56 @@ footer {
 
 .logo img {
   height: 127px;
-  width: auto; 
-  object-fit: contain; 
+  width: auto;
+  object-fit: contain;
 }
 
+/* Responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .footer-navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+}
 
 /* Main Page - Footer Copyright*/
 .copyright {
@@ -501,7 +780,7 @@ footer {
   display: flex;
   justify-content: center; /* Posisikan teks di tengah secara horizontal */
   align-items: center; /* Posisikan teks di tengah secara vertikal */
-  background-color: #FFFAFA; /* Opsional, warna background footer */
+  background-color: #fffafa; /* Opsional, warna background footer */
   box-sizing: border-box;
 }
 
@@ -510,10 +789,34 @@ footer {
   font-family: "Raleway", sans-serif; /* Font keluarga */
   font-weight: 400;
   font-size: 11px; /* Ukuran font */
-  color: #7A7A7A; /* Warna teks */
+  color: #7a7a7a; /* Warna teks */
   text-align: center; /* Teks diatur ke tengah */
 }
 
+/* Responsiveness */
+@media (max-width: 768px) {
+  .copyright {
+    height: auto;
+    padding: 10px;
+  }
+
+  .copyright-content p {
+    font-size: 10px; /* Ukuran font lebih kecil untuk tablet */
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .copyright {
+    height: auto;
+    padding: 10px;
+  }
+
+  .copyright-content p {
+    font-size: 9px; /* Ukuran font lebih kecil untuk ponsel */
+    padding: 0 5px;
+  }
+}
 
 /* <================================================================================>*/
 /* <================================================================================>*/
@@ -522,20 +825,20 @@ footer {
 .hero-about {
   width: 100%;
   height: 291px;
-  background:
-  url("assets/images/Aboutus_Banner.jpg") center/cover no-repeat;
+  background: url("assets/images/Aboutus_Banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #FFFAFA;
+  color: #fffafa;
 }
 
+/* ------------------------------------------------------ */
 /* About Page - About*/
 .container-about-page {
   width: 100%;
   height: 1110px;
-  background-color: #FFFAFA;
+  background-color: #fffafa;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -544,7 +847,7 @@ footer {
 }
 
 .left-bar {
-  background: #CBD3C9;
+  background: #cbd3c9;
   width: 443px;
   height: 1110px;
   position: absolute;
@@ -638,7 +941,7 @@ footer {
   position: absolute;
   left: 728px;
   top: 310px;
-  width: 479px; 
+  width: 479px;
   height: 486px;
 }
 
@@ -646,7 +949,7 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 14px;
-  align-items: center; 
+  align-items: center;
   justify-content: flex-start;
   left: 728px;
   top: 824px;
@@ -662,7 +965,7 @@ footer {
   position: relative;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
-  align-self: center; 
+  align-self: center;
   margin-bottom: -5px;
 }
 
@@ -677,41 +980,156 @@ footer {
   width: 175px;
   height: 36px;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: flex-start;
-  align-self: center; 
+  align-self: center;
 }
 
+/* ------------------------------------------------ */
+/* about us */
+/* Media Queries untuk Responsivitas */
+@media (max-width: 1024px) {
+  .container-about-page {
+    flex-direction: column; /* Mengatur tata letak menjadi kolom untuk layar kecil */
+    padding: 20px; /* Tambahkan padding untuk menghindari elemen terlalu rapat */
+  }
+
+  .left-bar {
+    width: 100%; /* Lebar penuh untuk layar lebih kecil */
+    height: auto; /* Tinggi otomatis */
+    position: relative; /* Ubah ke relative agar tidak tumpang tindih */
+  }
+
+  .container-about-page .content {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0; /* Hilangkan margin kiri */
+  }
+
+  .container-about-page .content img {
+    max-width: 90%; /* Sesuaikan ukuran gambar agar proporsional */
+    height: auto; /* Tinggi otomatis */
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .content .text {
+    max-width: 100%; /* Lebar penuh untuk teks */
+  }
+
+  .text .head-text-about-page,
+  .sub-head,
+  .text-content,
+  .connect {
+    position: relative; /* Ubah ke relative agar tata letak responsif */
+    left: 0;
+    top: 0;
+    width: auto;
+  }
+
+  .sub-head {
+    text-align: center; /* Pusatkan teks di layar kecil */
+  }
+
+  .text-content {
+    text-align: justify; /* Sesuaikan teks agar rapi */
+    margin-top: 20px;
+  }
+
+  .connect {
+    justify-content: center; /* Pusatkan elemen koneksi */
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-about-page .content img {
+    max-width: 100%; /* Gambar memenuhi layar */
+    height: auto;
+  }
+
+  .text .head-text-about-page {
+    font-size: 12px; /* Kurangi ukuran font */
+  }
+
+  .sub-head {
+    font-size: 24px; /* Sesuaikan ukuran font */
+  }
+
+  .text-content {
+    font-size: 12px; /* Kurangi ukuran font */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-about-page {
+    padding: 10px; /* Tambahkan padding lebih kecil */
+  }
+
+  .container-about-page .content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .text .head-text-about-page {
+    font-size: 10px; /* Ukuran font lebih kecil */
+  }
+
+  .sub-head {
+    font-size: 20px;
+  }
+
+  .text-content {
+    font-size: 10px;
+  }
+
+  .connect {
+    flex-direction: column; /* Atur ikon menjadi kolom */
+    gap: 10px;
+  }
+
+  .horizontal-divider {
+    width: 50px; /* Lebar divider lebih kecil */
+  }
+
+  .lets-connect {
+    text-align: center; /* Pusatkan teks */
+  }
+}
+
+/* ------------------------------------------------------- */
 /* About Page - Owner Profile*/
-.owner{
-  height: 980px;
+/* Gaya Umum */
+.owner {
+  height: auto; /* Tinggi dinamis */
   width: 100%;
   position: relative;
-  background-color: #FFFAFA;
+  background-color: #fffafa;
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 .profile {
   position: relative;
   width: 433px;
   height: 639px;
-  background: url("assets/images/profile_vikan.jpg") no-repeat center center/cover;
+  background: url("assets/images/profile_vikan.jpg") no-repeat center
+    center/cover;
   border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
 }
 
-
-.owner-profile{
+.owner-profile {
   height: 639px;
-  width: auto; 
+  width: auto;
   object-fit: cover;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .overlay {
@@ -756,102 +1174,201 @@ footer {
 }
 
 .owner-text {
-  margin-top: 50px; 
+  margin-top: 50px;
   text-align: center;
 }
 
-.owner-text1{
+.owner-text1 {
   color: #000000;
   font-family: "Cormorant Garamond", serif;
   font-size: 64px;
   letter-spacing: 0.08em;
   font-weight: 500;
-  margin: 0; 
-  line-height: 1; 
+  margin: 0;
+  line-height: 1;
 }
 
-.owner-text2{
+.owner-text2 {
   color: #000000;
   font-family: "Raleway", sans-serif;
   font-size: 24px;
   letter-spacing: 0.08em;
   font-weight: 300;
-  margin: 0; 
-  line-height: 1; 
-  display: block; 
+  margin: 0;
+  line-height: 1;
+  display: block;
 }
 
+/* Media Queries untuk Responsivitas */
+@media (max-width: 1024px) {
+  .profile {
+    width: 350px; /* Kurangi ukuran gambar */
+    height: 500px;
+  }
 
+  .owner-text1 {
+    font-size: 48px; /* Kurangi ukuran font */
+  }
 
+  .owner-text2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    width: 300px; /* Ukuran lebih kecil untuk tablet */
+    height: 400px;
+  }
+
+  .owner-text1 {
+    font-size: 36px;
+  }
+
+  .owner-text2 {
+    font-size: 18px;
+  }
+
+  .social-icons li {
+    width: 35px; /* Ukuran ikon lebih kecil */
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    width: 100%; /* Lebar penuh untuk ponsel */
+    height: auto; /* Tinggi otomatis agar proporsional */
+  }
+
+  .owner-text1 {
+    font-size: 28px;
+  }
+
+  .owner-text2 {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    gap: 10px; /* Kurangi jarak antar ikon */
+  }
+
+  .social-icons li {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ------------------------------------------------------------- */
 /* About Page - Villavi team*/
-.villavi-team{
-  height: 750px;
+.villavi-team {
+  height: auto; /* Sesuaikan tinggi agar konten fleksibel */
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FFFAFA;
+  background-color: #fffafa;
   font-family: "Cormorant Garamond", sans-serif;
+  padding: 20px;
 }
 
-.container-villavi-team{
+.container-villavi-team {
   padding: 50px 20px;
 }
 
-.villavi-team h1{
+.villavi-team h1 {
   color: #000000;
   font-family: "Cormorant Garamond", sans-serif;
   font-size: 40px;
   letter-spacing: 0.08em;
   font-weight: 600;
-  height: 76px;
-  top: 627.45px;
-  margin-top: 22px; 
+  margin-top: 22px;
+  text-align: center;
 }
 
-.card-profile h2{
+.card-profile h2 {
   color: #000000;
   font-family: "Cormorant Garamond", sans-serif;
   font-size: 32px;
   letter-spacing: 0.08em;
   font-weight: 600;
-  height: 32.86px;
-  top: 664.18px;
+  text-align: center;
 }
 
-.card-profile p{
+.card-profile p {
   color: #000000;
   font-family: "Raleway", sans-serif;
   font-size: 12px;
   letter-spacing: 0.08em;
   font-weight: 300;
-  height: 10.95px;
-  top: 664.18px;
+  text-align: center;
 }
 
-
-.team-profile{
+.team-profile {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 90px;
+  gap: 30px; /* Kurangi gap untuk layar kecil */
 }
 
-.card-profile{
+.card-profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FFFAFA;
+  background-color: #fffafa;
   color: #000;
+  max-width: 100%;
 }
 
-.card-profile img{
-  height: 484.55px;
-  width: 270px;
-  min-width: 240px;
+.card-profile img {
+  height: auto;
+  width: 100%;
+  max-width: 270px;
   object-fit: cover;
   object-position: center;
   border-radius: 4px;
   margin: 0 auto 20px;
+}
+
+/* Media Query untuk Tablet */
+@media (max-width: 768px) {
+  .villavi-team h1 {
+    font-size: 32px;
+  }
+
+  .card-profile h2 {
+    font-size: 28px;
+  }
+
+  .card-profile p {
+    font-size: 10px;
+  }
+
+  .team-profile {
+    gap: 20px;
+  }
+}
+
+/* Media Query untuk Ponsel */
+@media (max-width: 480px) {
+  .villavi-team h1 {
+    font-size: 24px;
+  }
+
+  .card-profile h2 {
+    font-size: 24px;
+  }
+
+  .card-profile p {
+    font-size: 8px;
+  }
+
+  .container-villavi-team {
+    padding: 20px;
+  }
+
+  .team-profile {
+    gap: 15px;
+  }
 }
 
 /* Service Page - Hero*/
@@ -859,21 +1376,20 @@ footer {
 .hero-service {
   width: 100%;
   height: 291px;
-  background:
-  url("assets/images/Ourservice_Banner.jpg") center/cover no-repeat;
+  background: url("assets/images/Ourservice_Banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #FFFAFA;
+  color: #fffafa;
 }
 
 /* <========================================================> */
 /* <========================================================> */
 /* RESPONSIVE DESIGN */
 @media (max-width: 1200px) {
-    .custom-heading {
-      font-size: 2.5rem; 
+  .custom-heading {
+    font-size: 2.5rem;
     .custom-text {
       font-size: 1.25rem;
     }
@@ -891,10 +1407,10 @@ footer {
     padding: 2rem 1rem;
   }
   .custom-heading {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
   .custom-text {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
   .hero-banner {
     position: static;
@@ -926,7 +1442,7 @@ footer {
     text-align: center;
   }
   .custom-heading {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
   .custom-text {
     font-size: 0.8rem;
@@ -935,7 +1451,7 @@ footer {
     font-size: 16px;
   }
   .hero-banner {
-    display: none; 
+    display: none;
   }
 }
 
@@ -983,7 +1499,7 @@ footer {
   transform: scale(1.1);
 }
 
-.profile-name{
+.profile-name {
   margin-top: 20px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -1223,6 +1739,7 @@ button:hover {
   background-color: #a2bfa2;
 }
 
+/* --------------------------------------------- */
 /* teks di bawah buat sevices */
 .center-container {
   max-width: 600px; /* Membatasi lebar teks */
@@ -1246,6 +1763,30 @@ button:hover {
 
 .inquiry-button:hover {
   background-color: #909f90;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .center-container {
+    padding: 15px;
+  }
+
+  .inquiry-button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .center-container {
+    max-width: 100%; /* Memaksimalkan lebar pada layar kecil */
+    padding: 10px;
+  }
+
+  .inquiry-button {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
 }
 
 /* portofolio */
