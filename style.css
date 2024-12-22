@@ -1,3 +1,4 @@
+
 /* Import Font  */
 
 @font-face {
@@ -14,24 +15,8 @@
   font-style: normal;
 }
 
-.main-header {
-  width: 100%; /* Lebar penuh halaman */
-  height: 52px; /* Tinggi sesuai Figma */
-  background-color: #cbd3c9; /* Warna latar belakang */
-  display: flex; /* Menengahkan konten */
-  align-items: center; /* Teks di tengah vertikal */
-  justify-content: center; /* Teks di tengah horizontal */
-  font-family: "Raleway", sans-serif; /* Font Raleway */
-  font-weight: 600;
-  font-size: 12px; /* Ukuran font */
-  color: #000; /* Warna font hitam */
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("assets/font/Raleway/static/Raleway-Regular.ttf") format("truetype");
-  font-weight: 400; /* Medium */
-  font-style: normal;
-}
+/* Main Page  */
+
 
 @font-face {
   font-family: "Raleway";
@@ -172,33 +157,6 @@ footer {
 
 /* HERO */
 
-@font-face {
-  font-family: "CormorantGaramond-Regular";
-  src: url("assets/font/CormorantGaramond-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "CormorantGaramond-Bold";
-  src: url("assets/font/CormorantGaramond-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "CormorantGaramond-Medium";
-  src: url("assets/font/CormorantGaramond-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "CormorantGaramond-Ligth";
-  src: url("assets/font/CormorantGaramond-Ligth.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
 
 .hero {
   width: 100%;
@@ -1783,14 +1741,6 @@ button:hover {
   background-color: #a2bfa2;
 }
 
-/* --------------------------------------------- */
-/* teks di bawah buat sevices */
-.center-container {
-  max-width: 600px; /* Membatasi lebar teks */
-  text-align: center; /* Membuat teks berada di tengah */
-  margin: 0 auto; /* Center secara horizontal */
-  padding: 20px;
-}
 
 .inquiry-button {
   background-color: #a8b5a8;
