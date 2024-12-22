@@ -24,46 +24,88 @@
   font-weight: 600;
   font-size: 12px; /* Ukuran font */
   color: #000; /* Warna font hitam */
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-ExtraLigth.ttf")
+    format("truetype");
+  font-weight: 200; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-Bold.ttf") format("truetype");
+  font-weight: 700; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-Ligth.ttf") format("truetype");
+  font-weight: 300; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/font/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/font/CormorantGaramond-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/font/CormorantGaramond-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/font/CormorantGaramond-Ligth.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("assets/font/CormorantGaramond-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/* Main Page  */
+
+.main-header {
+  width: 100%; /* Lebar penuh halaman */
+  height: 52px; /* Tinggi sesuai Figma */
+  background-color: #cbd3c9; /* Warna latar belakang */
+  display: flex; /* Menengahkan konten */
+  align-items: center; /* Teks di tengah vertikal */
+  justify-content: center; /* Teks di tengah horizontal */
+  font-family: "Raleway", sans-serif; /* Font Raleway */
+  font-weight: 600;
+  font-size: 12px; /* Ukuran font */
+  color: #000;
   text-transform: uppercase; /* Jika perlu huruf kapital */
   top: 0; /* Posisi atas halaman */
   left: 0; /* Mulai dari sisi kiri */
   letter-spacing: 0.1em;
-}
-
-.navbar {
-  background-color: #cbd3c9;
-  width: 100%; /* Lebar penuh */
-  height: 246px;
-  padding: 0; /* Menghilangkan padding default */
-  background-color: white; /* Warna latar belakang navbar */
-}
-
-.navbar-brand img {
-  max-width: 100%; /* Sesuaikan ukuran logo */
-  height: auto; /* Sesuaikan proporsi logo */
-}
-
-.navbar-nav .nav-item .nav-link {
-  font-family: "Raleway", sans-serif !important;
-  font-weight: 500 !important; /* Medium */
-  font-size: 18px !important; /* Ukuran font */
-  color: #000;
-  text-decoration: none;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-}
-
-.nav-item {
-  display: inline-block; /* Pastikan item ditampilkan dalam baris yang sama */
-}
-
-.nav-link:hover {
-  color: #007bff;
-}
+} /* Warna font hitam */
 
 /* Main Page - Hero Section */
 /* Gaya umum */

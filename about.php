@@ -161,10 +161,10 @@
   <section id="footer" class="footer">
     <nav class="footer-container">
       <ul class="footer-navigation">
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="services.html">SERVICES</a></li>
-        <li><a href="portofolio.html">PORTFOLIO</a></li>
+        <li><a href="home.php">HOME</a></li>
+        <li><a href="about.php">ABOUT</a></li>
+        <li><a href="services.php">SERVICES</a></li>
+        <li><a href="portofolio.php">PORTFOLIO</a></li>
         <li><a href="contact.php">CONTACT</a></li>
       </ul>
       <ul class="social-links">
