@@ -1,4 +1,5 @@
-/* Main Page  */
+/* Import Font  */
+
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-SemiBold.ttf") format("truetype");
@@ -1014,7 +1015,7 @@ footer {
 .lets-connect {
   color: #000000;
   text-align: left;
-  font-family: "Raleway-Bold", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -1428,6 +1429,7 @@ footer {
 
 /* <========================================================> */
 /* <========================================================> */
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 1200px) {
   .custom-heading {
@@ -2028,63 +2030,6 @@ a:hover {
     height: 200px; /* Lebih kecil pada ponsel */
   }
 }
-
-/* footer */
-
-/* footer Container */
-/* footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 100px;
-} */
-
-/* Navigation Menu */
-/* nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
-} */
-
-/* nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: gray;
-} */
-
-/* Title Styling */
-/* .title {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.title h1 {
-  font-size: 32px;
-  font-weight: normal;
-  letter-spacing: 2px;
-}
-
-.title p {
-  font-size: 14px;
-  color: gray;
-  margin-top: 5px;
-} */
 
 /* Responsive Design */
 @media (max-width: 1024px) {
