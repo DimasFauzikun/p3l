@@ -1,6 +1,4 @@
-
-/* Import Font  */
-
+/* Main Page  */
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-SemiBold.ttf") format("truetype");
@@ -12,6 +10,25 @@
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Medium.ttf") format("truetype");
   font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+.main-header {
+  width: 100%; /* Lebar penuh halaman */
+  height: 52px; /* Tinggi sesuai Figma */
+  background-color: #cbd3c9; /* Warna latar belakang */
+  display: flex; /* Menengahkan konten */
+  align-items: center; /* Teks di tengah vertikal */
+  justify-content: center; /* Teks di tengah horizontal */
+  font-family: "Raleway", sans-serif; /* Font Raleway */
+  font-weight: 600;
+  font-size: 12px; /* Ukuran font */
+  color: #000; /* Warna font hitam */
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400; /* Medium */
   font-style: normal;
 }
 
@@ -102,31 +119,18 @@
   flex-direction: column; /* Tambahkan agar tampilan lebih fleksibel */
 }
 
-.navbar{
-  height: 246px;
-  background-color: #FFFAFA;
-}
-
-.navbar-nav .nav-item {
-  margin-right: 31px; 
-}
-
-.navbar-nav .nav-item:last-child {
-  margin-right: 0;
-}
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .nav-link {
-  font-size: 20px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  color: #000;
-  text-decoration: none; 
+  font-size: 1rem;
 }
 
+footer {
+  font-size: 0.9rem;
+}
 
 /* Media queries untuk responsivitas */
 @media (max-width: 768px) {
@@ -140,9 +144,11 @@
 
   .nav-link {
     font-size: 0.9rem;
-    font-family: "Raleway", ;
   }
 
+  footer {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -158,10 +164,40 @@
     font-size: 0.8rem;
   }
 
+  footer {
+    font-size: 0.7rem;
+  }
 }
 
 /* HERO */
 
+@font-face {
+  font-family: "CormorantGaramond-Regular";
+  src: url("assets/font/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CormorantGaramond-Bold";
+  src: url("assets/font/CormorantGaramond-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CormorantGaramond-Medium";
+  src: url("assets/font/CormorantGaramond-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CormorantGaramond-Ligth";
+  src: url("assets/font/CormorantGaramond-Ligth.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
 
 .hero {
   width: 100%;
@@ -242,7 +278,7 @@
 /* Gaya umum */
 .about {
   width: 100%;
-  height: 1074px; /* Sesuaikan tinggi untuk konten fleksibel */
+  height: auto; /* Sesuaikan tinggi untuk konten fleksibel */
   background-color: #fffafa;
   align-items: center;
   justify-content: center;
@@ -506,20 +542,10 @@
   font-size: 20px;
   font-weight: bold;
   margin-top: 20px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0em;
 }
 
 .main-text {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
-  line-height: 1.8;
-  letter-spacing: 0.08em;
-  margin-top: 10px;
-  color: #333;
-}
-
-.portfolio .main-text {
-  width: 475px;
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   line-height: 1.8;
@@ -589,10 +615,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 574px; 
+  height: 400px; /* Tinggi area 360 */
   overflow: hidden;
-  padding: 20px 0; 
-  margin: 30px 0; 
+  padding: 20px 0; /* Tambahkan ruang di atas dan bawah */
+  margin: 30px 0; /* Tambahkan ruang 20px di luar elemen atas dan bawah */
 }
 
 #viewerCanvas {
@@ -988,7 +1014,7 @@
 .lets-connect {
   color: #000000;
   text-align: left;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway-Bold", sans-serif;
   font-size: 14px;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -1118,7 +1144,7 @@
 /* About Page - Owner Profile*/
 /* Gaya Umum */
 .owner {
-  height: 980px; 
+  height: auto; /* Tinggi dinamis */
   width: 100%;
   position: relative;
   background-color: #fffafa;
@@ -1127,7 +1153,7 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 .profile {
@@ -1278,7 +1304,7 @@
 /* ------------------------------------------------------------- */
 /* About Page - Villavi team*/
 .villavi-team {
-  height: 750px; /* Sesuaikan tinggi agar konten fleksibel */
+  height: auto; /* Sesuaikan tinggi agar konten fleksibel */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1297,8 +1323,6 @@
   font-size: 40px;
   letter-spacing: 0.08em;
   font-weight: 600;
-  height: 76px;
-  top: 627.45px;
   margin-top: 22px;
   text-align: center;
 }
@@ -1325,7 +1349,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 90px; 
+  gap: 30px; /* Kurangi gap untuk layar kecil */
 }
 
 .card-profile {
@@ -1404,7 +1428,6 @@
 
 /* <========================================================> */
 /* <========================================================> */
-
 /* RESPONSIVE DESIGN */
 @media (max-width: 1200px) {
   .custom-heading {
@@ -1758,6 +1781,14 @@ button:hover {
   background-color: #a2bfa2;
 }
 
+/* --------------------------------------------- */
+/* teks di bawah buat sevices */
+.center-container {
+  max-width: 600px; /* Membatasi lebar teks */
+  text-align: center; /* Membuat teks berada di tengah */
+  margin: 0 auto; /* Center secara horizontal */
+  padding: 20px;
+}
 
 .inquiry-button {
   background-color: #a8b5a8;
@@ -1997,6 +2028,63 @@ a:hover {
     height: 200px; /* Lebih kecil pada ponsel */
   }
 }
+
+/* footer */
+
+/* footer Container */
+/* footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 100px;
+} */
+
+/* Navigation Menu */
+/* nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+} */
+
+/* nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: gray;
+} */
+
+/* Title Styling */
+/* .title {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.title h1 {
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.title p {
+  font-size: 14px;
+  color: gray;
+  margin-top: 5px;
+} */
 
 /* Responsive Design */
 @media (max-width: 1024px) {
