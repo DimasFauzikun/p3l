@@ -129,19 +129,12 @@
     <div class="container-portfolio">
       <div class="items-secondary">
         <div class="head-text">
-          <h1>OUR SERVICES</h1>
+          <h1>PORTFOLIO</h1>
         </div>
         <div class="content">
-          <p class="sub-head-content">Our Event Vision</p>
-          <p class="main-text">Kami menciptakan pengalaman yang menghasilkan kenangan unik dan luar biasa di setiap kesempatan.
-            Setiap detail acara kami persiapkan dengan cermat untuk menciptakan pengalaman yang tak terlupakan.
-            Setiap pernikahan dirancang sesuai dengan keinginan pelanggan, menjadikannya perayaan yang istimewa
-            dan penuh makna pada momen-momen sentimental Anda.</p>
-          <p class="sub-head-content">Our Approach</p>
-          <p class="main-text">Untuk menciptakan pengalaman yang lebih baik, kami percaya bahwa mendengarkan adalah langkah pertama yang penting.
-            Kami bangga menawarkan pengalaman perencanaan yang mulus, memastikan setiap acara terlaksana dengan lancar, sempurna, dan elegan.
-            Kelancaran acara dan kepuasan pelanggan adalah prioritas utama kami.
-            Kami akan menjaga kesempurnaan acara, sehingga Anda dapat sepenuhnya menikmati perayaan bersama orang-orang tercinta</p>
+          <p class="main-text">Bersama VillaVi, kami tidak hanya merencanakan pernikahan, tetapi juga menciptakan pengalaman yang tak terlupakan. 
+            Kami berkomitmen untuk memberikan yang terbaik, melampaui ekspektasi Anda, dan menjadikan hari istimewa Anda sebagai refleksi sejati dari cinta dan gaya Anda. 
+            Setiap Janji kami adalah mewujudkan visi Anda menjadi kenyataan yang spektakuler, memastikan setiap momen perayaan Anda penuh keajaiban dan kenangan yang abadi.</p>
           <br><br>
           <a href="portofolio.php" class="portfolio-btn">OUR PORTFOLIO</a>
         </div>
@@ -156,6 +149,7 @@
   <section id="camera-360" class="camera-360">
     <canvas id="viewerCanvas"></canvas>
   </section>
+
   <script type="module">
     import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js';
 

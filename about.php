@@ -61,14 +61,8 @@
   </nav>
 
   <!-- Hero Section -->
-  <section
-    class="hero-section text-center text-white"
-    style="
-        background-image: url('Content\ 1\ -\ Opening.jpg');
-        height: 70vh;
-        background-size: cover;
-        background-position: center;
-      ">
+  <section class="hero-about">
+    <div class="hero-content"></div>
   </section>
 
   <!-- About -->

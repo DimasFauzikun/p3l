@@ -15,9 +15,6 @@
   font-style: normal;
 }
 
-/* Main Page  */
-
-
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-ExtraLigth.ttf")
@@ -105,18 +102,31 @@
   flex-direction: column; /* Tambahkan agar tampilan lebih fleksibel */
 }
 
+.navbar{
+  height: 246px;
+  background-color: #FFFAFA;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 31px; 
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .nav-link {
-  font-size: 1rem;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none; 
 }
 
-footer {
-  font-size: 0.9rem;
-}
 
 /* Media queries untuk responsivitas */
 @media (max-width: 768px) {
@@ -130,11 +140,9 @@ footer {
 
   .nav-link {
     font-size: 0.9rem;
+    font-family: "Raleway", ;
   }
 
-  footer {
-    font-size: 0.8rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -150,9 +158,6 @@ footer {
     font-size: 0.8rem;
   }
 
-  footer {
-    font-size: 0.7rem;
-  }
 }
 
 /* HERO */
@@ -237,7 +242,7 @@ footer {
 /* Gaya umum */
 .about {
   width: 100%;
-  height: auto; /* Sesuaikan tinggi untuk konten fleksibel */
+  height: 1074px; /* Sesuaikan tinggi untuk konten fleksibel */
   background-color: #fffafa;
   align-items: center;
   justify-content: center;
@@ -501,10 +506,20 @@ footer {
   font-size: 20px;
   font-weight: bold;
   margin-top: 20px;
-  letter-spacing: 0em;
+  letter-spacing: 0.08em;
 }
 
 .main-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  margin-top: 10px;
+  color: #333;
+}
+
+.portfolio .main-text {
+  width: 475px;
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   line-height: 1.8;
@@ -574,10 +589,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px; /* Tinggi area 360 */
+  height: 574px; 
   overflow: hidden;
-  padding: 20px 0; /* Tambahkan ruang di atas dan bawah */
-  margin: 30px 0; /* Tambahkan ruang 20px di luar elemen atas dan bawah */
+  padding: 20px 0; 
+  margin: 30px 0; 
 }
 
 #viewerCanvas {
@@ -1103,7 +1118,7 @@ footer {
 /* About Page - Owner Profile*/
 /* Gaya Umum */
 .owner {
-  height: auto; /* Tinggi dinamis */
+  height: 980px; 
   width: 100%;
   position: relative;
   background-color: #fffafa;
@@ -1112,7 +1127,7 @@ footer {
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
 .profile {
@@ -1263,7 +1278,7 @@ footer {
 /* ------------------------------------------------------------- */
 /* About Page - Villavi team*/
 .villavi-team {
-  height: auto; /* Sesuaikan tinggi agar konten fleksibel */
+  height: 750px; /* Sesuaikan tinggi agar konten fleksibel */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1282,6 +1297,8 @@ footer {
   font-size: 40px;
   letter-spacing: 0.08em;
   font-weight: 600;
+  height: 76px;
+  top: 627.45px;
   margin-top: 22px;
   text-align: center;
 }
@@ -1308,7 +1325,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px; /* Kurangi gap untuk layar kecil */
+  gap: 90px; 
 }
 
 .card-profile {
