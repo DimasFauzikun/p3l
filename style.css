@@ -109,6 +109,7 @@
 
 /* Main Page - Hero Section */
 /* Gaya umum */
+/* Hero Section */
 .hero-section {
   display: flex;
   align-items: center;
@@ -119,35 +120,81 @@
   flex-direction: column; /* Tambahkan agar tampilan lebih fleksibel */
 }
 
+/* Navbar */
+.navbar {
+  height: 246px;
+  background-color: #fffafa;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 31px;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .nav-link {
-  font-size: 1rem;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
 }
 
-footer {
-  font-size: 0.9rem;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
 }
 
-/* Media queries untuk responsivitas */
 @media (max-width: 768px) {
   .hero-section {
     padding: 1.5rem;
   }
 
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    padding: 0.5rem;
+  }
+
   .navbar-brand {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   .nav-link {
-    font-size: 0.9rem;
-  }
-
-  footer {
-    font-size: 0.8rem;
+    font-size: 16px;
   }
 }
 
@@ -156,16 +203,25 @@ footer {
     padding: 1rem;
   }
 
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    font-size: 0.875rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .navbar-brand {
-    font-size: 1.2rem;
+    font-size: 0.875rem;
   }
 
   .nav-link {
-    font-size: 0.8rem;
-  }
-
-  footer {
-    font-size: 0.7rem;
+    font-size: 14px;
   }
 }
 
