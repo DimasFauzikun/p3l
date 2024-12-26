@@ -73,14 +73,8 @@ $dataResult = tampilPackages($conn);
     </nav>
 
     <!-- Hero Section -->
-    <section
-        class="hero-section text-center text-white"
-        style="
-        background-image: url('Content\ 2\ -\ Opening.jpg');
-        height: 70vh;
-        background-size: cover;
-        background-position: center;
-      ">
+    <section class="hero-service">
+        <div class="hero-content"></div>
     </section>
 
     <!-- Services Section -->
@@ -140,16 +134,6 @@ $dataResult = tampilPackages($conn);
                 </div>
             </div>
         </div>
-    </div>
-    <!-- di bawah -->
-    <div class="center-container">
-        <h1>Lorem Ipsum</h1>
-        <p>
-            There are many variations of passages of Lorem Ipsum available, but the
-            majority have suffered alteration in some form, by injected humour, or
-            randomised words which don't look even slightly believable.
-        </p>
-        <button class="inquiry-button">INQUIRY FORM</button>
     </div>
 
     <!-- Footer -->

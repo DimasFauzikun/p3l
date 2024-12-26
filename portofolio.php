@@ -10,6 +10,7 @@ function fetchPortfolios($conn)
 
 $portfolios = fetchPortfolios($conn);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

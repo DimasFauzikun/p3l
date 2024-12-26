@@ -13,18 +13,6 @@
   font-style: normal;
 }
 
-.main-header {
-  width: 100%; /* Lebar penuh halaman */
-  height: 52px; /* Tinggi sesuai Figma */
-  background-color: #cbd3c9; /* Warna latar belakang */
-  display: flex; /* Menengahkan konten */
-  align-items: center; /* Teks di tengah vertikal */
-  justify-content: center; /* Teks di tengah horizontal */
-  font-family: "Raleway", sans-serif; /* Font Raleway */
-  font-weight: 600;
-  font-size: 12px; /* Ukuran font */
-  color: #000; /* Warna font hitam */
-}
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Regular.ttf") format("truetype");
@@ -88,6 +76,7 @@
   font-weight: 600;
   font-style: normal;
 }
+
 /* Main Page  */
 
 .main-header {
@@ -108,7 +97,6 @@
 } /* Warna font hitam */
 
 /* Main Page - Hero Section */
-/* Gaya umum */
 /* Hero Section */
 .hero-section {
   display: flex;
@@ -331,7 +319,6 @@
 
 /* --------------------------------------------------------- */
 /* Main Page - About Section */
-/* Gaya umum */
 .about {
   width: 100%;
   height: auto; /* Sesuaikan tinggi untuk konten fleksibel */
@@ -497,7 +484,6 @@
 }
 
 /* ----------------------------------------------------- */
-/* Gaya Umum */
 .service-btn,
 .portfolio-btn {
   background-color: #a4aea2;
@@ -571,7 +557,6 @@
 }
 
 /* Teks */
-/* Gaya Umum */
 .items-secondary {
   flex: 1;
   padding: 0 91px;
@@ -1198,7 +1183,6 @@
 
 /* ------------------------------------------------------- */
 /* About Page - Owner Profile*/
-/* Gaya Umum */
 .owner {
   height: auto; /* Tinggi dinamis */
   width: 100%;
@@ -1300,12 +1284,12 @@
 /* Media Queries untuk Responsivitas */
 @media (max-width: 1024px) {
   .profile {
-    width: 350px; /* Kurangi ukuran gambar */
+    width: 350px; 
     height: 500px;
   }
 
   .owner-text1 {
-    font-size: 48px; /* Kurangi ukuran font */
+    font-size: 48px; 
   }
 
   .owner-text2 {
@@ -1315,7 +1299,7 @@
 
 @media (max-width: 768px) {
   .profile {
-    width: 300px; /* Ukuran lebih kecil untuk tablet */
+    width: 300px; 
     height: 400px;
   }
 
@@ -1328,15 +1312,15 @@
   }
 
   .social-icons li {
-    width: 35px; /* Ukuran ikon lebih kecil */
+    width: 35px;
     height: 35px;
   }
 }
 
 @media (max-width: 480px) {
   .profile {
-    width: 100%; /* Lebar penuh untuk ponsel */
-    height: auto; /* Tinggi otomatis agar proporsional */
+    width: 100%; 
+    height: auto; 
   }
 
   .owner-text1 {
@@ -1360,7 +1344,7 @@
 /* ------------------------------------------------------------- */
 /* About Page - Villavi team*/
 .villavi-team {
-  height: auto; /* Sesuaikan tinggi agar konten fleksibel */
+  height: auto; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1835,56 +1819,6 @@ button {
 
 button:hover {
   background-color: #a2bfa2;
-}
-
-/* --------------------------------------------- */
-/* teks di bawah buat sevices */
-.center-container {
-  max-width: 600px; /* Membatasi lebar teks */
-  text-align: center; /* Membuat teks berada di tengah */
-  margin: 0 auto; /* Center secara horizontal */
-  padding: 20px;
-}
-
-.inquiry-button {
-  background-color: #a8b5a8;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.inquiry-button:hover {
-  background-color: #909f90;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-  .center-container {
-    padding: 15px;
-  }
-
-  .inquiry-button {
-    padding: 8px 16px;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .center-container {
-    max-width: 100%; /* Memaksimalkan lebar pada layar kecil */
-    padding: 10px;
-  }
-
-  .inquiry-button {
-    padding: 6px 12px;
-    font-size: 0.7rem;
-  }
 }
 
 /* portofolio */

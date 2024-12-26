@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Tentukan file PHP yang ada
+RewriteCond %{REQUEST_URI} !^/home.php$
+RewriteCond %{REQUEST_URI} !^/about.php$
+RewriteCond %{REQUEST_URI} !^/service.php$
+RewriteCond %{REQUEST_URI} !^/portofolio.php$
+RewriteCond %{REQUEST_URI} !^/contact.php$
+
+# Arahkan ke 404.php jika URL tidak cocok
+RewriteRule ^.*$ /404.php [L]

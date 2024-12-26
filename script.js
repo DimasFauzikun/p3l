@@ -94,6 +94,17 @@ function formatCurrency(input) {
   }
 }
 
+
+// Mengatur atribut min untuk input date
+document.addEventListener('DOMContentLoaded', function () {
+  // Menentukan tanggal hari ini dalam format YYYY-MM-DD
+  const today = new Date().toISOString().split('T')[0];
+
+  // Mengatur atribut min untuk input date
+  document.getElementById('date').setAttribute('min', today);
+});
+
+
 // Memastikan input hanya angka ketika form disubmit
 document.querySelector("form").addEventListener("submit", function (event) {
   let budgetField = document.getElementById("budget");

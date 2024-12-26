@@ -1,86 +1,96 @@
 <?php
+// Koneksi ke database
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "p3l";
 
+// Membuat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// Cek koneksi
 if ($conn->connect_error) {
-  die("Koneksi gagal: " . $conn->connect_error);
+    die("Koneksi gagal: " . $conn->connect_error);
 }
 
 $message = '';
 
+// Proses form saat metode request POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = $_POST['name'];
-  $phone = $_POST['phone'];
-  $email = $_POST['email'];
-  $address = $_POST['address'];
-  $service = isset($_POST['service']) ? implode(", ", $_POST['service']) : '';
-  $package = $_POST['package'];
-  $budget = preg_replace('/[^0-9]/', '', $_POST['budget']);
-  $date = $_POST['date'];
-  $details = $_POST['details'];
+    // Mengambil data dari form
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $address = $_POST['address'];
+    $service = isset($_POST['service']) ? implode(", ", $_POST['service']) : '';
+    $package = $_POST['package'];
+    $budget = preg_replace('/[^0-9]/', '', $_POST['budget']);
+    $date = $_POST['date'];
+    $details = $_POST['details'];
 
-  if (!is_numeric($budget) || empty($budget)) {
-    $message = "Budget harus berupa angka.";
-  } else {
-    // Periksa apakah tanggal sudah ada di database
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM contact WHERE date = ?");
-    $stmt->bind_param("s", $date);
-    $stmt->execute();
-    $stmt->bind_result($count);
-    $stmt->fetch();
-    $stmt->close();
-
-    if ($count > 0) {
-      // Jika tanggal sudah terpakai, tampilkan SweetAlert
-      echo "<script>
-              setTimeout(() => {
-                Swal.fire({
-                  icon: 'error',
-                  title: 'Tanggal Tidak Tersedia',
-                  text: 'Tanggal ini sudah terpakai. Silakan pilih tanggal lain.',
-                });
-              }, 200);
-            </script>";
+    // Validasi budget
+    if (!is_numeric($budget) || empty($budget)) {
+        $message = "Budget harus berupa angka.";
     } else {
-      // Simpan data jika tanggal belum terpakai
-      $stmt = $conn->prepare("INSERT INTO contact (name, phone, email, address, service, package, budget, date, details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-      $stmt->bind_param("sssssssss", $name, $phone, $email, $address, $service, $package, $budget, $date, $details);
+        // Periksa apakah tanggal sudah ada di database
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM contact WHERE date = ?");
+        $stmt->bind_param("s", $date);
+        $stmt->execute();
+        $stmt->bind_result($count);
+        $stmt->fetch();
+        $stmt->close();
 
-      if ($stmt->execute()) {
-        // Berhasil menyimpan data
-        echo "<script>
-                setTimeout(() => {
-                  Swal.fire({
-                    icon: 'success',
-                    title: 'Data Berhasil Disimpan',
-                    text: 'Terima kasih telah menghubungi kami.',
-                  });
-                }, 200);
-              </script>";
-      } else {
-        // Gagal menyimpan data
-        echo "<script>
-                setTimeout(() => {
-                  Swal.fire({
-                    icon: 'error',
-                    title: 'Kesalahan',
-                    text: 'Terjadi kesalahan saat menyimpan data.',
-                  });
-                }, 200);
-              </script>";
-      }
+        // Jika tanggal sudah terpakai
+        if ($count > 0) {
+            // Tampilkan SweetAlert error
+            echo "<script>
+                    setTimeout(() => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Tanggal Tidak Tersedia',
+                            text: 'Tanggal ini sudah terpakai. Silakan pilih tanggal lain.',
+                        });
+                    }, 200);
+                </script>";
+        } else {
+            // Simpan data ke database jika tanggal belum terpakai
+            $stmt = $conn->prepare("INSERT INTO contact (name, phone, email, address, service, package, budget, date, details) 
+                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("sssssssss", $name, $phone, $email, $address, $service, $package, $budget, $date, $details);
 
-      $stmt->close();
+            // Cek apakah data berhasil disimpan
+            if ($stmt->execute()) {
+                echo "<script>
+                        setTimeout(() => {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Data Berhasil Disimpan',
+                                text: 'Terima kasih telah menghubungi kami.',
+                            });
+                        }, 200);
+                    </script>";
+            } else {
+                // Tampilkan SweetAlert error jika gagal menyimpan
+                echo "<script>
+                        setTimeout(() => {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Kesalahan',
+                                text: 'Terjadi kesalahan saat menyimpan data.',
+                            });
+                        }, 200);
+                    </script>";
+            }
+
+            $stmt->close();
+        }
     }
-  }
 }
 
+// Menutup koneksi
 $conn->close();
 ?>
+
 
 
 <!DOCTYPE html>
@@ -178,7 +188,8 @@ $conn->close();
         <input type="text" id="budget" name="budget" required placeholder="Rp 0" oninput="formatCurrency(this)" />
 
         <label for="date">Event Date</label>
-        <input type="date" id="date" name="date" required />
+        <input type="date" id="date" name="date" required min="" />
+
 
         <label for="details">Tell Us About Event</label>
         <textarea id="details" name="details" rows="4"></textarea>
@@ -228,7 +239,7 @@ $conn->close();
         | DESIGN BY GENERASI TATAP LAYAR</p>
     </div>
   </footer>
-
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
