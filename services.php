@@ -39,36 +39,36 @@ $dataResult = tampilPackages($conn);
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="home.php">
-                <img src="VillaVi_Logo.jpg" alt="VillaVi Logo" height=50% width=50%>
-            </a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <a class="navbar-brand" href="home.php">
+            <img src="VillaVi_Logo.jpg" alt="VillaVi Logo" height=50% width=50%>
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="home.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.php">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.php">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portofolio.php">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="home.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.php">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="services.php">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portofolio.php">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+            </ul>
+        </div>
         </div>
     </nav>
 
@@ -77,65 +77,24 @@ $dataResult = tampilPackages($conn);
         <div class="hero-content"></div>
     </section>
 
+
     <!-- Services Section -->
-    <div class="container2 my-5">
-        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-            <div class="section">
-                <div class="image">
-                    <img src="<?php echo htmlspecialchars($row['gambar']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
-                </div>
-                <div class="content">
-                    <h2><?php echo htmlspecialchars($row['title']); ?></h2>
-                    <p><?php echo nl2br(htmlspecialchars($row['deskripsi'])); ?></p>
-                </div>
+    <div class="available-service">
+    <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+        <div class="services-section">
+            <div class="images-services">
+                <img src="<?php echo htmlspecialchars($row['gambar']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
             </div>
-        <?php } ?>
-    </div>
-
-    <!-- Wedding Package Section -->
-    <div class="container3">
-        <h1>WEDDING PACKAGE</h1>
-        <div class="packages">
-            <?php while ($row = mysqli_fetch_assoc($dataResult)) { ?>
-                <div class="package">
-                    <div class="image">
-                        <img src="<?php echo $row['gambar_pk']; ?>" alt="<?php echo $row['title_pk']; ?>" />
-                        <div class="overlay"><?php echo strtoupper($row['title_pk']); ?></div>
-                    </div>
-                    <h2><?php echo $row['title_pk']; ?></h2>
-                    <p><?php echo $row['deskripsi_pk']; ?></p>
-                    <p class="price">Paket untuk <strong><?php echo $row['pax']; ?> PAX</strong></p>
-                    <button class="btn btn btn-secondary gray-button read-more-btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#readMoreModal"
-                        data-title="<?php echo htmlspecialchars($row['title_pk']); ?>"
-                        data-description="<?php echo htmlspecialchars($row['deskripsi_pk']); ?>"
-                        data-image="<?php echo htmlspecialchars($row['gambar_paket']); ?>">Read More</button>
-                </div>
-            <?php } ?>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="readMoreModal" tabindex="-1" aria-labelledby="readMoreModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="readMoreModalLabel">Package Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img id="modalImage" src="" alt="Package Image" class="img-fluid mb-3" />
-                    <h2 id="modalTitle"></h2>
-                    <p id="modalDescription"></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary gray-button" data-bs-dismiss="modal">Close</button>
-                </div>
+            <div class="text-services-content">
+                <!-- <div class="horizontal-divider-services"></div> -->
+                <h1><?php echo htmlspecialchars($row['title']); ?></h1>
+                <p><?php echo nl2br(htmlspecialchars($row['deskripsi'])); ?></p>
             </div>
         </div>
+    <?php } ?>
     </div>
 
+    
     <!-- Footer -->
     <section id="footer" class="footer">
         <nav class="footer-container">
