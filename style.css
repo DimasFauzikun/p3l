@@ -28,10 +28,18 @@
   font-style: normal;
 }
 
+
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Bold.ttf") format("truetype");
   font-weight: 700; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-Thin.ttf") format("truetype");
+  font-weight: 100; 
   font-style: normal;
 }
 
@@ -77,6 +85,7 @@
   font-style: normal;
 }
 
+
 /* Main Page  */
 
 .main-header {
@@ -111,7 +120,7 @@
 /* Navbar */
 .navbar {
   height: 246px;
-  background-color: #fffafa;
+  background-color: #fff;
 }
 
 .navbar-nav .nav-item {
@@ -746,7 +755,7 @@
 .footer {
   width: 100%;
   height: 257px;
-  background-color: #fffafa;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1453,6 +1462,8 @@
   }
 }
 
+/* <========================================================> */
+/* <========================================================> */
 /* Service Page - Hero*/
 
 .hero-service {
@@ -1466,268 +1477,86 @@
   color: #fffafa;
 }
 
-/* <========================================================> */
-/* <========================================================> */
-/* RESPONSIVE DESIGN */
-@media (max-width: 1200px) {
-  .custom-heading {
-    font-size: 2.5rem;
-    .custom-text {
-      font-size: 1.25rem;
-    }
-    .hero-banner {
-      right: 20px;
-      max-width: 50%;
-    }
-  }
-}
 
-@media (max-width: 992px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .custom-heading {
-    font-size: 2rem;
-  }
-  .custom-text {
-    font-size: 1rem;
-  }
-  .hero-banner {
-    position: static;
-    max-width: 70%;
-    margin: 0 auto;
-  }
-}
+/* ------------------------------------------------------------- */
 
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 1rem;
-  }
-  .custom-heading {
-    font-size: 1.75rem;
-  }
-  .custom-text {
-    font-size: 0.9rem;
-  }
-  .custom-text2 {
-    font-size: 18px;
-  }
-  .hero::after {
-    background-size: cover;
-  }
-}
+/* Service Page - available section */
 
-@media (max-width: 576px) {
-  .hero-section {
-    text-align: center;
-  }
-  .custom-heading {
-    font-size: 1.5rem;
-  }
-  .custom-text {
-    font-size: 0.8rem;
-  }
-  .custom-text2 {
-    font-size: 16px;
-  }
-  .hero-banner {
-    display: none;
-  }
-}
-
-/* RESPONSIVE IMAGES AND POSITIONS */
-@media (max-width: 992px) {
-  .custom-right-position,
-  .custom-right-position1 {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .custom-left-position {
-    margin-left: 0;
-  }
-  .custom-text-right {
-    margin-left: 0;
-    text-align: center;
-  }
-}
-
-/* TEAM SECTION */
-.profile-card {
-  text-align: center;
-  max-width: 90%;
-  margin: 20px auto;
-}
-
-.profile-image {
+.available-service {
   width: 100%;
-  max-width: 280px;
   height: auto;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.profile-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.profile-image:hover img {
-  transform: scale(1.1);
-}
-
-.profile-name {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  background-color: gray;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.profile-role {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #555;
-}
-
-/* FLEX CONTAINER TEAM */
-.container5 {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px; /* Jarak antar card */
-}
-
-/* bentuk team-card */
-.team-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 380px; /* Tinggi gambar */
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-/* Overlay Text on Image */
-.team-name-overlay {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 8px 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
-}
-
-/* Role Text */
-.team-role {
-  margin-top: 15px;
-  font-size: 1rem;
-  color: #555;
-  font-weight: normal;
-}
-
-.team-role-1 {
-  margin-top: 15px;
-  font-size: 1rem;
-  color: #555;
-  font-weight: normal;
-  text-align: center; /* Membuat teks berada di tengah */
-}
-
-/* RESPONSIVE TEAM CARDS */
-@media (max-width: 992px) {
-  .container5 {
-    justify-content: center; /* Menyatukan kartu ke tengah */
-  }
-
-  .profile-card {
-    max-width: 45%; /* Dua card per baris */
-  }
-}
-
-@media (max-width: 768px) {
-  .profile-card {
-    max-width: 100%; /* Satu card per baris */
-  }
-
-  .profile-name {
-    font-size: 1rem;
-    padding: 3px 8px;
-  }
-
-  .profile-role {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .profile-card {
-    max-width: 100%; /* Full width on small screens */
-  }
-  .profile-image {
-    max-width: 200px;
-  }
-}
-
-/* Services */
-
-.container2 {
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 64px 17px; 
+  justify-content: center; 
+  align-items: flex-start;
+  padding: 50px 0
 }
 
-.section {
-  display: flex;
+.services-section {
   flex-basis: calc(50% - 20px);
-  flex-direction: column;
+  max-width: 525px; 
+  height: 438px; 
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 8px; 
+  display: flex;
+  flex-direction: column; 
 }
 
-.section .image img {
+.services-section .images-services img {
   width: 100%;
-  height: auto;
+  height: 247px; 
+  object-fit: cover; 
   display: block;
 }
 
-.section .content {
-  padding: 15px;
-  text-align: center;
+.services-section .text-services-content {
+  padding: 0 40px;
+  height: 157px;
+  margin-top: 5px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
-.section h2 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
+.services-section .horizontal-divider-services {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px 0px 0px 0px;
+  flex-shrink: 0;
+  width: 70px;
+  height: 1px;
+  position: relative;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+  align-self: center;
+  margin-bottom: 10px ;
+}
+
+.services-section h1 {
+  font-family: "Cormorant Garamond", serif;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 34px 20px; 
   color: #333;
 }
 
-.section p {
-  font-size: 0.9em;
-  color: #666;
+.services-section p {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px; 
+  font-weight: 300;
+  line-height: 1.5; 
+  color: #0A0A0A;
+  margin: 0 0 0 20px; 
 }
 
-body {
-  background-color: #fdfdfd;
-  color: #333;
-  line-height: 1.6;
-}
 
+
+/* ------------------------------------------------------------- */
+/* Service Page - Wedding Packages Section */
 h1 {
   text-align: center;
   margin: 20px 0;
@@ -1742,7 +1571,7 @@ h1 {
   flex-direction: column;
 }
 
-.packages {
+.package-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1750,7 +1579,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.package {
+.package-wedding {
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -1760,24 +1589,24 @@ h1 {
   max-width: calc(33% - 20px);
 }
 
-.package.custom {
+.package-wedding .custom {
   margin: 0 auto;
   flex: 1 1 100%;
   max-width: 500px;
 }
 
-.package .image {
+.package-weddinge .image {
   position: relative;
 }
 
-.package .image img {
+.package-wedding .image img {
   width: 100%;
   display: block;
   height: 300px;
   object-fit: cover;
 }
 
-.package .overlay {
+.package-wedding .overlay {
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -1788,112 +1617,78 @@ h1 {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-.package h2 {
+.package-wedding h2 {
   font-size: 1.4rem;
   margin: 15px 0;
 }
 
-.package p {
+.package-weddinge p {
   font-size: 0.9rem;
   color: #666;
   padding: 0 15px;
 }
 
-.package .price {
+.package-wedding .price {
   font-size: 1rem;
   font-weight: bold;
   margin: 10px 0;
   color: #000;
 }
 
-button {
-  background-color: #c0d6c0;
-  border: none;
-  padding: 10px 20px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-}
 
-button:hover {
-  background-color: #a2bfa2;
-}
-
-/* portofolio */
-
-/* Reset Margin & Padding */
-/* GALERI GAMBARS */
-.gallery1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom default */
-  grid-gap: 30px; /* Jarak antar gambar */
-  max-width: 1200px; /* Lebar maksimum galeri */
-  padding: 20px;
-  margin: 0 auto; /* Pusatkan galeri secara horizontal */
-}
-
-.gallery1 div {
-  display: flex; /* Mengaktifkan flexbox */
-  justify-content: center; /* Memusatkan gambar secara horizontal */
-  align-items: center; /* Memusatkan gambar secara vertikal */
-  overflow: hidden; /* Menjaga gambar tetap di dalam kotak */
-  border-radius: 0px; /* Membuat sudut kotak melengkung */
-  background-color: #f8f8f8; /* Memberikan latar belakang abu-abu lembut */
-  height: 300px; /* Tinggi tetap untuk setiap elemen grid */
-}
-
-.gallery1 img {
-  width: auto; /* Menjaga proporsi asli gambar */
-  height: 100%; /* Gambar akan menyesuaikan tinggi kotak */
-  object-fit: contain; /* Memastikan gambar tidak terpotong */
-  transition: transform 0.3s ease; /* Animasi efek hover */
-}
-
-.gallery1 img:hover {
-  transform: scale(1.1); /* Hanya gambar yang diperbesar */
-}
-
-/* RESPONSIVE GALLERY */
-@media (max-width: 992px) {
-  .gallery1 {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom pada tablet */
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery1 {
-    grid-template-columns: 1fr; /* 1 kolom pada ponsel */
-  }
-}
-
-/* contact */
-
-/* Container utama */
-.container4 {
+/* <========================================================> */
+/* <========================================================> */
+/* Portofolio Page - Hero*/
+.hero-portfolio{
+  width: 100%;
+  height: 291px;
+  background: url("assets/images/Ourportfolio_Banner.jpg") center/cover no-repeat;
   display: flex;
-  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fffafa;
+}
+
+/* <========================================================> */
+/* <========================================================> */
+
+/* Contact Page */
+.contact{
+  background-color: #fffafa;
+}
+/* Container utama */
+.container-contact {
+  display: flex;
+  max-width: 1400px;
+  height: 1640px;
   margin: 20px auto;
   gap: 30px;
   padding: 20px;
 }
 
-/* Bagian kiri (formulir) */
+/* Contact Page - Bagian kiri (formulir) */
 .left-section {
   flex: 1;
+  
 }
 
 .left-section h2 {
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: 0.08rem;
+  margin-top: 42px;
+  margin-bottom: 60px;
 }
 
 form label {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.08rem;
   display: block;
-  margin: 10px 0 5px;
-  font-size: 0.9rem;
+  margin: 10px 10px 5px;
 }
 
 form input,
@@ -1906,175 +1701,66 @@ form textarea {
   border-radius: 5px;
 }
 
-/* Service section - Flexbox vertikal */
+/* Contact Page - Service section  */
 
 .checkbox-group {
-  display: flex; /* Aktifkan Flexbox */
-  flex-direction: column; /* Atur checkbox agar vertikal */
-  gap: 10px; /* Jarak antar checkbox */
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
   margin-bottom: 15px;
 }
 
 .checkbox-group label {
   display: flex;
-  align-items: baseline; /* Sejajarkan checkbox dengan garis dasar teks */
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.checkbox-group input {
-  margin-right: 5px; /* Jarak antara checkbox dan teks */
-  width: 15px; /* Ukuran checkbox */
-  height: 15px;
-}
-
-.btn-send {
-  background-color: #a2b09f;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  position: relative; 
   cursor: pointer;
   font-size: 1rem;
 }
 
-.btn-send:hover {
-  background-color: #8a9982;
+.checkbox-group input {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 2px; 
 }
 
-/* Bagian kanan (gambar dan peta) */
-.right-section {
-  flex: 1;
-  text-align: center;
+.package option {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
 }
 
-.wedding-img {
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 10px;
+#details {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
 }
 
-iframe {
-  width: 100%;
-  height: 300px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
 
-.right-section p {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-a {
-  color: #a2b09f;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 992px) {
-  /* Atur agar bagian kiri dan kanan tampil vertikal (1 kolom) pada tablet */
-  .container4 {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .left-section,
-  .right-section {
-    flex: 1 1 100%; /* Menggunakan 100% lebar untuk tiap bagian */
-  }
-
-  .wedding-img {
-    height: auto; /* Sesuaikan tinggi gambar pada layar kecil */
-  }
-
-  iframe {
-    height: 250px; /* Sesuaikan tinggi iframe pada layar kecil */
-  }
-}
-
-@media (max-width: 768px) {
-  /* Pada layar ponsel, pastikan semua bagian memiliki ukuran lebar penuh */
-  .container4 {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .left-section,
-  .right-section {
-    flex: 1 1 100%; /* 100% lebar pada ponsel */
-  }
-
-  .btn-send {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  iframe {
-    height: 200px; /* Lebih kecil pada ponsel */
-  }
-}
-
-/* footer */
-
-/* footer Container */
-/* footer {
-  display: flex;
-  justify-content: space-between;
+.btn-send {
+  background-color: #a4aea2;
+  width: 159px;
+  height: 52px;
+  color: white !important;
+  letter-spacing: 0.08em;
   align-items: center;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 100px;
-} */
-
-/* Navigation Menu */
-/* nav {
+  justify-content: center;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
-} */
-
-/* nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: gray;
-} */
-
-/* Title Styling */
-/* .title {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.title h1 {
-  font-size: 32px;
+  gap: 8px;
+  flex-direction: row;
+  border-radius: 3px;
+  font-family: "Cormorant Garamond", serif;
   font-weight: normal;
-  letter-spacing: 2px;
+  font-size: 20px;
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
+  outline: none; 
+  border: none;  
 }
 
-.title p {
-  font-size: 14px;
-  color: gray;
-  margin-top: 5px;
-} */
+.btn-send:hover {
+  background-color: #8d968b;
+}
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -2138,6 +1824,176 @@ nav ul li a:hover {
   }
 }
 
+
+/* Bagian kanan (gambar dan peta) */
+.right-section {
+  flex: 1;
+  text-align: center;
+}
+
+.wedding-img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.right-section p {
+  font-family: "Raleway", sans-serif;
+  height: 69px;
+  font-size: 12px;
+  color: #000;
+  letter-spacing: 0.08rem;
+  text-align: left;
+  line-height: 1.4;
+  margin: 20px 0;
+}
+
+.email-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.address {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 12px; 
+  line-height: 1.6;
+}
+
+a {
+  color: #a2b09f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  /* Atur agar bagian kiri dan kanan tampil vertikal (1 kolom) pada tablet */
+  .container4 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1 1 100%; /* Menggunakan 100% lebar untuk tiap bagian */
+  }
+
+  .wedding-img {
+    height: auto; /* Sesuaikan tinggi gambar pada layar kecil */
+  }
+
+  iframe {
+    height: 250px; /* Sesuaikan tinggi iframe pada layar kecil */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Pada layar ponsel, pastikan semua bagian memiliki ukuran lebar penuh */
+  .container4 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1 1 100%; /* 100% lebar pada ponsel */
+  }
+
+  .btn-send {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  iframe {
+    height: 200px; /* Lebih kecil pada ponsel */
+  }
+}
+
+
+
+/* <========================================================> */
+/* <========================================================> */
+/* RESPONSIVE IMAGES AND POSITIONS */
+@media (max-width: 992px) {
+  .custom-right-position,
+  .custom-right-position1 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .custom-left-position {
+    margin-left: 0;
+  }
+  .custom-text-right {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+
+/* portofolio */
+
+/* Reset Margin & Padding */
+/* GALERI GAMBARS */
+.gallery1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom default */
+  grid-gap: 30px; /* Jarak antar gambar */
+  max-width: 1200px; /* Lebar maksimum galeri */
+  padding: 20px;
+  margin: 0 auto; /* Pusatkan galeri secara horizontal */
+}
+
+.gallery1 div {
+  display: flex; /* Mengaktifkan flexbox */
+  justify-content: center; /* Memusatkan gambar secara horizontal */
+  align-items: center; /* Memusatkan gambar secara vertikal */
+  overflow: hidden; /* Menjaga gambar tetap di dalam kotak */
+  border-radius: 0px; /* Membuat sudut kotak melengkung */
+  background-color: #f8f8f8; /* Memberikan latar belakang abu-abu lembut */
+  height: 300px; /* Tinggi tetap untuk setiap elemen grid */
+}
+
+.gallery1 img {
+  width: auto; /* Menjaga proporsi asli gambar */
+  height: 100%; /* Gambar akan menyesuaikan tinggi kotak */
+  object-fit: contain; /* Memastikan gambar tidak terpotong */
+  transition: transform 0.3s ease; /* Animasi efek hover */
+}
+
+.gallery1 img:hover {
+  transform: scale(1.1); /* Hanya gambar yang diperbesar */
+}
+
+/* RESPONSIVE GALLERY */
+@media (max-width: 992px) {
+  .gallery1 {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom pada tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery1 {
+    grid-template-columns: 1fr; /* 1 kolom pada ponsel */
+  }
+}
+
+
 /* footer2 */
 footer {
   font-family: "Times New Roman", serif;
@@ -2158,122 +2014,6 @@ footer {
   margin: 20px 0;
 }
 
-/* admin */
-/* admin-style.css */
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #007bff;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-header p {
-  margin: 5px 0 0;
-  font-size: 1.2rem;
-}
-
-.container {
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
-}
-
-.table {
-  width: 100%;
-  margin-bottom: 20px;
-  border-collapse: collapse;
-}
-
-.table th,
-.table td {
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #dee2e6;
-}
-
-.table th {
-  background-color: #343a40;
-  color: #ffffff;
-}
-
-.table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.btn {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.btn-edit {
-  background-color: #ffc107;
-  color: #ffffff;
-  margin-right: 5px;
-}
-
-.btn-edit:hover {
-  background-color: #e0a800;
-}
-
-.btn-delete {
-  background-color: #dc3545;
-  color: #ffffff;
-}
-
-.btn-delete:hover {
-  background-color: #c82333;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-form input,
-form textarea {
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-form label {
-  font-weight: bold;
-}
-
-footer {
-  background-color: #f8f9fa;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-  border-top: 1px solid #dee2e6;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #6c757d;
-} */
 .custom-line-vertical {
   width: 1px; /* Lebar garis */
   height: 50px; /* Tinggi garis */

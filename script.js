@@ -94,15 +94,80 @@ function formatCurrency(input) {
   }
 }
 
+// validasi nomor telpon
+function validatePhone() {
+  const phoneInput = document.getElementById('phone');
+  const errorElement = document.getElementById('phone-error');
+  
+  // Hapus karakter non-numerik
+  const sanitizedValue = phoneInput.value.replace(/[^0-9]/g, '');
+  
+  // Jika ada karakter non-numerik yang dihapus, tampilkan pesan error
+  if (phoneInput.value !== sanitizedValue) {
+    errorElement.style.display = 'block'; // Tampilkan pesan error
+    phoneInput.value = sanitizedValue; // Perbarui nilai input hanya dengan angka
+  } else {
+    errorElement.style.display = 'none'; // Sembunyikan pesan error
+  }
+}
 
-// Mengatur atribut min untuk input date
-document.addEventListener('DOMContentLoaded', function () {
-  // Menentukan tanggal hari ini dalam format YYYY-MM-DD
-  const today = new Date().toISOString().split('T')[0];
+// hari tidak boleh sama dengan hari ini dan sebelumnya
+document.addEventListener("DOMContentLoaded", function () {
+  const dateInput = document.getElementById("date");
 
-  // Mengatur atribut min untuk input date
-  document.getElementById('date').setAttribute('min', today);
+  function setMinDate() {
+    const today = new Date();
+    today.setDate(today.getDate()); 
+
+    const minDate = today.toISOString().split("T")[0]; 
+    dateInput.setAttribute("min", minDate);
+  }
+  setMinDate();
+
+  dateInput.addEventListener("click", function () {
+    const today = new Date();
+    today.setDate(today.getDate());
+
+    const minDate = today.toISOString().split("T")[0];
+    dateInput.setAttribute("min", minDate);
+  });
 });
+
+
+
+// validasi cek budget harus berupa angka
+function validateBudget() {
+  const budgetInput = document.getElementById('budget');
+  const errorElement = document.getElementById('budget-error');
+  const inputValue = budgetInput.value.replace(/[^0-9]/g, ''); 
+  
+  if (inputValue === "") {
+    errorElement.style.display = 'block'; 
+    budgetInput.value = ""; 
+    return;
+  }
+
+  const formattedValue = "Rp." + parseInt(inputValue, 10).toLocaleString('id-ID');
+  budgetInput.value = formattedValue;
+
+  errorElement.style.display = 'none'; 
+}
+
+
+
+// menyalakan opsi wedding packages jika opsi = wedding organizer
+function toggleWeddingPackages() {
+  const weddingOrganizerCheckbox = document.getElementById('wedding-organizer');
+  const packagesContainer = document.getElementById('wedding-packages-container');
+
+  if (weddingOrganizerCheckbox.checked) {
+    packagesContainer.style.display = 'block'; 
+  } else {
+    packagesContainer.style.display = 'none'; 
+  }
+}
+
+
 
 
 // Memastikan input hanya angka ketika form disubmit
