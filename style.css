@@ -28,7 +28,6 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Bold.ttf") format("truetype");
@@ -39,7 +38,7 @@
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Thin.ttf") format("truetype");
-  font-weight: 100; 
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -84,7 +83,6 @@
   font-weight: 600;
   font-style: normal;
 }
-
 
 /* Main Page  */
 
@@ -1293,12 +1291,12 @@
 /* Media Queries untuk Responsivitas */
 @media (max-width: 1024px) {
   .profile {
-    width: 350px; 
+    width: 350px;
     height: 500px;
   }
 
   .owner-text1 {
-    font-size: 48px; 
+    font-size: 48px;
   }
 
   .owner-text2 {
@@ -1308,7 +1306,7 @@
 
 @media (max-width: 768px) {
   .profile {
-    width: 300px; 
+    width: 300px;
     height: 400px;
   }
 
@@ -1328,8 +1326,8 @@
 
 @media (max-width: 480px) {
   .profile {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
   }
 
   .owner-text1 {
@@ -1353,7 +1351,7 @@
 /* ------------------------------------------------------------- */
 /* About Page - Villavi team*/
 .villavi-team {
-  height: auto; 
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1477,86 +1475,60 @@
   color: #fffafa;
 }
 
-
 /* ------------------------------------------------------------- */
 
-/* Service Page - available section */
-
-.available-service {
-  width: 100%;
-  height: auto;
+/* --------------------------------------------- */
+/* Services Section */
+.container2 {
+  width: var(--width, 70%); /* Default width is 90% */
+  height: var(--height, auto); /* Default height is auto */
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 64px 17px; 
-  justify-content: center; 
-  align-items: flex-start;
-  padding: 50px 0
+  gap: 20px;
 }
 
-.services-section {
-  flex-basis: calc(50% - 20px);
-  max-width: 525px; 
-  height: 438px; 
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  border-radius: 8px; 
+.section {
   display: flex;
-  flex-direction: column; 
+  flex-basis: calc(50% - 20px);
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.services-section .images-services img {
+.section .image img {
   width: 100%;
-  height: 247px; 
-  object-fit: cover; 
+  height: auto;
   display: block;
 }
 
-.services-section .text-services-content {
-  padding: 0 40px;
-  height: 157px;
-  margin-top: 5px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
+.section .content {
+  padding: 15px;
+  text-align: center;
 }
 
-.services-section .horizontal-divider-services {
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0px 0px 0px;
-  flex-shrink: 0;
-  width: 70px;
-  height: 1px;
-  position: relative;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(1, -1);
-  align-self: center;
-  margin-bottom: 10px ;
-}
-
-.services-section h1 {
-  font-family: "Cormorant Garamond", serif;
-  text-align: left;
-  font-size: 22px;
-  font-weight: 500;
-  margin: 0 0 34px 20px; 
+.section h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
   color: #333;
 }
 
-.services-section p {
-  font-family: "Raleway", sans-serif;
-  font-size: 14px; 
-  font-weight: 300;
-  line-height: 1.5; 
-  color: #0A0A0A;
-  margin: 0 0 0 20px; 
+.section p {
+  font-size: 0.9em;
+  color: #666;
 }
 
-
-
-/* ------------------------------------------------------------- */
-/* Service Page - Wedding Packages Section */
+/* --------------------------------------------- */
+/* Wedding Package Section */
+.container3 {
+  width: var(--width, 70%); /* Default width is 90% */
+  height: var(--height, auto); /* Default height is auto */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 h1 {
   text-align: center;
   margin: 20px 0;
@@ -1564,14 +1536,7 @@ h1 {
   color: #000;
 }
 
-.container3 {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.package-list {
+.packages {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1579,7 +1544,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.package-wedding {
+.package {
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -1589,24 +1554,18 @@ h1 {
   max-width: calc(33% - 20px);
 }
 
-.package-wedding .custom {
-  margin: 0 auto;
-  flex: 1 1 100%;
-  max-width: 500px;
-}
-
-.package-weddinge .image {
+.package .image {
   position: relative;
 }
 
-.package-wedding .image img {
+.package .image img {
   width: 100%;
   display: block;
   height: 300px;
   object-fit: cover;
 }
 
-.package-wedding .overlay {
+.package .overlay {
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -1617,32 +1576,68 @@ h1 {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-.package-wedding h2 {
+.package h2 {
   font-size: 1.4rem;
   margin: 15px 0;
 }
 
-.package-weddinge p {
+.package p {
   font-size: 0.9rem;
   color: #666;
   padding: 0 15px;
 }
 
-.package-wedding .price {
+.package .price {
   font-size: 1rem;
   font-weight: bold;
   margin: 10px 0;
   color: #000;
 }
 
+/* --------------------------------------------- */
+/* Buttons for both sections */
+button {
+  background-color: #c0d6c0;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #a2bfa2;
+}
+
+/* --------------------------------------------- */
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container2,
+  .container3 {
+    flex-direction: column;
+  }
+
+  .section,
+  .package {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .package .image img {
+    height: 200px;
+  }
+}
 
 /* <========================================================> */
 /* <========================================================> */
 /* Portofolio Page - Hero*/
-.hero-portfolio{
+.hero-portfolio {
   width: 100%;
   height: 291px;
-  background: url("assets/images/Ourportfolio_Banner.jpg") center/cover no-repeat;
+  background: url("assets/images/Ourportfolio_Banner.jpg") center/cover
+    no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1654,7 +1649,7 @@ h1 {
 /* <========================================================> */
 
 /* Contact Page */
-.contact{
+.contact {
   background-color: #fffafa;
 }
 /* Container utama */
@@ -1670,7 +1665,6 @@ h1 {
 /* Contact Page - Bagian kiri (formulir) */
 .left-section {
   flex: 1;
-  
 }
 
 .left-section h2 {
@@ -1704,15 +1698,15 @@ form textarea {
 /* Contact Page - Service section  */
 
 .checkbox-group {
-  display: flex; 
-  flex-direction: column; 
-  gap: 10px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 15px;
 }
 
 .checkbox-group label {
   display: flex;
-  position: relative; 
+  position: relative;
   cursor: pointer;
   font-size: 1rem;
 }
@@ -1722,7 +1716,7 @@ form textarea {
   width: 20px;
   height: 20px;
   position: relative;
-  top: 2px; 
+  top: 2px;
 }
 
 .package option {
@@ -1734,7 +1728,6 @@ form textarea {
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
 }
-
 
 .btn-send {
   background-color: #a4aea2;
@@ -1753,14 +1746,13 @@ form textarea {
   font-size: 20px;
   text-decoration: none !important;
   transition: all 0.3s ease-in-out;
-  outline: none; 
-  border: none;  
+  outline: none;
+  border: none;
 }
 
 .btn-send:hover {
   background-color: #8d968b;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -1824,7 +1816,6 @@ form textarea {
   }
 }
 
-
 /* Bagian kanan (gambar dan peta) */
 .right-section {
   flex: 1;
@@ -1855,6 +1846,15 @@ iframe {
   margin: 20px 0;
 }
 
+/* Make font size responsive */
+@media (max-width: 768px) {
+  .right-section p {
+    font-size: 10px; /* Adjust for smaller screens */
+    height: auto; /* Allow content to adjust for smaller screens */
+  }
+}
+
+/* Email link styles */
 .email-link {
   color: blue;
   text-decoration: none;
@@ -1864,11 +1864,19 @@ iframe {
   text-decoration: underline;
 }
 
+/* Address styling */
 .address {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 200;
-  font-size: 12px; 
+  font-size: 12px;
   line-height: 1.6;
+}
+
+/* Make address font responsive */
+@media (max-width: 768px) {
+  .address {
+    font-size: 10px; /* Adjust for smaller screens */
+  }
 }
 
 a {
@@ -1924,8 +1932,6 @@ a:hover {
   }
 }
 
-
-
 /* <========================================================> */
 /* <========================================================> */
 /* RESPONSIVE IMAGES AND POSITIONS */
@@ -1944,7 +1950,6 @@ a:hover {
     text-align: center;
   }
 }
-
 
 /* portofolio */
 
@@ -1992,7 +1997,6 @@ a:hover {
     grid-template-columns: 1fr; /* 1 kolom pada ponsel */
   }
 }
-
 
 /* footer2 */
 footer {
