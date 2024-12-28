@@ -152,14 +152,8 @@ $conn->close();
         <input type="text" id="name" name="name" required />
 
         <label for="phone">Phone</label>
-        <input
-          type="text"
-          id="phone"
-          name="phone"
-          required
-          oninput="validatePhone()" />
+        <input type="text" id="phone" name="phone" required oninput="validatePhone()" />
         <small id="phone-error" style="color: red; display: none;">Input harus berupa angka</small>
-
 
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required />
@@ -169,24 +163,10 @@ $conn->close();
 
         <label for="service">Service</label>
         <div class="checkbox-group">
-          <label>
-            <input
-              type="checkbox"
-              id="wedding-organizer"
-              name="service[]"
-              value="Wedding Organizer"
-              onclick="toggleWeddingPackages()" />
-            Wedding Organizer
-          </label>
-          <label>
-            <input type="checkbox" name="service[]" value="Photoshoot Services" /> Photoshoot Services
-          </label>
-          <label>
-            <input type="checkbox" name="service[]" value="Venue for Shooting" /> Venue for Shooting
-          </label>
-          <label>
-            <input type="checkbox" name="service[]" value="Event by Request" /> Event by Request
-          </label>
+          <label><input type="checkbox" id="wedding-organizer" name="service[]" value="Wedding Organizer" onclick="toggleWeddingPackages()"/> Wedding Organizer</label>
+          <label><input type="checkbox" name="service[]" value="Photoshoot Services" /> Photoshoot Services</label>
+          <label><input type="checkbox" name="service[]" value="Venue for Shooting" /> Venue for Shooting</label>
+          <label><input type="checkbox" name="service[]" value="Event by Request" /> Event by Request</label>
         </div>
 
         <div id="wedding-packages-container" style="display: none;">
@@ -201,36 +181,34 @@ $conn->close();
         </div>
 
 
-
         <label for="budget">Estimated Event Budget</label>
-        <input
-          type="text"
-          id="budget"
-          name="budget"
-          required
-          placeholder="Rp 0"
-          oninput="validateBudget()" />
+        <input 
+          type="text" 
+          id="budget" 
+          name="budget" 
+          required 
+          placeholder="Rp 0" 
+          oninput="validateBudget()" 
+        />
         <small id="budget-error" style="color: red; display: none;">Input hanya bisa berupa angka</small>
-
 
         <label for="date">Event Date</label>
         <input type="date" id="date" name="date" required />
 
         <label for="details">Tell Us About Event</label>
         <textarea id="details" name="details" rows="4"></textarea>
-
+        
         <button type="submit" class="btn-send">SEND</button>
       </form>
     </div>
 
-    <!-- Left Section -->
     <div class="right-section">
       <img src="Rectangle 57.jpg" alt="Wedding Bouquet" class="wedding-img" />
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5876.085189989196!2d106.89287967645825!3d-6.31838019367101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed0991611a33%3A0xac0920869524750f!2sVillaVi!5e1!3m2!1sen!2sid!4v1734323499670!5m2!1sen!2sid" width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
       <p>
         Terima kasih telah memilih VillaVi. Mari kita bekerja sama untuk menciptakan sesuatu yang istimewa dan penuh kenangan! <br> <br>
-        Untuk informasi lebih lanjut, kirimkan email ke
-        <a href="mailto:villavi.the.venue@gmail.com" class="email-link">villavi.the.venue@gmail.com</a>
+        Untuk informasi lebih lanjut, kirimkan email ke 
+        <a href="mailto:villavi.the.venue@gmail.com" class="email-link">villavi.the.venue@gmail.com</a> 
         atau telepon kami di 0896-9647-6888. Kami akan dengan senang hati merespons Anda!
       </p>
       <p class="address">
