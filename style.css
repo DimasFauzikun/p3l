@@ -2108,35 +2108,3 @@ a:hover {
     grid-template-columns: 1fr; /* 1 kolom pada ponsel */
   }
 }
-
-
-/* footer2 */
-footer {
-  font-family: "Times New Roman", serif;
-  color: gray;
-  text-align: center;
-  font-size: 12px;
-}
-
-.long-hr-container {
-  display: flex;
-  justify-content: center;
-}
-
-.long-hr {
-  border: none;
-  border-top: 1px solid black;
-  width: 100%; /* Ubah nilai ini untuk memperpanjang garis */
-  margin: 20px 0;
-}
-
-.custom-line-vertical {
-  width: 1px; /* Lebar garis */
-  height: 50px; /* Tinggi garis */
-  background-color: #000; /* Warna garis */
-  margin: 0 auto; /* Agar garis berada di tengah */
-}
-.lead {
-  max-width: 600px;
-  margin: 0 auto;
-}
