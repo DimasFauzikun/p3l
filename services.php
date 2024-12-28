@@ -39,36 +39,36 @@ $dataResult = tampilPackages($conn);
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
         <div class="container">
-        <a class="navbar-brand" href="home.php">
-            <img src="VillaVi_Logo.jpg" alt="VillaVi Logo" height=50% width=50%>
-        </a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <a class="navbar-brand" href="home.php">
+                <img src="VillaVi_Logo.jpg" alt="VillaVi Logo" height=50% width=50%>
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="home.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.php">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="services.php">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="portofolio.php">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.php">Contact</a>
-            </li>
-            </ul>
-        </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.php">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofolio.php">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -81,22 +81,22 @@ $dataResult = tampilPackages($conn);
     <!-- Services Section -->
     <div class="available-service">
         <div class="content-service">
-        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-        <div class="services-section">
-            <div class="images-services">
-                <img src="<?php echo htmlspecialchars($row['gambar']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
-            </div>
-            <div class="text-services-content">
-                <h1><?php echo htmlspecialchars($row['title']); ?></h1>
-                <p><?php echo nl2br(htmlspecialchars($row['deskripsi'])); ?></p>
-            </div>
-        </div>
-        <?php } ?>
+            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                <div class="services-section">
+                    <div class="images-services">
+                        <img src="<?php echo htmlspecialchars($row['gambar']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
+                    </div>
+                    <div class="text-services-content">
+                        <h1><?php echo htmlspecialchars($row['title']); ?></h1>
+                        <p><?php echo nl2br(htmlspecialchars($row['deskripsi'])); ?></p>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
     </div>
 
-        <!-- Wedding Package Section -->
-        <div class="wedding-package">
+    <!-- Wedding Package Section -->
+    <div class="wedding-package">
         <h1>WEDDING PACKAGE</h1>
         <div class="package-list">
             <?php while ($row = mysqli_fetch_assoc($dataResult)) { ?>
@@ -118,11 +118,25 @@ $dataResult = tampilPackages($conn);
                     </button>
                 </div>
             <?php } ?>
+            <!-- custom -->
+            <div class="package-wedding">
+                <div class="image">
+                    <img src="/uploads/Rectangle 82.jpg" alt="Package Title 2" />
+                    <div class="overlay">THE CUSTOM</div>
+                </div>
+                <h2>THE CUSTOM</h2>
+                <p>THE CUSTOM Perayaan fleksibel yang dirancang khusus sesuai keinginan Anda, dengan layanan dan detail yang dapat disesuaikan untuk menciptakan momen yang sempurna.</p>
+                <!-- <p class="price">Paket untuk <strong>100 PAX</strong></p> -->
+                <button class="wedding-package-btn" onclick="window.location.href='contact.php';">
+                    Hubungi Kami
+                </button>
+
+            </div>
         </div>
     </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="readMoreModal" tabindex="-1" aria-labelledby="readMoreModalLabel" aria-hidden="true">
+    <!-- Modal -->
+    <div class="modal fade" id="readMoreModal" tabindex="-1" aria-labelledby="readMoreModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -141,7 +155,7 @@ $dataResult = tampilPackages($conn);
         </div>
     </div>
 
-    
+
     <!-- Footer -->
     <section id="footer" class="footer">
         <nav class="footer-container">
