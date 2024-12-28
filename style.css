@@ -28,7 +28,6 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Bold.ttf") format("truetype");
@@ -39,7 +38,7 @@
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Thin.ttf") format("truetype");
-  font-weight: 100; 
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -84,7 +83,6 @@
   font-weight: 600;
   font-style: normal;
 }
-
 
 /* Main Page  */
 
@@ -1293,12 +1291,12 @@
 /* Media Queries untuk Responsivitas */
 @media (max-width: 1024px) {
   .profile {
-    width: 350px; 
+    width: 350px;
     height: 500px;
   }
 
   .owner-text1 {
-    font-size: 48px; 
+    font-size: 48px;
   }
 
   .owner-text2 {
@@ -1308,7 +1306,7 @@
 
 @media (max-width: 768px) {
   .profile {
-    width: 300px; 
+    width: 300px;
     height: 400px;
   }
 
@@ -1328,8 +1326,8 @@
 
 @media (max-width: 480px) {
   .profile {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
   }
 
   .owner-text1 {
@@ -1353,7 +1351,7 @@
 /* ------------------------------------------------------------- */
 /* About Page - Villavi team*/
 .villavi-team {
-  height: auto; 
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1477,51 +1475,49 @@
   color: #fffafa;
 }
 
-
 /* ------------------------------------------------------------- */
 
-/* Service Page - available section */
+/* Service Page - Available Section */
 .available-service {
-  width:  100%;
-  height:  1150px;
+  width: 100%;
+  height: auto; /* Changed from fixed height to auto for responsiveness */
   display: flex;
   flex-wrap: wrap;
 }
 
-.content-service{
-  width: var(--width, 70%); /* Default width is 90% */
-  height: var(--height, auto); /* Default height is auto */
+.content-service {
+  width: var(--width, 70%);
+  height: var(--height, auto);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 64px 17px; 
-  justify-content: center; 
+  gap: 64px 17px;
+  justify-content: center;
   align-items: flex-start;
   padding: 50px 0;
 }
 
 .services-section {
   flex-basis: calc(50% - 20px);
-  max-width: 525px; 
-  height: 465px; 
+  max-width: 525px;
+  height: 465px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border-radius: 8px; 
+  border-radius: 8px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .services-section .images-services img {
   width: 100%;
-  height: 247px; 
-  object-fit: cover; 
+  height: auto; /* Adjust image height for responsiveness */
+  object-fit: cover;
   display: block;
 }
 
 .services-section .text-services-content {
   padding: 0 40px;
-  height: 157px;
   margin-top: 24px;
   text-align: left;
   display: flex;
@@ -1531,15 +1527,12 @@
 .services-section .horizontal-divider-services {
   border-style: solid;
   border-color: #000000;
-  border-width: 1px 0px 0px 0px;
+  border-width: 1px 0 0 0;
   flex-shrink: 0;
   width: 20px;
   height: 1px;
-  position: relative;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(1, -1);
   align-self: center;
-  margin-bottom: 10px ;
+  margin-bottom: 10px;
 }
 
 .services-section h1 {
@@ -1547,34 +1540,23 @@
   text-align: left;
   font-size: 22px;
   font-weight: 500;
-  margin: 0 0 20px 20px; 
+  margin: 0 0 20px 20px;
   color: #333;
 }
 
 .services-section p {
   font-family: "Raleway", sans-serif;
-  font-size: 14px; 
+  font-size: 14px;
   text-align: justify;
   font-weight: 300;
-  color: #0A0A0A;
-  margin: 0 0 0 20px; 
+  color: #0a0a0a;
+  margin: 0 0 0 20px;
 }
 
-
-
-/* ------------------------------------------------------------- */
 /* Service Page - Wedding Packages Section */
-
-
 .wedding-package {
-  /* width: 100%;
-  height: 2087px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; */
-  width:  100%;
-  height:  2087px;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -1592,36 +1574,28 @@
 }
 
 .package-list {
-  /* width: var(--width, 70%);
+  width: var(--width, 70%);
   height: var(--height, auto);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  align-items: flex-start;
-  gap: 85px 13px;  */
-  width: var(--width, 70%); /* Default width is 90% */
-  height: var(--height, auto); /* Default height is auto */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 67px 13px; 
-  justify-content: center; 
+  gap: 67px 13px;
+  justify-content: center;
   align-items: flex-start;
 }
 
 .package-wedding {
   flex-basis: calc(50% - 20px);
-  max-width: 346px; 
-  height: 943px; 
+  max-width: 346px;
+  height: 943px;
   /* height: auto;  */
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border-radius: 8px; 
+  border-radius: 8px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
-
 
 .package-wedding .image {
   position: relative;
@@ -1629,9 +1603,9 @@
 
 .package-wedding .image img {
   width: 100%;
-  display: block;
-  height: 491px;
+  height: auto;
   object-fit: cover;
+  display: block;
 }
 
 .package-wedding .overlay {
@@ -1649,8 +1623,6 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 36px;
   font-weight: 600;
-  line-height: auto;
-  letter-spacing: 0.08rem;
   margin: 15px 0;
   padding: 0 20px;
 }
@@ -1661,9 +1633,9 @@
   font-weight: 200;
   color: #000;
   padding: 0 20px;
-  word-wrap: break-word; 
-  overflow-wrap: break-word; 
-  white-space: normal; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
   line-height: 1.5;
 }
 
@@ -1691,26 +1663,26 @@
   transition: all 0.3s ease-in-out;
   outline: none;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .wedding-package-btn:hover {
   background-color: #8d968b;
 }
 
-/* ------------------------------------------------------------- */
-/* Service Page - Modal  */
-
-.modal-title{
+/* Service Page - Modal */
+.modal-title {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.08rem;
 }
-.modal-body img{
+
+.modal-body img {
   border-radius: 4px;
 }
-.modal-body h2{
+
+.modal-body h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 36px;
   font-weight: 500;
@@ -1718,7 +1690,7 @@
   margin: 15px 0;
 }
 
-.modal-body p{
+.modal-body p {
   font-family: "Raleway", sans-serif;
   font-size: 12px;
   font-weight: 300;
@@ -1728,7 +1700,7 @@
   text-align: justify;
 }
 
-.modal-btn{
+.modal-btn {
   background-color: #a4aea2;
   width: 120px;
   height: 60px;
@@ -1745,20 +1717,49 @@
   transition: all 0.3s ease-in-out;
   outline: none;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-.modal-btn:hover{
+.modal-btn:hover {
   background-color: #8d968b;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .services-section,
+  .package-wedding {
+    flex-basis: 100%; /* Full width on smaller screens */
+    max-width: 100%;
+  }
+
+  .package-list,
+  .content-service {
+    gap: 32px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wedding-package h1 {
+    font-size: 24px;
+  }
+
+  .package-wedding h2 {
+    font-size: 28px;
+  }
+
+  .package-wedding p {
+    font-size: 16px;
+  }
 }
 
 /* <========================================================> */
 /* <========================================================> */
 /* Portofolio Page - Hero*/
-.hero-portfolio{
+.hero-portfolio {
   width: 100%;
   height: 291px;
-  background: url("assets/images/Ourportfolio_Banner.jpg") center/cover no-repeat;
+  background: url("assets/images/Ourportfolio_Banner.jpg") center/cover
+    no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1770,7 +1771,7 @@
 /* <========================================================> */
 
 /* Contact Page */
-.contact{
+.contact {
   background-color: #fffafa;
 }
 /* Container utama */
@@ -1786,7 +1787,6 @@
 /* Contact Page - Bagian kiri (formulir) */
 .left-section {
   flex: 1;
-  
 }
 
 .left-section h2 {
@@ -1820,15 +1820,15 @@ form textarea {
 /* Contact Page - Service section  */
 
 .checkbox-group {
-  display: flex; 
-  flex-direction: column; 
-  gap: 10px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 15px;
 }
 
 .checkbox-group label {
   display: flex;
-  position: relative; 
+  position: relative;
   cursor: pointer;
   font-size: 1rem;
 }
@@ -1838,7 +1838,7 @@ form textarea {
   width: 20px;
   height: 20px;
   position: relative;
-  top: 2px; 
+  top: 2px;
 }
 
 .package option {
@@ -1850,7 +1850,6 @@ form textarea {
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
 }
-
 
 .btn-send {
   background-color: #a4aea2;
@@ -1869,14 +1868,13 @@ form textarea {
   font-size: 20px;
   text-decoration: none !important;
   transition: all 0.3s ease-in-out;
-  outline: none; 
-  border: none;  
+  outline: none;
+  border: none;
 }
 
 .btn-send:hover {
   background-color: #8d968b;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -1940,7 +1938,6 @@ form textarea {
   }
 }
 
-
 /* Bagian kanan (gambar dan peta) */
 .right-section {
   flex: 1;
@@ -1971,6 +1968,15 @@ iframe {
   margin: 20px 0;
 }
 
+/* Make font size responsive */
+@media (max-width: 768px) {
+  .right-section p {
+    font-size: 10px; /* Adjust for smaller screens */
+    height: auto; /* Allow content to adjust for smaller screens */
+  }
+}
+
+/* Email link styles */
 .email-link {
   color: blue;
   text-decoration: none;
@@ -1980,11 +1986,19 @@ iframe {
   text-decoration: underline;
 }
 
+/* Address styling */
 .address {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 200;
-  font-size: 12px; 
+  font-size: 12px;
   line-height: 1.6;
+}
+
+/* Make address font responsive */
+@media (max-width: 768px) {
+  .address {
+    font-size: 10px; /* Adjust for smaller screens */
+  }
 }
 
 a {
@@ -2040,8 +2054,6 @@ a:hover {
   }
 }
 
-
-
 /* <========================================================> */
 /* <========================================================> */
 /* RESPONSIVE IMAGES AND POSITIONS */
@@ -2060,7 +2072,6 @@ a:hover {
     text-align: center;
   }
 }
-
 
 /* portofolio */
 
