@@ -28,10 +28,18 @@
   font-style: normal;
 }
 
+
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Bold.ttf") format("truetype");
   font-weight: 700; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-Thin.ttf") format("truetype");
+  font-weight: 100; 
   font-style: normal;
 }
 
@@ -84,6 +92,7 @@
   font-style: normal;
 }
 
+
 /* Main Page  */
 
 .main-header {
@@ -118,6 +127,7 @@
 /* Navbar */
 .navbar {
   height: 246px;
+  background-color: #fff;
   background-color: #fff;
 }
 
@@ -753,6 +763,7 @@
 .footer {
   width: 100%;
   height: 257px;
+  background-color: #fff;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -1462,6 +1473,8 @@
 
 /* <========================================================> */
 /* <========================================================> */
+/* <========================================================> */
+/* <========================================================> */
 /* Service Page - Hero*/
 
 .hero-service {
@@ -1479,84 +1492,94 @@
 
 /* Service Page - Available Section */
 .available-service {
-  width: 100%;
-  height: auto; /* Changed from fixed height to auto for responsiveness */
+  width:  100%;
+  height:  1150px;
   display: flex;
   flex-wrap: wrap;
 }
 
+
 .content-service {
-  width: var(--width, 70%);
-  height: var(--height, auto);
+  width: var(--width, 70%); 
+  height: var(--height, auto); 
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 64px 17px;
-  justify-content: center;
+  gap: 64px 17px; 
+  justify-content: center; 
   align-items: flex-start;
   padding: 50px 0;
 }
 
 .services-section {
   flex-basis: calc(50% - 20px);
-  max-width: 525px;
-  height: 465px;
+  max-width: 525px; 
+  height: 465px; 
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 8px; 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 .services-section .images-services img {
   width: 100%;
-  height: auto; /* Adjust image height for responsiveness */
-  object-fit: cover;
+  height: 247px; 
+  object-fit: cover; 
   display: block;
 }
 
 .services-section .text-services-content {
   padding: 0 40px;
+  height: 157px;
   margin-top: 24px;
   text-align: left;
   display: flex;
   flex-direction: column;
 }
 
+
 .services-section .horizontal-divider-services {
   border-style: solid;
   border-color: #000000;
-  border-width: 1px 0 0 0;
+  border-width: 1px 0px 0px 0px;
   flex-shrink: 0;
   width: 20px;
   height: 1px;
+  position: relative;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
   align-self: center;
   margin-bottom: 10px;
 }
+
 
 .services-section h1 {
   font-family: "Cormorant Garamond", serif;
   text-align: left;
   font-size: 22px;
   font-weight: 500;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 20px; 
   color: #333;
 }
 
 .services-section p {
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-size: 14px; 
   text-align: justify;
   font-weight: 300;
-  color: #0a0a0a;
-  margin: 0 0 0 20px;
+  color: #0A0A0A;
+  margin: 0 0 0 20px; 
 }
 
+
+
+/* ------------------------------------------------------------- */
 /* Service Page - Wedding Packages Section */
 .wedding-package {
-  width: 100%;
-  height: auto;
+  width:  100%;
+  height:  2087px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -1571,12 +1594,21 @@
   margin: 20px 0;
   font-size: 32px;
   color: #000;
+  margin-bottom: 50px;
 }
 
 .package-list {
   width: var(--width, 70%);
   height: var(--height, auto);
   margin: 0 auto;
+  display: flex;
+  flex-direction: wrap;
+  gap: 67px 13px; 
+  justify-content: center; 
+  align-items: flex-start;
+}
+
+.package-list {
   display: flex;
   flex-wrap: wrap;
   gap: 67px 13px;
@@ -1586,12 +1618,21 @@
 
 .package-wedding {
   flex-basis: calc(50% - 20px);
-  max-width: 346px;
-  height: 943px;
+  max-width: 346px; 
+  height: auto; 
   /* height: auto;  */
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  border-radius: 8px; 
+  display: flex;
+  flex-direction: column; 
+}
+
+.package-wedding .custom {
+  margin: 0 auto;
+  flex: 1 1 100%;
+  max-width: 500px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -1603,9 +1644,9 @@
 
 .package-wedding .image img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
   display: block;
+  height: 491px;
+  object-fit: cover;
 }
 
 .package-wedding .overlay {
@@ -1623,6 +1664,8 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 36px;
   font-weight: 600;
+  line-height: auto;
+  letter-spacing: 0.08rem;
   margin: 15px 0;
   padding: 0 20px;
 }
@@ -1633,9 +1676,9 @@
   font-weight: 200;
   color: #000;
   padding: 0 20px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  white-space: normal; 
   line-height: 1.5;
 }
 
@@ -1663,7 +1706,9 @@
   transition: all 0.3s ease-in-out;
   outline: none;
   border: none;
-  cursor: pointer;
+  cursor: pointer; 
+  margin-bottom: 35px;
+
 }
 
 .wedding-package-btn:hover {
@@ -1752,6 +1797,9 @@
   }
 }
 
+
+
+
 /* <========================================================> */
 /* <========================================================> */
 /* Portofolio Page - Hero*/
@@ -1779,6 +1827,8 @@
   display: flex;
   max-width: 1400px;
   height: 1640px;
+  max-width: 1400px;
+  height: 1640px;
   margin: 20px auto;
   gap: 30px;
   padding: 20px;
@@ -1787,6 +1837,7 @@
 /* Contact Page - Bagian kiri (formulir) */
 .left-section {
   flex: 1;
+  
 }
 
 .left-section h2 {
@@ -1820,15 +1871,15 @@ form textarea {
 /* Contact Page - Service section  */
 
 .checkbox-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
   margin-bottom: 15px;
 }
 
 .checkbox-group label {
   display: flex;
-  position: relative;
+  position: relative; 
   cursor: pointer;
   font-size: 1rem;
 }
@@ -1838,7 +1889,7 @@ form textarea {
   width: 20px;
   height: 20px;
   position: relative;
-  top: 2px;
+  top: 2px; 
 }
 
 .package option {
@@ -1850,6 +1901,7 @@ form textarea {
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
 }
+
 
 .btn-send {
   background-color: #a4aea2;
@@ -1868,13 +1920,14 @@ form textarea {
   font-size: 20px;
   text-decoration: none !important;
   transition: all 0.3s ease-in-out;
-  outline: none;
-  border: none;
+  outline: none; 
+  border: none; 
 }
 
 .btn-send:hover {
   background-color: #8d968b;
 }
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -1938,6 +1991,7 @@ form textarea {
   }
 }
 
+
 /* Bagian kanan (gambar dan peta) */
 .right-section {
   flex: 1;
@@ -1968,7 +2022,247 @@ iframe {
   margin: 20px 0;
 }
 
+.email-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.address {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 12px; 
+  line-height: 1.6;
+}
+
+a {
+  color: #a2b09f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  /* Atur agar bagian kiri dan kanan tampil vertikal (1 kolom) pada tablet */
+  .container4 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1 1 100%; /* Menggunakan 100% lebar untuk tiap bagian */
+  }
+
+  .wedding-img {
+    height: auto; /* Sesuaikan tinggi gambar pada layar kecil */
+  }
+
+  iframe {
+    height: 250px; /* Sesuaikan tinggi iframe pada layar kecil */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Pada layar ponsel, pastikan semua bagian memiliki ukuran lebar penuh */
+  .container4 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1 1 100%; /* 100% lebar pada ponsel */
+  }
+.package option {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+}
+
+#details {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+}
+
+  .btn-send {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  iframe {
+    height: 200px; /* Lebih kecil pada ponsel */
+  }
+}
+
+
+
+/* <========================================================> */
+/* <========================================================> */
+/* RESPONSIVE IMAGES AND POSITIONS */
+@media (max-width: 992px) {
+  .custom-right-position,
+  .custom-right-position1 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .custom-left-position {
+    margin-left: 0;
+  }
+  .custom-text-right {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+
+/* portofolio */
+
+/* Reset Margin & Padding */
+/* GALERI GAMBARS */
+.gallery1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom default */
+  grid-gap: 30px; /* Jarak antar gambar */
+  max-width: 1200px; /* Lebar maksimum galeri */
+  padding: 20px;
+  margin: 0 auto; /* Pusatkan galeri secara horizontal */
+}
+
+.gallery1 div {
+  display: flex; /* Mengaktifkan flexbox */
+  justify-content: center; /* Memusatkan gambar secara horizontal */
+  align-items: center; /* Memusatkan gambar secara vertikal */
+  overflow: hidden; /* Menjaga gambar tetap di dalam kotak */
+  border-radius: 0px; /* Membuat sudut kotak melengkung */
+  background-color: #f8f8f8; /* Memberikan latar belakang abu-abu lembut */
+  height: 300px; /* Tinggi tetap untuk setiap elemen grid */
+}
+
+.gallery1 img {
+  width: auto; /* Menjaga proporsi asli gambar */
+  height: 100%; /* Gambar akan menyesuaikan tinggi kotak */
+  object-fit: contain; /* Memastikan gambar tidak terpotong */
+  transition: transform 0.3s ease; /* Animasi efek hover */
+}
+
+.gallery1 img:hover {
+  transform: scale(1.1); /* Hanya gambar yang diperbesar */
+}
+
+/* RESPONSIVE GALLERY */
+@media (max-width: 992px) {
+    .gallery1 {
+      grid-template-columns: repeat(2, 1fr);}/* 2 kolom pada tablet */
+    .btn-send {
+      background-color: #a4aea2;
+      width: 159px;
+      height: 52px;
+      color: white !important;
+      letter-spacing: 0.08em;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      gap: 8px;
+      flex-direction: row;
+      border-radius: 3px;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: normal;
+      font-size: 20px;
+      text-decoration: none !important;
+      transition: all 0.3s ease-in-out;
+      outline: none;
+      border: none;
+    }
+  }
+
+.btn-send:hover {
+  background-color: #8d968b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* Atur agar footer lebih kompak pada tablet */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .title h1 {
+    font-size: 28px;
+  }
+
+  .title p {
+    font-size: 12px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .long-hr {
+    width: 80%; /* Lebar garis lebih pendek */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery1 {
+    grid-template-columns: 1fr; /* 1 kolom pada ponsel */
+  }
+}
+
+
+/* Bagian kanan (gambar dan peta) */
+.right-section {
+  flex: 1;
+  text-align: center;
+}
+
+.wedding-img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.right-section p {
+  font-family: "Raleway", sans-serif;
+  height: 69px;
+  font-size: 12px;
+  color: #000;
+  letter-spacing: 0.08rem;
+  text-align: left;
+  line-height: 1.4;
+  margin: 20px 0;
+}
+
+.custom-line-vertical {
+  width: 1px; /* Lebar garis */
+  height: 50px; /* Tinggi garis */
+  background-color: #000; /* Warna garis */
+  margin: 0 auto; /* Agar garis berada di tengah */
 /* Make font size responsive */
+}
+
 @media (max-width: 768px) {
   .right-section p {
     font-size: 10px; /* Adjust for smaller screens */

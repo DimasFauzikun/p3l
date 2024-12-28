@@ -118,6 +118,7 @@ $dataResult = tampilPackages($conn);
                     </button>
                 </div>
             <?php } ?>
+
             <!-- custom -->
             <div class="package-wedding">
                 <div class="image">
@@ -129,8 +130,7 @@ $dataResult = tampilPackages($conn);
                 <!-- <p class="price">Paket untuk <strong>100 PAX</strong></p> -->
                 <button class="wedding-package-btn" onclick="window.location.href='contact.php';">
                     Hubungi Kami
-                </button>
-
+                </button> 
             </div>
         </div>
     </div>
