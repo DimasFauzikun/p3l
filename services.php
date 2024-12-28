@@ -77,27 +77,30 @@ $dataResult = tampilPackages($conn);
         <div class="hero-content"></div>
     </section>
 
+
     <!-- Services Section -->
-    <div class="container2 my-5">
-        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-            <div class="section">
-                <div class="image">
-                    <img src="<?php echo htmlspecialchars($row['gambar']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
+    <div class="available-service">
+        <div class="content-service">
+            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                <div class="services-section">
+                    <div class="images-services">
+                        <img src="<?php echo htmlspecialchars($row['gambar']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
+                    </div>
+                    <div class="text-services-content">
+                        <h1><?php echo htmlspecialchars($row['title']); ?></h1>
+                        <p><?php echo nl2br(htmlspecialchars($row['deskripsi'])); ?></p>
+                    </div>
                 </div>
-                <div class="content">
-                    <h2><?php echo htmlspecialchars($row['title']); ?></h2>
-                    <p><?php echo nl2br(htmlspecialchars($row['deskripsi'])); ?></p>
-                </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
+        </div>
     </div>
 
     <!-- Wedding Package Section -->
-    <div class="container3">
+    <div class="wedding-package">
         <h1>WEDDING PACKAGE</h1>
-        <div class="packages">
+        <div class="package-list">
             <?php while ($row = mysqli_fetch_assoc($dataResult)) { ?>
-                <div class="package">
+                <div class="package-wedding">
                     <div class="image">
                         <img src="<?php echo $row['gambar_pk']; ?>" alt="<?php echo $row['title_pk']; ?>" />
                         <div class="overlay"><?php echo strtoupper($row['title_pk']); ?></div>
@@ -105,14 +108,30 @@ $dataResult = tampilPackages($conn);
                     <h2><?php echo $row['title_pk']; ?></h2>
                     <p><?php echo $row['deskripsi_pk']; ?></p>
                     <p class="price">Paket untuk <strong><?php echo $row['pax']; ?> PAX</strong></p>
-                    <button class="btn btn btn-secondary gray-button read-more-btn"
+                    <button class="wedding-package-btn"
                         data-bs-toggle="modal"
                         data-bs-target="#readMoreModal"
                         data-title="<?php echo htmlspecialchars($row['title_pk']); ?>"
                         data-description="<?php echo htmlspecialchars($row['deskripsi_pk']); ?>"
-                        data-image="<?php echo htmlspecialchars($row['gambar_paket']); ?>">Read More</button>
+                        data-image="<?php echo htmlspecialchars($row['gambar_paket']); ?>">
+                        Detail Lengkap
+                    </button>
                 </div>
             <?php } ?>
+            <!-- custom -->
+            <div class="package-wedding">
+                <div class="image">
+                    <img src="/uploads/Rectangle 82.jpg" alt="Package Title 2" />
+                    <div class="overlay">THE CUSTOM</div>
+                </div>
+                <h2>THE CUSTOM</h2>
+                <p>THE CUSTOM Perayaan fleksibel yang dirancang khusus sesuai keinginan Anda, dengan layanan dan detail yang dapat disesuaikan untuk menciptakan momen yang sempurna.</p>
+                <!-- <p class="price">Paket untuk <strong>100 PAX</strong></p> -->
+                <button class="wedding-package-btn" onclick="window.location.href='contact.php';">
+                    Hubungi Kami
+                </button>
+
+            </div>
         </div>
     </div>
 
@@ -130,11 +149,12 @@ $dataResult = tampilPackages($conn);
                     <p id="modalDescription"></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary gray-button" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Footer -->
     <section id="footer" class="footer">
@@ -184,7 +204,7 @@ $dataResult = tampilPackages($conn);
             const modalDescription = document.getElementById("modalDescription");
             const modalImage = document.getElementById("modalImage");
 
-            document.querySelectorAll(".read-more-btn").forEach(function(button) {
+            document.querySelectorAll(".wedding-package-btn").forEach(function(button) {
                 button.addEventListener("click", function() {
                     const title = this.getAttribute("data-title");
                     const description = this.getAttribute("data-description");
