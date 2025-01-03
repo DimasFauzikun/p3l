@@ -44,6 +44,13 @@
 
 @font-face {
   font-family: "Raleway";
+  src: url("assets/font/Raleway/static/Raleway-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Ligth.ttf") format("truetype");
   font-weight: 300; /* Medium */
   font-style: normal;
@@ -118,6 +125,7 @@
 /* Navbar */
 .navbar {
   height: 246px;
+  background-color: #fff;
   background-color: #fff;
 }
 
@@ -753,6 +761,7 @@
 .footer {
   width: 100%;
   height: 257px;
+  background-color: #fff;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -1462,6 +1471,8 @@
 
 /* <========================================================> */
 /* <========================================================> */
+/* <========================================================> */
+/* <========================================================> */
 /* Service Page - Hero*/
 
 .hero-service {
@@ -1480,7 +1491,7 @@
 /* Service Page - Available Section */
 .available-service {
   width: 100%;
-  height: auto; /* Changed from fixed height to auto for responsiveness */
+  height: 1150px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1511,13 +1522,14 @@
 
 .services-section .images-services img {
   width: 100%;
-  height: auto; /* Adjust image height for responsiveness */
+  height: 247px;
   object-fit: cover;
   display: block;
 }
 
 .services-section .text-services-content {
   padding: 0 40px;
+  height: 157px;
   margin-top: 24px;
   text-align: left;
   display: flex;
@@ -1527,10 +1539,13 @@
 .services-section .horizontal-divider-services {
   border-style: solid;
   border-color: #000000;
-  border-width: 1px 0 0 0;
+  border-width: 1px 0px 0px 0px;
   flex-shrink: 0;
   width: 20px;
   height: 1px;
+  position: relative;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
   align-self: center;
   margin-bottom: 10px;
 }
@@ -1553,10 +1568,11 @@
   margin: 0 0 0 20px;
 }
 
+/* ------------------------------------------------------------- */
 /* Service Page - Wedding Packages Section */
 .wedding-package {
   width: 100%;
-  height: auto;
+  height: 2087px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -1571,12 +1587,21 @@
   margin: 20px 0;
   font-size: 32px;
   color: #000;
+  margin-bottom: 50px;
 }
 
 .package-list {
   width: var(--width, 70%);
   height: var(--height, auto);
   margin: 0 auto;
+  display: flex;
+  flex-direction: wrap;
+  gap: 67px 13px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.package-list {
   display: flex;
   flex-wrap: wrap;
   gap: 67px 13px;
@@ -1587,11 +1612,20 @@
 .package-wedding {
   flex-basis: calc(50% - 20px);
   max-width: 346px;
-  height: 943px;
+  height: auto;
   /* height: auto;  */
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-wedding .custom {
+  margin: 0 auto;
+  flex: 1 1 100%;
+  max-width: 500px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -1603,9 +1637,9 @@
 
 .package-wedding .image img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
   display: block;
+  height: 491px;
+  object-fit: cover;
 }
 
 .package-wedding .overlay {
@@ -1623,6 +1657,8 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 36px;
   font-weight: 600;
+  line-height: auto;
+  letter-spacing: 0.08rem;
   margin: 15px 0;
   padding: 0 20px;
 }
@@ -1664,6 +1700,7 @@
   outline: none;
   border: none;
   cursor: pointer;
+  margin-bottom: 35px;
 }
 
 .wedding-package-btn:hover {
@@ -1777,6 +1814,8 @@
 /* Container utama */
 .container-contact {
   display: flex;
+  max-width: 1400px;
+  height: 1640px;
   max-width: 1400px;
   height: 1640px;
   margin: 20px auto;
@@ -1968,7 +2007,244 @@ iframe {
   margin: 20px 0;
 }
 
-/* Make font size responsive */
+.email-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.address {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+a {
+  color: #a2b09f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  /* Atur agar bagian kiri dan kanan tampil vertikal (1 kolom) pada tablet */
+  .container4 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1 1 100%; /* Menggunakan 100% lebar untuk tiap bagian */
+  }
+
+  .wedding-img {
+    height: auto; /* Sesuaikan tinggi gambar pada layar kecil */
+  }
+
+  iframe {
+    height: 250px; /* Sesuaikan tinggi iframe pada layar kecil */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Pada layar ponsel, pastikan semua bagian memiliki ukuran lebar penuh */
+  .container4 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1 1 100%; /* 100% lebar pada ponsel */
+  }
+  .package option {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+  }
+
+  #details {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+  }
+
+  .btn-send {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  iframe {
+    height: 200px; /* Lebih kecil pada ponsel */
+  }
+}
+
+/* <========================================================> */
+/* <========================================================> */
+/* RESPONSIVE IMAGES AND POSITIONS */
+@media (max-width: 992px) {
+  .custom-right-position,
+  .custom-right-position1 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .custom-left-position {
+    margin-left: 0;
+  }
+  .custom-text-right {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* portofolio */
+
+/* Reset Margin & Padding */
+/* GALERI GAMBARS */
+.gallery1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom default */
+  grid-gap: 30px; /* Jarak antar gambar */
+  max-width: 1200px; /* Lebar maksimum galeri */
+  padding: 20px;
+  margin: 0 auto; /* Pusatkan galeri secara horizontal */
+}
+
+.gallery1 div {
+  display: flex; /* Mengaktifkan flexbox */
+  justify-content: center; /* Memusatkan gambar secara horizontal */
+  align-items: center; /* Memusatkan gambar secara vertikal */
+  overflow: hidden; /* Menjaga gambar tetap di dalam kotak */
+  border-radius: 0px; /* Membuat sudut kotak melengkung */
+  background-color: #f8f8f8; /* Memberikan latar belakang abu-abu lembut */
+  height: 300px; /* Tinggi tetap untuk setiap elemen grid */
+}
+
+.gallery1 img {
+  width: auto; /* Menjaga proporsi asli gambar */
+  height: 100%; /* Gambar akan menyesuaikan tinggi kotak */
+  object-fit: contain; /* Memastikan gambar tidak terpotong */
+  transition: transform 0.3s ease; /* Animasi efek hover */
+}
+
+.gallery1 img:hover {
+  transform: scale(1.1); /* Hanya gambar yang diperbesar */
+}
+
+/* RESPONSIVE GALLERY */
+@media (max-width: 992px) {
+  .gallery1 {
+    grid-template-columns: repeat(2, 1fr);
+  } /* 2 kolom pada tablet */
+  .btn-send {
+    background-color: #a4aea2;
+    width: 159px;
+    height: 52px;
+    color: white !important;
+    letter-spacing: 0.08em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    border-radius: 3px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    border: none;
+  }
+}
+
+.btn-send:hover {
+  background-color: #8d968b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* Atur agar footer lebih kompak pada tablet */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .title h1 {
+    font-size: 28px;
+  }
+
+  .title p {
+    font-size: 12px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .long-hr {
+    width: 80%; /* Lebar garis lebih pendek */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery1 {
+    grid-template-columns: 1fr; /* 1 kolom pada ponsel */
+  }
+}
+
+/* Bagian kanan (gambar dan peta) */
+.right-section {
+  flex: 1;
+  text-align: center;
+}
+
+.wedding-img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.right-section p {
+  font-family: "Raleway", sans-serif;
+  height: 69px;
+  font-size: 12px;
+  color: #000;
+  letter-spacing: 0.08rem;
+  text-align: left;
+  line-height: 1.4;
+  margin: 20px 0;
+}
+
+.custom-line-vertical {
+  width: 1px; /* Lebar garis */
+  height: 50px; /* Tinggi garis */
+  background-color: #000; /* Warna garis */
+  margin: 0 auto; /* Agar garis berada di tengah */
+  /* Make font size responsive */
+}
+
 @media (max-width: 768px) {
   .right-section p {
     font-size: 10px; /* Adjust for smaller screens */
@@ -2118,144 +2394,4 @@ a:hover {
   .gallery1 {
     grid-template-columns: 1fr; /* 1 kolom pada ponsel */
   }
-}
-
-/* =============================================================== */
-/* chatbot */
-/* Adjusted for right-bottom positioning and increased size */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-*,
-html {
-  --primaryGradient: linear-gradient(93.12deg, #581b98 0.52%, #9c1de7 100%);
-  --secondaryGradient: linear-gradient(
-    268.91deg,
-    #581b98 -2.14%,
-    #9c1de7 99.69%
-  );
-  --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-  --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
-  --light: 300;
-  --regular: 400;
-  --semiBold: 600;
-  --extraLight: 300;
-  --italic: 300;
-  --primary: #581b98;
-}
-
-body {
-  font-family: "Nunito", sans-serif;
-  font-weight: 400;
-  font-size: 100%;
-  background: #f1f1f1;
-}
-
-.chatbox__support {
-  background: #f9f9f9;
-  height: 600px;
-  width: 450px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  position: fixed;
-  bottom: 40px;
-  right: 50px;
-}
-
-/* HEADER */
-.chatbox__header {
-  background: var(--primaryGradient);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 20px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: var(--primaryBoxShadow);
-}
-
-.chatbox__image--header {
-  margin-right: 10px;
-}
-
-.chatbox__heading--header {
-  font-size: 1.5rem;
-  color: white;
-}
-
-.chatbox__description--header {
-  font-size: 1rem;
-  color: white;
-}
-
-/* Messages */
-.chatbox__messages {
-  padding: 0 20px;
-}
-
-.messages__item {
-  margin-top: 10px;
-  background: #e0e0e0;
-  padding: 8px 12px;
-  max-width: 70%;
-}
-
-.messages__item--visitor,
-.messages__item--typing {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.messages__item--operator {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background: var(--primary);
-  color: white;
-}
-
-/* FOOTER */
-.chatbox__footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 20px;
-  background: var(--secondaryGradient);
-  box-shadow: var(--secondaryBoxShadow);
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  margin-top: 20px;
-}
-
-.chatbox__footer input {
-  border: none;
-  padding: 12px 12px;
-  border-radius: 30px;
-  text-align: center;
-  flex: 1;
-}
-
-.chatbox__send--footer {
-  color: white;
-}
-
-.chatbox__button button,
-.chatbox__button button:focus,
-.chatbox__button button:visited {
-  padding: 12px;
-  background: white;
-  border: none;
-  outline: none;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
 }
