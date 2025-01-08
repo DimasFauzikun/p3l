@@ -12,9 +12,13 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/chat.css">
+  <link rel="stylesheet" href="./assets/css/typing.css">
 </head>
 
 <body>
+
   <!-- Header -->
   <header class="main-header">
     Tailoring extraordinary experiences for you
@@ -133,8 +137,8 @@
           <h1>PORTFOLIO</h1>
         </div>
         <div class="content">
-          <p class="main-text">Bersama VillaVi, kami tidak hanya merencanakan pernikahan, tetapi juga menciptakan pengalaman yang tak terlupakan. 
-            Kami berkomitmen untuk memberikan yang terbaik, melampaui ekspektasi Anda, dan menjadikan hari istimewa Anda sebagai refleksi sejati dari cinta dan gaya Anda. 
+          <p class="main-text">Bersama VillaVi, kami tidak hanya merencanakan pernikahan, tetapi juga menciptakan pengalaman yang tak terlupakan.
+            Kami berkomitmen untuk memberikan yang terbaik, melampaui ekspektasi Anda, dan menjadikan hari istimewa Anda sebagai refleksi sejati dari cinta dan gaya Anda.
             Setiap Janji kami adalah mewujudkan visi Anda menjadi kenyataan yang spektakuler, memastikan setiap momen perayaan Anda penuh keajaiban dan kenangan yang abadi.</p>
           <br><br>
           <a href="portofolio.php" class="portfolio-btn">OUR PORTFOLIO</a>
@@ -276,6 +280,57 @@
   </footer>
   
 
+
+  <!-- chatbot -->
+  <div class="container">
+    <div class="chatbox">
+      <div class="chatbox__support">
+        <div class="chatbox__header">
+          <div class="chatbox__image--header">
+            <img src="./images/image.png" alt="image">
+          </div>
+          <div class="chatbox__content--header">
+            <h4 class="chatbox__heading--header">Chat support</h4>
+            <p class="chatbox__description--header">There are many variations of passages of Lorem Ipsum available</p>
+          </div>
+        </div>
+        <div class="chatbox__messages">
+          <div>
+            <div class="messages__item messages__item--visitor">
+              Can you let me talk to the support?
+            </div>
+            <div class="messages__item messages__item--operator">
+              Sure!
+            </div>
+            <div class="messages__item messages__item--visitor">
+              Need your help, I need a developer in my site.
+            </div>
+            <div class="messages__item messages__item--operator">
+              Hi... What is it? I'm a front-end developer, yay!
+            </div>
+            <div class="messages__item messages__item--typing">
+              <span class="messages__dot"></span>
+              <span class="messages__dot"></span>
+              <span class="messages__dot"></span>
+            </div>
+          </div>
+        </div>
+        <div class="chatbox__footer">
+          <img src="./images/icons/emojis.svg" alt="">
+          <img src="./images/icons/microphone.svg" alt="">
+          <input type="text" placeholder="Write a message...">
+          <p class="chatbox__send--footer">Send</p>
+          <img src="./images/icons/attachment.svg" alt="">
+        </div>
+      </div>
+      <div class="chatbox__button">
+        <button>button</button>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/Chat.js"></script>
+  <script src="./app.js"></script>
+
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js" defer></script>
@@ -285,6 +340,7 @@
   <script
     nomodule
     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
 </body>
 
 </html>
