@@ -19,7 +19,7 @@ $portfolios = fetchPortfolios($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villavi The Venue</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -123,6 +123,16 @@ $portfolios = fetchPortfolios($conn);
                 | DESIGN BY GENERASI TATAP LAYAR</p>
         </div>
     </footer>
+
+        <!-- Chipp Chat Widget -->
+    <script>
+        window.CHIPP_APP_URL = "https://villaviaiagent-32623.chipp.ai";
+        window.CHIPP_APP_ID = 32623;
+    </script>
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.css" />
+
+    <script defer src="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

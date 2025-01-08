@@ -11,10 +11,8 @@
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/chat.css">
-  <link rel="stylesheet" href="./assets/css/typing.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -280,56 +278,15 @@
   </footer>
   
 
+  <!-- Chipp Chat Widget -->
+  <script>
+    window.CHIPP_APP_URL = "https://villaviaiagent-32623.chipp.ai";
+    window.CHIPP_APP_ID = 32623;
+  </script>
 
-  <!-- chatbot -->
-  <div class="container">
-    <div class="chatbox">
-      <div class="chatbox__support">
-        <div class="chatbox__header">
-          <div class="chatbox__image--header">
-            <img src="./images/image.png" alt="image">
-          </div>
-          <div class="chatbox__content--header">
-            <h4 class="chatbox__heading--header">Chat support</h4>
-            <p class="chatbox__description--header">There are many variations of passages of Lorem Ipsum available</p>
-          </div>
-        </div>
-        <div class="chatbox__messages">
-          <div>
-            <div class="messages__item messages__item--visitor">
-              Can you let me talk to the support?
-            </div>
-            <div class="messages__item messages__item--operator">
-              Sure!
-            </div>
-            <div class="messages__item messages__item--visitor">
-              Need your help, I need a developer in my site.
-            </div>
-            <div class="messages__item messages__item--operator">
-              Hi... What is it? I'm a front-end developer, yay!
-            </div>
-            <div class="messages__item messages__item--typing">
-              <span class="messages__dot"></span>
-              <span class="messages__dot"></span>
-              <span class="messages__dot"></span>
-            </div>
-          </div>
-        </div>
-        <div class="chatbox__footer">
-          <img src="./images/icons/emojis.svg" alt="">
-          <img src="./images/icons/microphone.svg" alt="">
-          <input type="text" placeholder="Write a message...">
-          <p class="chatbox__send--footer">Send</p>
-          <img src="./images/icons/attachment.svg" alt="">
-        </div>
-      </div>
-      <div class="chatbox__button">
-        <button>button</button>
-      </div>
-    </div>
-  </div>
-  <script src="./assets/js/Chat.js"></script>
-  <script src="./app.js"></script>
+  <link rel="stylesheet" href="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.css" />
+
+  <script defer src="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.js"></script>
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

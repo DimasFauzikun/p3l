@@ -27,7 +27,7 @@ $dataResult = tampilPackages($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Villavi The Venue</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -185,8 +185,7 @@ $dataResult = tampilPackages($conn);
                 | DESIGN BY GENERASI TATAP LAYAR</p>
         </div>
     </footer>
-    
-  <iframe src="https://villaviaiagent-32623.chipp.ai" height="800px" width="100%" frameborder="0" title="Villavi AI Agent"></iframe>
+
 
 
     <!-- Chipp Chat Widget -->

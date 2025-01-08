@@ -11,7 +11,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <!-- Header -->
@@ -101,8 +101,8 @@
 
     <!-- Chipp Chat Widget -->
     <script>
-    window.CHIPP_APP_URL = "https://villaviaiagent-32623.chipp.ai";
-    window.CHIPP_APP_ID = 32623;
+        window.CHIPP_APP_URL = "https://villaviaiagent-32623.chipp.ai";
+        window.CHIPP_APP_ID = 32623;
     </script>
 
     <link rel="stylesheet" href="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.css" />

@@ -14,7 +14,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -180,9 +180,6 @@
         | DESIGN BY GENERASI TATAP LAYAR</p>
     </div>
   </footer>
-
-  <iframe src="https://villaviaiagent-32623.chipp.ai" height="800px" width="100%" frameborder="0" title="Villavi AI Agent"></iframe>
-
 
   <!-- Chipp Chat Widget -->
   <script>
