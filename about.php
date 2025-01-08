@@ -181,6 +181,19 @@
     </div>
   </footer>
 
+  <iframe src="https://villaviaiagent-32623.chipp.ai" height="800px" width="100%" frameborder="0" title="Villavi AI Agent"></iframe>
+
+
+  <!-- Chipp Chat Widget -->
+  <script>
+    window.CHIPP_APP_URL = "https://villaviaiagent-32623.chipp.ai";
+    window.CHIPP_APP_ID = 32623;
+  </script>
+
+  <link rel="stylesheet" href="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.css" />
+
+  <script defer src="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js" defer></script>
   <script

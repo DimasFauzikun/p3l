@@ -230,7 +230,7 @@
       camera.updateProjectionMatrix();
     });
   </script>
-
+  
 
   <!-- Location Section -->
   <section id="location" class="location">
@@ -242,6 +242,8 @@
       </iframe>
     </div>
   </section>
+
+  
 
   <!-- Footer -->
   <section id="footer" class="footer">
@@ -272,6 +274,7 @@
         | DESIGN BY GENERASI TATAP LAYAR</p>
     </div>
   </footer>
+  
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

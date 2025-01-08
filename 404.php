@@ -96,5 +96,17 @@
             | DESIGN BY GENERASI TATAP LAYAR</p>
         </div>
     </footer>
+    <iframe src="https://villaviaiagent-32623.chipp.ai" height="800px" width="100%" frameborder="0" title="Villavi AI Agent"></iframe>
+
+
+    <!-- Chipp Chat Widget -->
+    <script>
+    window.CHIPP_APP_URL = "https://villaviaiagent-32623.chipp.ai";
+    window.CHIPP_APP_ID = 32623;
+    </script>
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.css" />
+
+    <script defer src="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.js"></script>
 </body>
 </html>

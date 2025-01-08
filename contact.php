@@ -152,7 +152,8 @@ $conn->close();
         <input type="text" id="name" name="name" required />
 
         <label for="phone">Phone</label>
-        <input type="text" id="phone" name="phone" required />
+        <input type="text" id="phone" name="phone" required oninput="validatePhone()" />
+        <small id="phone-error" style="color: red; display: none;">Input harus berupa angka</small>
 
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required />
@@ -162,7 +163,7 @@ $conn->close();
 
         <label for="service">Service</label>
         <div class="checkbox-group">
-          <label><input type="checkbox" name="service[]" value="Wedding Organizer" /> Wedding Organizer</label>
+          <label><input type="checkbox" id="wedding-organizer" name="service[]" value="Wedding Organizer" onclick="toggleWeddingPackages()"/> Wedding Organizer</label>
           <label><input type="checkbox" name="service[]" value="Photoshoot Services" /> Photoshoot Services</label>
           <label><input type="checkbox" name="service[]" value="Venue for Shooting" /> Venue for Shooting</label>
           <label><input type="checkbox" name="service[]" value="Event by Request" /> Event by Request</label>
@@ -180,9 +181,16 @@ $conn->close();
         </div>
 
 
-
         <label for="budget">Estimated Event Budget</label>
-        <input type="text" id="budget" name="budget" required placeholder="Rp 0" oninput="formatCurrency(this)" />
+        <input 
+          type="text" 
+          id="budget" 
+          name="budget" 
+          required 
+          placeholder="Rp 0" 
+          oninput="validateBudget()" 
+        />
+        <small id="budget-error" style="color: red; display: none;">Input hanya bisa berupa angka</small>
 
         <label for="date">Event Date</label>
         <input type="date" id="date" name="date" required />
@@ -198,10 +206,13 @@ $conn->close();
       <img src="Rectangle 57.jpg" alt="Wedding Bouquet" class="wedding-img" />
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5876.085189989196!2d106.89287967645825!3d-6.31838019367101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed0991611a33%3A0xac0920869524750f!2sVillaVi!5e1!3m2!1sen!2sid!4v1734323499670!5m2!1sen!2sid" width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
       <p>
-        Terima kasih telah memilih layanan kami. Untuk informasi lebih lanjut,
-        hubungi kami di
-        <a href="mailto:email@example.com">email@example.com</a> atau telepon
-        +62 812-3456-7890.
+        Terima kasih telah memilih VillaVi. Mari kita bekerja sama untuk menciptakan sesuatu yang istimewa dan penuh kenangan! <br> <br>
+        Untuk informasi lebih lanjut, kirimkan email ke 
+        <a href="mailto:villavi.the.venue@gmail.com" class="email-link">villavi.the.venue@gmail.com</a> 
+        atau telepon kami di 0896-9647-6888. Kami akan dengan senang hati merespons Anda!
+      </p>
+      <p class="address">
+        Jl. P.P.A No.8 11, RT.4/RW.4, Ceger, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13820
       </p>
     </div>
   </div>
@@ -235,6 +246,19 @@ $conn->close();
         | DESIGN BY GENERASI TATAP LAYAR</p>
     </div>
   </footer>
+  
+  <iframe src="https://villaviaiagent-32623.chipp.ai" height="800px" width="100%" frameborder="0" title="Villavi AI Agent"></iframe>
+
+
+  <!-- Chipp Chat Widget -->
+  <script>
+    window.CHIPP_APP_URL = "https://villaviaiagent-32623.chipp.ai";
+    window.CHIPP_APP_ID = 32623;
+  </script>
+
+  <link rel="stylesheet" href="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.css" />
+
+  <script defer src="https://storage.googleapis.com/chipp-chat-widget-assets/build/bundle.js"></script>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

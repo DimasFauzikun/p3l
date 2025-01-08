@@ -1488,39 +1488,25 @@
   color: #fffafa;
 }
 
-
-/* ------------------------------------------------------------- */
-
-/* Service Page - available section */
-
-.available-service {
-  width: 100%;
-  height: auto;
 /* ------------------------------------------------------------- */
 
 /* Service Page - Available Section */
 .available-service {
-  width: 100%;
-  height: auto; /* Changed from fixed height to auto for responsiveness */
+  width:  100%;
+  height:  1150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.content-service {
+  width: var(--width, 70%); 
+  height: var(--height, auto); 
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 64px 17px; 
   justify-content: center; 
-  align-items: flex-start;
-  padding: 50px 0
-}
-
-.services-section {
-}
-
-.content-service {
-  width: var(--width, 70%);
-  height: var(--height, auto);
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 64px 17px;
-  justify-content: center;
   align-items: flex-start;
   padding: 50px 0;
 }
@@ -1528,99 +1514,61 @@
 .services-section {
   flex-basis: calc(50% - 20px);
   max-width: 525px; 
-  height: 438px; 
-  max-width: 525px;
-  height: 465px;
+  height: 465px; 
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   border-radius: 8px; 
   display: flex;
   flex-direction: column; 
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
 }
 
-.services-section .images-services img {
 .services-section .images-services img {
   width: 100%;
   height: 247px; 
   object-fit: cover; 
-  height: auto; /* Adjust image height for responsiveness */
-  object-fit: cover;
   display: block;
 }
 
 .services-section .text-services-content {
   padding: 0 40px;
   height: 157px;
-  margin-top: 5px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-.services-section .text-services-content {
-  padding: 0 40px;
   margin-top: 24px;
   text-align: left;
   display: flex;
   flex-direction: column;
 }
 
+
 .services-section .horizontal-divider-services {
   border-style: solid;
   border-color: #000000;
   border-width: 1px 0px 0px 0px;
   flex-shrink: 0;
-  width: 70px;
+  width: 20px;
   height: 1px;
   position: relative;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
   align-self: center;
-  margin-bottom: 10px ;
-.services-section .horizontal-divider-services {
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  flex-shrink: 0;
-  width: 20px;
-  height: 1px;
-  align-self: center;
   margin-bottom: 10px;
 }
 
-.services-section h1 {
-  font-family: "Cormorant Garamond", serif;
-  text-align: left;
-  font-size: 22px;
-  font-weight: 500;
-  margin: 0 0 20px 20px;
-  color: #333;
-}
 
 .services-section h1 {
   font-family: "Cormorant Garamond", serif;
   text-align: left;
   font-size: 22px;
   font-weight: 500;
-  margin: 0 0 34px 20px; 
+  margin: 0 0 20px 20px; 
   color: #333;
-.services-section p {
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  text-align: justify;
-  font-weight: 300;
-  color: #0a0a0a;
-  margin: 0 0 0 20px;
 }
 
 .services-section p {
   font-family: "Raleway", sans-serif;
   font-size: 14px; 
+  text-align: justify;
   font-weight: 300;
-  line-height: 1.5; 
   color: #0A0A0A;
   margin: 0 0 0 20px; 
 }
@@ -1629,11 +1577,9 @@
 
 /* ------------------------------------------------------------- */
 /* Service Page - Wedding Packages Section */
-h1 {
-/* Service Page - Wedding Packages Section */
 .wedding-package {
-  width: 100%;
-  height: auto;
+  width:  100%;
+  height:  2087px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -1648,6 +1594,7 @@ h1 {
   margin: 20px 0;
   font-size: 32px;
   color: #000;
+  margin-bottom: 50px;
 }
 
 .package-list {
@@ -1655,7 +1602,10 @@ h1 {
   height: var(--height, auto);
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: wrap;
+  gap: 67px 13px; 
+  justify-content: center; 
+  align-items: flex-start;
 }
 
 .package-list {
@@ -1667,17 +1617,16 @@ h1 {
 }
 
 .package-wedding {
-.package-wedding {
   flex-basis: calc(50% - 20px);
-  max-width: 346px;
-  height: 943px;
+  max-width: 346px; 
+  height: auto; 
   /* height: auto;  */
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  text-align: center;
-  flex: 1 1 calc(33% - 20px);
-  max-width: calc(33% - 20px);
+  border-radius: 8px; 
+  display: flex;
+  flex-direction: column; 
 }
 
 .package-wedding .custom {
@@ -1689,20 +1638,17 @@ h1 {
   flex-direction: column;
 }
 
-.package-weddinge .image {
 .package-wedding .image {
   position: relative;
 }
 
 .package-wedding .image img {
-.package-wedding .image img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
   display: block;
+  height: 491px;
+  object-fit: cover;
 }
 
-.package-wedding .overlay {
 .package-wedding .overlay {
   position: absolute;
   bottom: 10px;
@@ -1715,35 +1661,27 @@ h1 {
 }
 
 .package-wedding h2 {
-  font-size: 1.4rem;
-.package-wedding h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 36px;
   font-weight: 600;
+  line-height: auto;
+  letter-spacing: 0.08rem;
   margin: 15px 0;
   padding: 0 20px;
 }
 
-.package-weddinge p {
-  font-size: 0.9rem;
-  color: #666;
-  padding: 0 15px;
 .package-wedding p {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 200;
   color: #000;
   padding: 0 20px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  white-space: normal; 
   line-height: 1.5;
 }
 
-.package-wedding .price {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 10px 0;
 .package-wedding .price {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -1751,28 +1689,6 @@ h1 {
   color: #000;
 }
 
-
-/* <========================================================> */
-/* <========================================================> */
-/* Portofolio Page - Hero*/
-.hero-portfolio{
-  width: 100%;
-  height: 291px;
-  background: url("assets/images/Ourportfolio_Banner.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fffafa;
-}
-
-/* <========================================================> */
-/* <========================================================> */
-
-/* Contact Page */
-.contact{
-  background-color: #fffafa;
-}
 .wedding-package-btn {
   background-color: #a4aea2;
   width: 188px;
@@ -1790,7 +1706,9 @@ h1 {
   transition: all 0.3s ease-in-out;
   outline: none;
   border: none;
-  cursor: pointer;
+  cursor: pointer; 
+  margin-bottom: 35px;
+
 }
 
 .wedding-package-btn:hover {
@@ -1879,6 +1797,9 @@ h1 {
   }
 }
 
+
+
+
 /* <========================================================> */
 /* <========================================================> */
 /* Portofolio Page - Hero*/
@@ -1903,7 +1824,6 @@ h1 {
 }
 /* Container utama */
 .container-contact {
-.container-contact {
   display: flex;
   max-width: 1400px;
   height: 1640px;
@@ -1914,7 +1834,6 @@ h1 {
   padding: 20px;
 }
 
-/* Contact Page - Bagian kiri (formulir) */
 /* Contact Page - Bagian kiri (formulir) */
 .left-section {
   flex: 1;
@@ -1928,12 +1847,6 @@ h1 {
   letter-spacing: 0.08rem;
   margin-top: 42px;
   margin-bottom: 60px;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-size: 36px;
-  letter-spacing: 0.08rem;
-  margin-top: 42px;
-  margin-bottom: 60px;
 }
 
 form label {
@@ -1941,12 +1854,7 @@ form label {
   font-weight: 500;
   font-size: 24px;
   letter-spacing: 0.08rem;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-size: 24px;
-  letter-spacing: 0.08rem;
   display: block;
-  margin: 10px 10px 5px;
   margin: 10px 10px 5px;
 }
 
@@ -1961,24 +1869,18 @@ form textarea {
 }
 
 /* Contact Page - Service section  */
-/* Contact Page - Service section  */
 
 .checkbox-group {
   display: flex; 
   flex-direction: column; 
   gap: 10px; 
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   margin-bottom: 15px;
 }
 
 .checkbox-group label {
   display: flex;
   position: relative; 
-  position: relative;
   cursor: pointer;
-  font-size: 1rem;
   font-size: 1rem;
 }
 
@@ -2019,7 +1921,7 @@ form textarea {
   text-decoration: none !important;
   transition: all 0.3s ease-in-out;
   outline: none; 
-  border: none;  
+  border: none; 
 }
 
 .btn-send:hover {
@@ -2100,11 +2002,6 @@ form textarea {
   width: 100%;
   margin-bottom: 20px;
   border-radius: 10px;
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  top: 2px;
 }
 
 iframe {
@@ -2261,28 +2158,29 @@ a:hover {
 
 /* RESPONSIVE GALLERY */
 @media (max-width: 992px) {
-  .gallery1 {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom pada tablet */
-.btn-send {
-  background-color: #a4aea2;
-  width: 159px;
-  height: 52px;
-  color: white !important;
-  letter-spacing: 0.08em;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  gap: 8px;
-  flex-direction: row;
-  border-radius: 3px;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: normal;
-  font-size: 20px;
-  text-decoration: none !important;
-  transition: all 0.3s ease-in-out;
-  outline: none;
-  border: none;
-}
+    .gallery1 {
+      grid-template-columns: repeat(2, 1fr);}/* 2 kolom pada tablet */
+    .btn-send {
+      background-color: #a4aea2;
+      width: 159px;
+      height: 52px;
+      color: white !important;
+      letter-spacing: 0.08em;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      gap: 8px;
+      flex-direction: row;
+      border-radius: 3px;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: normal;
+      font-size: 20px;
+      text-decoration: none !important;
+      transition: all 0.3s ease-in-out;
+      outline: none;
+      border: none;
+    }
+  }
 
 .btn-send:hover {
   background-color: #8d968b;
@@ -2363,6 +2261,8 @@ iframe {
   background-color: #000; /* Warna garis */
   margin: 0 auto; /* Agar garis berada di tengah */
 /* Make font size responsive */
+}
+
 @media (max-width: 768px) {
   .right-section p {
     font-size: 10px; /* Adjust for smaller screens */
