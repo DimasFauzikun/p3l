@@ -65,23 +65,8 @@ $portfolios = fetchPortfolios($conn);
     </nav>
 
     <!-- Hero Section -->
-    <section
-        class="hero-section text-center text-white"
-        style="
-        background-image: url('Content\ 3\ -\ Opening.jpg');
-        height: 70vh;
-        background-size: cover;
-        background-position: center;
-      ">
-        <!-- <div
-        class="container h-100 d-flex align-items-center justify-content-center"
-      >
-        <div>
-          <h1>VILLAVI THE VENUE</h1>
-          <p class="mb-4">Creating Unforgettable Moments with Purpose</p>
-          <a href="#contact" class="btn btn-secondary">Start Planning</a>
-        </div>
-      </div> -->
+    <section class="hero-portfolio">
+        <div class="hero-content"></div>
     </section>
 
     <!-- Portfolio Gallery -->
