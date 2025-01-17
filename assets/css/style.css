@@ -932,7 +932,7 @@
 .container-about-page {
   width: 100%;
   height: 1110px;
-  background-color: #fffafa;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1198,7 +1198,7 @@
   height: auto; /* Tinggi dinamis */
   width: 100%;
   position: relative;
-  background-color: #fffafa;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1359,7 +1359,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fffafa;
+  background-color: #fff;
   font-family: "Cormorant Garamond", sans-serif;
   padding: 20px;
 }
@@ -2139,9 +2139,9 @@ a:hover {
 }
 
 .gallery1 img {
-  width: auto; /* Menjaga proporsi asli gambar */
-  height: 100%; /* Gambar akan menyesuaikan tinggi kotak */
-  object-fit: contain; /* Memastikan gambar tidak terpotong */
+  width: 100%; /* Pastikan gambar memenuhi lebar frame */
+  height: 100%; /* Pastikan gambar memenuhi tinggi frame */
+  object-fit: cover; /* Gambar akan menyesuaikan frame tanpa jarak */
   transition: transform 0.3s ease; /* Animasi efek hover */
 }
 

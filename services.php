@@ -126,7 +126,10 @@ $dataResult = tampilPackages($conn);
                     <div class="overlay">THE CUSTOM</div>
                 </div>
                 <h2>THE CUSTOM</h2>
-                <p>THE CUSTOM Perayaan fleksibel yang dirancang khusus sesuai keinginan Anda, dengan layanan dan detail yang dapat disesuaikan untuk menciptakan momen yang sempurna.</p>
+                <p>THE CUSTOM Perayaan fleksibel yang dirancang khusus sesuai keinginan Anda, dengan layanan dan detail yang dapat disesuaikan untuk menciptakan momen yang sempurna.
+                <br><br>
+                Dapat melayani segala jenis kebutuhan acara yang anda ingin adakan, mulai dari pernikahan, lamaran, hingga photoshoot.
+                </p>
                 <!-- <p class="price">Paket untuk <strong>100 PAX</strong></p> -->
                 <button class="wedding-package-btn" onclick="window.location.href='contact.php';">
                     Hubungi Kami
