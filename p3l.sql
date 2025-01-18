@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 28 Dec 2024 pada 07.47
+-- Waktu pembuatan: 18 Jan 2025 pada 15.54
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.4
 
@@ -84,18 +84,18 @@ CREATE TABLE `portofolio` (
 --
 
 INSERT INTO `portofolio` (`id`, `gambar_porto`) VALUES
-(1, 'uploads/Rectangle 45.jpg'),
-(2, 'uploads/Rectangle 46.jpg'),
-(3, 'uploads/Rectangle 48.jpg'),
-(4, 'uploads/Rectangle 47.jpg'),
-(5, 'uploads/Rectangle 49.jpg'),
-(6, 'uploads/Rectangle 50.jpg'),
-(7, 'uploads/Rectangle 51.jpg'),
-(8, 'uploads/Rectangle 54.jpg'),
-(9, 'uploads/Rectangle 53.jpg'),
-(10, 'uploads/Rectangle 52.jpg'),
-(11, 'uploads/Rectangle 55.jpg'),
-(12, 'uploads/Rectangle 56.jpg');
+(1, 'uploads/beblooms.wedding-1629903797890.jpg'),
+(2, 'uploads/DEDI8283-2.JPG'),
+(3, 'uploads/842A2492.JPG'),
+(4, 'uploads/IMG_8997.JPG'),
+(5, 'uploads/IMG-20210315-WA0042.jpg'),
+(6, 'uploads/IMG-20210213-WA0052.jpg'),
+(7, 'uploads/IMG_7895.JPG'),
+(8, 'uploads/IMG-20210315-WA0037.jpg'),
+(9, 'uploads/IMG-20210213-WA0057.jpg'),
+(10, 'uploads/Photo dias 2021 (1 of 1)-8.JPG'),
+(11, 'uploads/beblooms.wedding-1628184487659.jpg'),
+(12, 'uploads/IMG-20200902-WA0010.jpg');
 
 -- --------------------------------------------------------
 
@@ -143,8 +143,7 @@ CREATE TABLE `wedding_packages` (
 INSERT INTO `wedding_packages` (`id`, `title_pk`, `deskripsi_pk`, `pax`, `gambar_pk`, `overlay_text`, `gambar_paket`) VALUES
 (1, 'THE INTIMATE ELEGANCE', 'THE INTIMATE ELEGANCE menyuguhkan atmosfer intim dengan dekorasi menawan, menu istimewa yang dirancang dengan penuh perhatian, serta layanan eksklusif untuk menjadikan momen Anda sempurna', '150', 'uploads/image (1).jpg', 'THE INTIMATE ELEGANCE', 'uploads/image (1).jpg'),
 (3, 'THE RADIANCE ROYALE', 'THE RADIANCE ROYALE menghadirkan perpaduan sempurna antara desain dekorasi yang memukau, sajian kuliner premium, dan pengalaman tak terlupakan yang akan memanjakan Anda serta tamu undangan', '200', 'uploads/image-2.jpg', 'THE RADIANCE ROYALE', 'uploads/image-2.jpg'),
-(4, 'THE IMPERIAL BLISS', 'THE IMPERIAL BLISS menyajikan pengalaman eksklusif dengan tata ruang megah, dekorasi mewah, menu istimewa, dan layanan yang dirancang untuk memberikan kesempurnaan di setiap momen berharga di hidup anda', '300', 'uploads/image-3.png', 'THE IMPERIAL BLISS', 'uploads/image-3.png'),
-(5, 'THE CUSTOM', 'THE CUSTOM Perayaan fleksibel yang dirancang khusus sesuai keinginan Anda, dengan layanan dan detail yang dapat disesuaikan untuk menciptakan momen yang sempurna', '', 'uploads/image-4.png', 'THE CUSTOM', 'uploads/image-4.png');
+(4, 'THE IMPERIAL BLISS', 'THE IMPERIAL BLISS menyajikan pengalaman eksklusif dengan tata ruang megah, dekorasi mewah, menu istimewa, dan layanan yang dirancang untuk memberikan kesempurnaan di setiap momen berharga di hidup anda', '300', 'uploads/image-3.png', 'THE IMPERIAL BLISS', 'uploads/image-3.png');
 
 --
 -- Indexes for dumped tables
