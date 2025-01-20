@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST['email'];
   $address = $_POST['address'];
   $service = isset($_POST['service']) ? implode(", ", $_POST['service']) : '';
-  $package = $_POST['package'];
+  $package = isset($_POST['package']) ? $_POST['package'] : ''; // Pastikan package tidak wajib
   $budget = preg_replace('/[^0-9]/', '', $_POST['budget']);
   $date = $_POST['date'];
   $details = $_POST['details'];
@@ -26,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!is_numeric($budget) || empty($budget)) {
     $message = "Budget harus berupa angka.";
   } else {
-    // Periksa apakah tanggal sudah ada di database
     $stmt = $conn->prepare("SELECT COUNT(*) FROM contact WHERE date = ?");
     $stmt->bind_param("s", $date);
     $stmt->execute();
@@ -35,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 
     if ($count > 0) {
-      // Jika tanggal sudah terpakai, tampilkan SweetAlert
       echo "<script>
               setTimeout(() => {
                 Swal.fire({
@@ -46,12 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               }, 200);
             </script>";
     } else {
-      // Simpan data jika tanggal belum terpakai
       $stmt = $conn->prepare("INSERT INTO contact (name, phone, email, address, service, package, budget, date, details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
       $stmt->bind_param("sssssssss", $name, $phone, $email, $address, $service, $package, $budget, $date, $details);
 
       if ($stmt->execute()) {
-        // Berhasil menyimpan data
         echo "<script>
                 setTimeout(() => {
                   Swal.fire({
@@ -62,7 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }, 200);
               </script>";
       } else {
-        // Gagal menyimpan data
         echo "<script>
                 setTimeout(() => {
                   Swal.fire({
@@ -78,8 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 }
-
-$conn->close();
 ?>
 
 
@@ -163,7 +156,7 @@ $conn->close();
 
         <label for="service">Service</label>
         <div class="checkbox-group">
-          <label><input type="checkbox" id="wedding-organizer" name="service[]" value="Wedding Organizer" onclick="toggleWeddingPackages()"/> Wedding Organizer</label>
+          <label><input type="checkbox" id="wedding-organizer" name="service[]" value="Wedding Organizer" onclick="toggleWeddingPackages()" /> Wedding Organizer</label>
           <label><input type="checkbox" name="service[]" value="Photoshoot Services" /> Photoshoot Services</label>
           <label><input type="checkbox" name="service[]" value="Venue for Shooting" /> Venue for Shooting</label>
           <label><input type="checkbox" name="service[]" value="Event by Request" /> Event by Request</label>
@@ -171,7 +164,7 @@ $conn->close();
 
         <div id="wedding-packages-container" style="display: none;">
           <label for="package">Wedding Packages</label>
-          <select id="package" name="package" class="package" required>
+          <select id="package" name="package" class="package">
             <option value="" disabled selected hidden></option>
             <option value="THE INTIMATE ELEGANCE">THE INTIMATE ELEGANCE</option>
             <option value="THE RADIANCE ROYALE">THE RADIANCE ROYALE</option>
@@ -181,14 +174,13 @@ $conn->close();
         </div>
 
         <label for="budget">Estimated Event Budget</label>
-        <input 
-          type="text" 
-          id="budget" 
-          name="budget" 
-          required 
-          placeholder="Rp 0" 
-          oninput="validateBudget()" 
-        />
+        <input
+          type="text"
+          id="budget"
+          name="budget"
+          required
+          placeholder="Rp 0"
+          oninput="validateBudget()" />
         <small id="budget-error" style="color: red; display: none;">Input hanya bisa berupa angka</small>
 
         <label for="date">Event Date</label>
@@ -196,8 +188,8 @@ $conn->close();
 
         <label for="details">Tell Us About Event</label>
         <textarea id="details" name="details" rows="4"></textarea>
-        
-        
+
+
         <button type="submit" class="btn-send">SEND</button>
       </form>
     </div>
@@ -207,8 +199,8 @@ $conn->close();
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5876.085189989196!2d106.89287967645825!3d-6.31838019367101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed0991611a33%3A0xac0920869524750f!2sVillaVi!5e1!3m2!1sen!2sid!4v1734323499670!5m2!1sen!2sid" width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
       <p>
         Terima kasih telah memilih VillaVi. Mari kita bekerja sama untuk menciptakan sesuatu yang istimewa dan penuh kenangan! <br> <br>
-        Untuk informasi lebih lanjut, kirimkan email ke 
-        <a href="mailto:villavi.the.venue@gmail.com" class="email-link">villavi.the.venue@gmail.com</a> 
+        Untuk informasi lebih lanjut, kirimkan email ke
+        <a href="mailto:villavi.the.venue@gmail.com" class="email-link">villavi.the.venue@gmail.com</a>
         atau telepon kami di 0896-9647-6888. Kami akan dengan senang hati merespons Anda!
       </p>
       <p class="address">
@@ -246,7 +238,7 @@ $conn->close();
         | DESIGN BY GENERASI TATAP LAYAR</p>
     </div>
   </footer>
-  
+
 
 
   <!-- Chipp Chat Widget -->

@@ -154,15 +154,16 @@ function validateBudget() {
 
 // menyalakan opsi wedding packages jika opsi = wedding organizer
 function toggleWeddingPackages() {
-  const weddingOrganizerCheckbox = document.getElementById("wedding-organizer");
-  const packagesContainer = document.getElementById(
+  const weddingCheckbox = document.getElementById("wedding-organizer");
+  const packageContainer = document.getElementById(
     "wedding-packages-container"
   );
-
-  if (weddingOrganizerCheckbox.checked) {
-    packagesContainer.style.display = "block";
+  if (weddingCheckbox.checked) {
+    packageContainer.style.display = "block";
+    document.getElementById("package").setAttribute("required", "required");
   } else {
-    packagesContainer.style.display = "none";
+    packageContainer.style.display = "none";
+    document.getElementById("package").removeAttribute("required");
   }
 }
 
