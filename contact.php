@@ -18,13 +18,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST['email'];
   $address = $_POST['address'];
   $service = isset($_POST['service']) ? implode(", ", $_POST['service']) : '';
-  $package = isset($_POST['package']) ? $_POST['package'] : ''; // Pastikan package tidak wajib
+  $package = isset($_POST['package']) ? $_POST['package'] : '';
   $budget = preg_replace('/[^0-9]/', '', $_POST['budget']);
   $date = $_POST['date'];
   $details = $_POST['details'];
 
   if (!is_numeric($budget) || empty($budget)) {
-    $message = "Budget harus berupa angka.";
+    echo "<script>
+            setTimeout(() => {
+              Swal.fire({
+                icon: 'error',
+                title: 'Invalid Budget',
+                text: 'Budget harus berupa angka.',
+              });
+            }, 200);
+          </script>";
   } else {
     $stmt = $conn->prepare("SELECT COUNT(*) FROM contact WHERE date = ?");
     $stmt->bind_param("s", $date);
@@ -35,13 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($count > 0) {
       echo "<script>
-              setTimeout(() => {
+              document.addEventListener('DOMContentLoaded', function() {
                 Swal.fire({
                   icon: 'error',
                   title: 'Tanggal Tidak Tersedia',
                   text: 'Tanggal ini sudah terpakai. Silakan pilih tanggal lain.',
                 });
-              }, 200);
+              });
             </script>";
     } else {
       $stmt = $conn->prepare("INSERT INTO contact (name, phone, email, address, service, package, budget, date, details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -49,23 +57,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       if ($stmt->execute()) {
         echo "<script>
-                setTimeout(() => {
+                document.addEventListener('DOMContentLoaded', function() {
                   Swal.fire({
                     icon: 'success',
                     title: 'Data Berhasil Disimpan',
                     text: 'Terima kasih telah menghubungi kami.',
+                  }).then(() => {
+                    window.location.href = 'contact.php';
                   });
-                }, 200);
+                });
               </script>";
       } else {
         echo "<script>
-                setTimeout(() => {
+                document.addEventListener('DOMContentLoaded', function() {
                   Swal.fire({
                     icon: 'error',
                     title: 'Kesalahan',
                     text: 'Terjadi kesalahan saat menyimpan data.',
                   });
-                }, 200);
+                });
+              </script>";
+      }
+      if ($count > 0) {
+        echo "<script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Tanggal Tidak Tersedia',
+                    text: 'Tanggal ini sudah terpakai. Silakan pilih tanggal lain.',
+                  }).then(() => {
+                    document.getElementById('date').value = '';
+                  });
+                });
               </script>";
       }
 
@@ -74,6 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 ?>
+
 
 
 
@@ -239,7 +263,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </footer>
 
+  <!-- script tanggal sebelum ga bisa di pilih -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Set minimum date to today
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("date").setAttribute("min", today);
 
+      // Date validation on form submission
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+        const selectedDate = document.getElementById("date").value;
+        if (selectedDate < today) {
+          event.preventDefault();
+          Swal.fire({
+            icon: "error",
+            title: "Tanggal Tidak Valid",
+            text: "Tanggal yang dipilih tidak boleh sebelum hari ini.",
+          });
+        }
+      });
+    });
+  </script>
 
   <!-- Chipp Chat Widget -->
   <script>

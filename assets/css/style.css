@@ -28,7 +28,6 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: "Raleway";
   src: url("assets/font/Raleway/static/Raleway-Bold.ttf") format("truetype");
@@ -84,7 +83,6 @@
   font-weight: 600;
   font-style: normal;
 }
-
 
 /* Main Page  */
 
@@ -755,10 +753,10 @@
 /* Main Page - Footer */
 .footer {
   width: 100%;
-  height: 257px;
-  background-color: #fff;
+  min-height: 257px;
   background-color: #fff;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0 180px;
@@ -779,17 +777,17 @@
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #000000; /* Warna teks */
+  color: #000000;
   transition: color 0.3s ease;
 }
 
 .footer-navigation li a:hover {
-  color: #a4aea2; /* Warna saat di-hover */
+  color: #a4aea2;
 }
 
 .social-links {
   list-style-type: none;
-  margin-top: 20px;
+  margin: 20px 0 0;
   padding: 0;
   display: flex;
   gap: 20px;
@@ -800,7 +798,7 @@
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #666; /* Warna ikon sosial */
+  color: #666;
   transition: color 0.3s ease;
 }
 
@@ -812,6 +810,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .logo img {
@@ -821,11 +820,28 @@
 }
 
 /* Responsiveness */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 0 100px;
+  }
+
+  .footer-navigation {
+    gap: 15px;
+  }
+
+  .social-links {
+    margin-top: 15px;
+  }
+
+  .logo img {
+    height: 110px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
     align-items: center;
-    height: auto;
     padding: 20px;
   }
 
@@ -842,6 +858,27 @@
 
   .logo img {
     height: 100px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 601px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .footer-navigation {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social-links {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .logo img {
+    height: 95px;
   }
 }
 
@@ -867,47 +904,38 @@
   }
 }
 
-/* Main Page - Footer Copyright*/
+/* Main Page - Footer Copyright */
 .copyright {
-  height: 50px;
+  height: auto;
   width: 100%;
   display: flex;
-  justify-content: center; /* Posisikan teks di tengah secara horizontal */
-  align-items: center; /* Posisikan teks di tengah secara vertikal */
-  background-color: #fffafa; /* Opsional, warna background footer */
+  justify-content: center;
+  align-items: center;
+  background-color: #fffafa;
+  padding: 10px 20px;
   box-sizing: border-box;
 }
 
 .copyright-content p {
-  margin: 0; /* Hilangkan margin default dari paragraf */
-  font-family: "Raleway", sans-serif; /* Font keluarga */
+  margin: 0;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 11px; /* Ukuran font */
-  color: #7a7a7a; /* Warna teks */
-  text-align: center; /* Teks diatur ke tengah */
+  font-size: 11px;
+  color: #7a7a7a;
+  text-align: center;
 }
 
 /* Responsiveness */
 @media (max-width: 768px) {
-  .copyright {
-    height: auto;
-    padding: 10px;
-  }
-
   .copyright-content p {
-    font-size: 10px; /* Ukuran font lebih kecil untuk tablet */
+    font-size: 10px;
     padding: 0 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .copyright {
-    height: auto;
-    padding: 10px;
-  }
-
   .copyright-content p {
-    font-size: 9px; /* Ukuran font lebih kecil untuk ponsel */
+    font-size: 9px;
     padding: 0 5px;
   }
 }
@@ -1491,29 +1519,28 @@
   flex-wrap: wrap;
 }
 
-
 .content-service {
-  width: var(--width, 70%); 
-  height: var(--height, auto); 
+  width: var(--width, 70%);
+  height: var(--height, auto);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 64px 17px; 
-  justify-content: center; 
+  gap: 64px 17px;
+  justify-content: center;
   align-items: flex-start;
   padding: 50px 0;
 }
 
 .services-section {
   flex-basis: calc(50% - 20px);
-  max-width: 525px; 
-  height: 465px; 
+  max-width: 525px;
+  height: 465px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border-radius: 8px; 
+  border-radius: 8px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .services-section .images-services img {
@@ -1532,7 +1559,6 @@
   flex-direction: column;
 }
 
-
 .services-section .horizontal-divider-services {
   border-style: solid;
   border-color: #000000;
@@ -1547,23 +1573,22 @@
   margin-bottom: 10px;
 }
 
-
 .services-section h1 {
   font-family: "Cormorant Garamond", serif;
   text-align: left;
   font-size: 22px;
   font-weight: 500;
-  margin: 0 0 20px 20px; 
+  margin: 0 0 20px 20px;
   color: #333;
 }
 
 .services-section p {
   font-family: "Raleway", sans-serif;
-  font-size: 14px; 
+  font-size: 14px;
   text-align: justify;
   font-weight: 300;
-  color: #0A0A0A;
-  margin: 0 0 0 20px; 
+  color: #0a0a0a;
+  margin: 0 0 0 20px;
 }
 
 /* Service Page - Wedding Packages Section */
@@ -1606,9 +1631,9 @@
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border-radius: 8px; 
+  border-radius: 8px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .package-wedding .custom {
@@ -1667,9 +1692,9 @@
   font-weight: 200;
   color: #000;
   padding: 0 20px;
-  word-wrap: break-word; 
-  overflow-wrap: break-word; 
-  white-space: normal; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
   line-height: 1.5;
 }
 
@@ -1786,16 +1811,13 @@
   }
 }
 
-
-
-
 /* <========================================================> */
 /* <========================================================> */
 /* Portofolio Page - Hero*/
 .hero-portfolio {
   width: 100%;
   height: 291px;
-  background: url("../images/Ourportfolio_Banner.jpg") center/cover  no-repeat;
+  background: url("../images/Ourportfolio_Banner.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1825,7 +1847,6 @@
 /* Contact Page - Bagian kiri (formulir) */
 .left-section {
   flex: 1;
-  
 }
 
 .left-section h2 {
@@ -1859,15 +1880,15 @@ form textarea {
 /* Contact Page - Service section  */
 
 .checkbox-group {
-  display: flex; 
-  flex-direction: column; 
-  gap: 10px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 15px;
 }
 
 .checkbox-group label {
   display: flex;
-  position: relative; 
+  position: relative;
   cursor: pointer;
   font-size: 1rem;
 }
@@ -1877,7 +1898,7 @@ form textarea {
   width: 20px;
   height: 20px;
   position: relative;
-  top: 2px; 
+  top: 2px;
 }
 
 .package option {
@@ -1889,7 +1910,6 @@ form textarea {
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
 }
-
 
 .btn-send {
   background-color: #a4aea2;
@@ -1908,14 +1928,13 @@ form textarea {
   font-size: 20px;
   text-decoration: none !important;
   transition: all 0.3s ease-in-out;
-  outline: none; 
-  border: none; 
+  outline: none;
+  border: none;
 }
 
 .btn-send:hover {
   background-color: #8d968b;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -1978,7 +1997,6 @@ form textarea {
     width: 70%; /* Garis lebih sempit */
   }
 }
-
 
 /* Bagian kanan (gambar dan peta) */
 .right-section {
