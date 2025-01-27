@@ -102,7 +102,7 @@
   </section>
 
   <section class="owner">
-    <div class="profile">
+    <div class="prof  ile">
       <img src="assets/images/profile_vikan.jpg" class="owner-profile" />
       <div class="overlay">
         <ul class="social-icons">
@@ -133,17 +133,17 @@
       <h1>VILLAVI THE VENUE TEAM</h1>
       <div class="team-profile">
         <div class="card-profile">
-          <img src="assets/images/profile_tiara.jpg" alt="#test">
+          <img src="assets/images/profile_tiara.jpg" alt="#test" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <h2>Tiara</h2>
           <p>General Manager</p>
         </div>
         <div class="card-profile">
-          <img src="assets/images/profile_raja.jpg" alt="#test">
+          <img src="assets/images/profile_raja.jpg" alt="#test" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <h2>Raja</h2>
           <p>Operational Manager</p>
         </div>
         <div class="card-profile">
-          <img src="assets/images/profile_adjeng.jpg" alt="#test">
+          <img src="assets/images/profile_adjeng.jpg" alt="#test" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <h2>Adjeng</h2>
           <p>Marketing Manager</p>
         </div>

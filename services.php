@@ -102,7 +102,7 @@ $dataResult = tampilPackages($conn);
             <?php while ($row = mysqli_fetch_assoc($dataResult)) { ?>
                 <div class="package-wedding">
                     <div class="image">
-                        <img src="<?php echo $row['gambar_pk']; ?>" alt="<?php echo $row['title_pk']; ?>" />
+                        <img src="<?php echo $row['gambar_paket']; ?>" alt="<?php echo $row['title_pk']; ?>" />
                         <div class="overlay"><?php echo strtoupper($row['title_pk']); ?></div>
                     </div>
                     <h2><?php echo $row['title_pk']; ?></h2>
@@ -113,7 +113,7 @@ $dataResult = tampilPackages($conn);
                         data-bs-target="#readMoreModal"
                         data-title="<?php echo htmlspecialchars($row['title_pk']); ?>"
                         data-description="<?php echo htmlspecialchars($row['deskripsi_pk']); ?>"
-                        data-image="<?php echo htmlspecialchars($row['gambar_paket']); ?>">
+                        data-pdf="<?php echo htmlspecialchars($row['gambar_pk']); ?>">
                         Detail Lengkap
                     </button>
                 </div>
@@ -140,24 +140,24 @@ $dataResult = tampilPackages($conn);
 
     <!-- Modal -->
     <div class="modal fade" id="readMoreModal" tabindex="-1" aria-labelledby="readMoreModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg"> 
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="readMoreModalLabel">Package Details</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img id="modalImage" src="" alt="Package Image" class="img-fluid mb-3" />
-                    <h2 id="modalTitle"></h2>
-                    <p id="modalDescription"></p>
+                    <!-- Responsif iframe -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="modalPDF" class="embed-responsive-item" src="" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Footer -->
     <section id="footer" class="footer">
@@ -212,26 +212,31 @@ $dataResult = tampilPackages($conn);
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const modal = document.getElementById("readMoreModal");
-            const modalTitle = document.getElementById("modalTitle");
-            const modalDescription = document.getElementById("modalDescription");
-            const modalImage = document.getElementById("modalImage");
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modalPDF = document.getElementById("modalPDF");
 
-            document.querySelectorAll(".wedding-package-btn").forEach(function(button) {
-                button.addEventListener("click", function() {
-                    const title = this.getAttribute("data-title");
-                    const description = this.getAttribute("data-description");
-                    const image = this.getAttribute("data-image");
+            // Seleksi semua tombol dengan data-pdf
+            document.querySelectorAll(".wedding-package-btn").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const pdfPath = this.getAttribute("data-pdf");
 
-                    modalTitle.textContent = title;
-                    modalDescription.textContent = description;
-                    modalImage.src = image;
+                    if (pdfPath) {
+                        modalPDF.src = pdfPath;
+                    } else {
+                        console.error("PDF path is not provided!");
+                        modalPDF.src = ""; // Reset src jika data-pdf tidak ada
+                    }
                 });
             });
+
+            // Reset iframe saat modal ditutup
+            const modal = document.getElementById("readMoreModal");
+            modal.addEventListener("hidden.bs.modal", function () {
+                modalPDF.src = ""; // Hapus src untuk mencegah memori terpakai
+            });
         });
-    </script>
+        </script>
 </body>
 
 </html>

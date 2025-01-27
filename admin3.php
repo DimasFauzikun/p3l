@@ -67,6 +67,8 @@ function hapusPackage($conn, $id)
     }
 }
 
+
+// Kode lama 
 // Menangani form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['tambah'])) {
@@ -75,6 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pax = $_POST['pax'];
         $overlay = $_POST['overlay_text'];
         $gambar_paket = '';
+        $gambar = '';
 
         // Proses upload gambar_paket
         if (!empty($_FILES['gambar_paket']['name'])) {
@@ -94,6 +97,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fileDestination = 'uploads/' . $fileName;
             move_uploaded_file($fileTmpName, $fileDestination);
             $gambar = $fileDestination;
+            $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
+
+             // Validasi hanya file PDF
+            if (strtolower($fileExtension) === 'pdf') {
+                $fileDestination = 'uploads/' . $fileName;
+                if (move_uploaded_file($fileTmpName, $fileDestination)) {
+                    $gambar = $fileDestination; // Simpan path file PDF
+                } else {
+                    echo "Error upload PDF file.";
+                }
+            } else {
+                echo "File yang diupload hanya boleh PDF.";
+            }
         }
 
         tambahPackage($conn, $title, $deskripsi, $pax, $gambar, $overlay, $gambar_paket);
@@ -123,11 +139,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fileDestination = 'uploads/' . $fileName;
             move_uploaded_file($fileTmpName, $fileDestination);
             $gambar = $fileDestination;
+            $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
+
+             // Validasi hanya file PDF
+            if (strtolower($fileExtension) === 'pdf') {
+                $fileDestination = 'uploads/' . $fileName;
+                if (move_uploaded_file($fileTmpName, $fileDestination)) {
+                    $gambar = $fileDestination; // Simpan path file PDF
+                } else {
+                    echo "Error upload PDF file.";
+                }
+            } else {
+                echo "File yang diupload hanya boleh PDF.";
+            }
         }
 
         editPackage($conn, $id, $title, $deskripsi, $pax, $gambar, $overlay, $gambar_paket);
     }
 }
+
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['hapus'])) {
     hapusPackage($conn, $_POST['id']);
@@ -262,6 +293,7 @@ $dataResult = tampilPackages($conn);
         </ul>
         <hr>
     </div>
+
     <div class="container mt-5">
         <h2>Manage Wedding Packages</h2>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
@@ -282,7 +314,7 @@ $dataResult = tampilPackages($conn);
                 <input type="file" class="form-control" name="gambar_paket" accept=".jpg, .jpeg, .png">
             </div>
             <div class="mb-3">
-                <input type="file" class="form-control" name="gambar_pk" accept=".jpg, .jpeg, .png">
+                <input type="file" class="form-control" name="gambar_pk" accept=".pdf">
             </div>
             <input type="submit" class="btn btn-primary" name="tambah" value="Add Package">
         </form>
@@ -304,12 +336,34 @@ $dataResult = tampilPackages($conn);
                 <?php while ($row = mysqli_fetch_assoc($dataResult)) { ?>
                     <tr>
                         <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['title_pk']; ?></td>
-                        <td><?php echo nl2br($row['deskripsi_pk']); ?></td>
+
+                        <td><?php echo htmlspecialchars($row['title_pk'], ENT_QUOTES, 'UTF-8'); ?></td>
+
+                        <td><?php echo nl2br(htmlspecialchars($row['deskripsi_pk'], ENT_QUOTES, 'UTF-8')); ?></td>
+
                         <td><?php echo $row['pax']; ?></td>
+
                         <td><?php echo $row['overlay_text']; ?></td>
-                        <td><img src="<?php echo $row['gambar_paket']; ?>" alt="Gambar Paket" width="100"></td>
-                        <td><img src="<?php echo $row['gambar_pk']; ?>" alt="Gambar PK" width="100"></td>
+
+                        <td>
+                        <?php if (!empty($row['gambar_paket'])) { ?>
+                            <img src="<?php echo $row['gambar_paket']; ?>" alt="Gambar Paket" width="100">
+                        <?php } else { ?>
+                            <span>No Image</span>
+                        <?php } ?>
+                        </td>
+                        <td>
+                            <?php if (!empty($row['gambar_pk'])) { ?>
+                                <?php if (pathinfo($row['gambar_pk'], PATHINFO_EXTENSION) === 'pdf') { ?>
+                                    <a href="<?php echo $row['gambar_pk']; ?>" target="_blank">View PDF</a>
+                                <?php } else { ?>
+                                    <img src="<?php echo $row['gambar_pk']; ?>" alt="Gambar PK" width="100">
+                                <?php } ?>
+                            <?php } else { ?>
+                                <span>No File</span>
+                            <?php } ?>
+                        </td>
+
                         <td>
                             <!-- Form Edit & Hapus -->
                             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" class="mb-2">
@@ -330,7 +384,7 @@ $dataResult = tampilPackages($conn);
                                     <input type="file" class="form-control" name="gambar_paket" accept=".jpg, .jpeg, .png">
                                 </div>
                                 <div class="mb-2">
-                                    <input type="file" class="form-control" name="gambar_pk" accept=".jpg, .jpeg, .png">
+                                    <input type="file" class="form-control" name="gambar_pk" accept=".pdf">
                                 </div>
                                 <input type="submit" class="btn btn-success" name="edit" value="Edit">
                             </form>

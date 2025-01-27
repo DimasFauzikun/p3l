@@ -1239,11 +1239,10 @@
   position: relative;
   width: 433px;
   height: 639px;
-  background: url("assets/images/profile_vikan.jpg") no-repeat center
-    center/cover;
   border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .owner-profile {
@@ -1251,6 +1250,7 @@
   width: auto;
   object-fit: cover;
   margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .overlay {
@@ -1431,11 +1431,12 @@
   gap: 30px; /* Kurangi gap untuk layar kecil */
 }
 
+
 .card-profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fffafa;
+  background-color: #fff;
   color: #000;
   max-width: 100%;
 }
