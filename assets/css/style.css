@@ -664,17 +664,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px; /* Tinggi area 360 */
+  height: 1080px; /* Tinggi area 360 */
   overflow: hidden;
   padding: 20px 0; /* Tambahkan ruang di atas dan bawah */
   margin: 30px 0; /* Tambahkan ruang 20px di luar elemen atas dan bawah */
 }
 
 #viewerCanvas {
-  width: 90%; /* Lebar lebih kecil, sekitar 60% dari container */
-  max-width: 980px; /* Lebar maksimum untuk mencegah tampilan terlalu besar */
+  width: 1080px; 
+  max-width: 80%; /* Lebar maksimum untuk mencegah tampilan terlalu besar */
   height: auto; /* Otomatis menyesuaikan tinggi sesuai aspek rasio */
-  border-radius: 10px; /* Opsional: sudut bulat untuk estetika */
+  border-radius: 0px; /* Opsional: sudut bulat untuk estetika */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
 }
 

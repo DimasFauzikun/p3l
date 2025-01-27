@@ -147,7 +147,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Camera 360 Section -->
   <section id="camera-360" class="camera-360">
     <canvas id="viewerCanvas"></canvas>
@@ -159,22 +159,23 @@
     // Inisialisasi renderer
     const canvas = document.getElementById('viewerCanvas');
     const renderer = new THREE.WebGLRenderer({
-      canvas
+      canvas,
+      antialias: true, // Tambahkan anti-alias untuk smoothing
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     // Membuat scene dan camera
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, 0, 0.1); // Sedikit offset untuk pengalaman 360
+    camera.position.set(0, 0, 0.1);
 
     // Tambahkan tekstur panorama sebagai material ke bola
     const textureLoader = new THREE.TextureLoader();
     textureLoader.load('/assets/images/360-image.jpeg', (texture) => {
-      const sphereGeometry = new THREE.SphereGeometry(50, 60, 40); // Bola besar
+      const sphereGeometry = new THREE.SphereGeometry(50, 60, 40);
       const sphereMaterial = new THREE.MeshBasicMaterial({
         map: texture,
-        side: THREE.BackSide, // Membuat tekstur terlihat dari dalam bola
+        side: THREE.BackSide,
       });
 
       const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
@@ -185,9 +186,23 @@
     let isDragging = false;
     let prevMouseX = 0;
     let prevMouseY = 0;
+    let velocityX = 0;
+    let velocityY = 0;
 
-    // Fungsi animasi
+    // Fungsi animasi dengan inersia
     function animate() {
+      // Tambahkan efek inersia pada rotasi
+      if (!isDragging) {
+        velocityX *= 0.95; // Perlambat secara bertahap
+        velocityY *= 0.95;
+
+        camera.rotation.y -= velocityX * 0.002;
+        camera.rotation.x -= velocityY * 0.002;
+
+        // Batasi rotasi vertikal
+        camera.rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, camera.rotation.x));
+      }
+
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     }
@@ -198,6 +213,8 @@
       isDragging = true;
       prevMouseX = event.clientX;
       prevMouseY = event.clientY;
+      velocityX = 0;
+      velocityY = 0; // Reset velocity saat mouse ditekan
     });
 
     canvas.addEventListener('mousemove', (event) => {
@@ -205,11 +222,13 @@
         const deltaX = event.clientX - prevMouseX;
         const deltaY = event.clientY - prevMouseY;
 
-        // Rotasi kamera berdasarkan pergerakan mouse
+        velocityX = deltaX; // Simpan kecepatan untuk inersia
+        velocityY = deltaY;
+
         camera.rotation.y -= deltaX * 0.002;
         camera.rotation.x -= deltaY * 0.002;
 
-        // Membatasi rotasi vertikal agar tidak terlalu ekstrem
+        // Batasi rotasi vertikal
         camera.rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, camera.rotation.x));
 
         prevMouseX = event.clientX;
@@ -232,8 +251,8 @@
       camera.updateProjectionMatrix();
     });
   </script>
-  
 
+  
   <!-- Location Section -->
   <section id="location" class="location">
     <div class="location">
