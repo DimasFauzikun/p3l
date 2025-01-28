@@ -102,7 +102,7 @@
   </section>
 
   <section class="owner">
-    <div class="prof  ile">
+    <div class="profile">
       <img src="assets/images/profile_vikan.jpg" class="owner-profile" />
       <div class="overlay">
         <ul class="social-icons">
