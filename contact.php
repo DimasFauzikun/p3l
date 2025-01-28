@@ -122,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="home.php">
-        <img src="VillaVi_Logo.jpg" alt="VillaVi Logo" height=50% width=50%>
+        <img src="assets/images/VillaVi_Logo.jpg" alt="VillaVi Logo" height=50% width=50%>
       </a>
       <button
         class="navbar-toggler"
@@ -219,7 +219,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <div class="right-section">
-      <img src="Rectangle 57.jpg" alt="Wedding Bouquet" class="wedding-img" />
+      <img src="assets/images/contact_images.jpg" alt="Wedding Bouquet" class="wedding-img" />
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5876.085189989196!2d106.89287967645825!3d-6.31838019367101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed0991611a33%3A0xac0920869524750f!2sVillaVi!5e1!3m2!1sen!2sid!4v1734323499670!5m2!1sen!2sid" width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
       <p>
         Terima kasih telah memilih VillaVi. Mari kita bekerja sama untuk menciptakan sesuatu yang istimewa dan penuh kenangan! <br> <br>
@@ -252,7 +252,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </nav>
     <nav class="logo">
-      <img src="VillaVi_Logo.png" alt="VillaVi Logo">
+      <img src="assets/images/VillaVi_Logo.png" alt="VillaVi Logo">
     </nav>
   </section>
 

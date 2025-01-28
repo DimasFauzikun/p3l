@@ -32,7 +32,7 @@ $portfolios = fetchPortfolios($conn);
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="home.php">
-                <img src="VillaVi_Logo.jpg" alt="VillaVi Logo" height=50% width=50%>
+                <img src="assets/images/VillaVi_Logo.jpg" alt="VillaVi Logo" height=50% width=50%>
             </a>
             <button
                 class="navbar-toggler"
@@ -98,7 +98,7 @@ $portfolios = fetchPortfolios($conn);
 
         </nav>
         <nav class="logo">
-            <img src="VillaVi_Logo.png" alt="VillaVi Logo">
+            <img src="assets/images/VillaVi_Logo.png" alt="VillaVi Logo">
         </nav>
     </section>
 
