@@ -62,7 +62,7 @@
     align-items: center; 
     width: 100%; 
     height: 540px; 
-    background-color: #fffafa;">
+    background-color: #fff;">
     <img src="assets/images/404-image.png" alt="Page not found" style="width: 570px; height: 503px;">
 </section>
 
@@ -96,7 +96,6 @@
             | DESIGN BY GENERASI TATAP LAYAR</p>
         </div>
     </footer>
-    <iframe src="https://villaviaiagent-32623.chipp.ai" height="800px" width="100%" frameborder="0" title="Villavi AI Agent"></iframe>
 
 
     <!-- Chipp Chat Widget -->
